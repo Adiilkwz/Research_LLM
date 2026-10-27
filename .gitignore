@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+results/**/checkpoint.pt
+results/**/checkpoint.pt.tmp
+data/stats/
+.ipynb_checkpoints/

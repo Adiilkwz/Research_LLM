@@ -1,0 +1,10 @@
+# torch: use the platform's pre-installed CUDA build (Kaggle). Do NOT reinstall it.
+transformers==5.5.4
+datasets==4.8.5
+huggingface_hub==1.17.0
+numpy
+scipy
+pandas
+matplotlib
+pyyaml
+tqdm

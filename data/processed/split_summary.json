@@ -1,0 +1,70 @@
+{
+  "split_seed": 2026,
+  "kept_edits": 2518,
+  "dropped": {
+    "non_latin": 215,
+    "long_target": 9,
+    "duplicate_subject_relation": 17,
+    "parse_failed": 3,
+    "other_filter": 45
+  },
+  "test_edits": 1761,
+  "dev_edits": 126,
+  "locality_candidates": 2530,
+  "test_by_source": {
+    "popular": 544,
+    "random": 1217
+  },
+  "test_tests": {
+    "two_hop": 3727,
+    "alias": 3207,
+    "rel_spec": 5836,
+    "edits_with_any_portability": 1695,
+    "reverse": 961,
+    "other_logical": 698,
+    "inverse_relation": 263
+  },
+  "test_relations": {
+    "COUNTRY": 371,
+    "OCCUPATION": 343,
+    "SEX_OR_GENDER": 255,
+    "COUNTRY_OF_CITIZENSHIP": 130,
+    "PLACE_OF_BIRTH": 109,
+    "EMPLOYER": 47,
+    "AWARD_RECEIVED": 46,
+    "PLACE_OF_DEATH": 36,
+    "FATHER": 35,
+    "CHILD": 34,
+    "MOTHER": 34,
+    "FOLLOWS": 33,
+    "SPOUSE": 30,
+    "MEMBER_OF_SPORTS_TEAM": 29,
+    "FOLLOWED_BY": 28,
+    "POSITION_HELD": 26,
+    "SIBLING": 22,
+    "COMPOSER": 19,
+    "AUTHOR": 19,
+    "CAST_MEMBER": 19,
+    "FIELD_OF_WORK": 15,
+    "LEAGUE": 15,
+    "DIRECTOR": 14,
+    "ETHNIC_GROUP": 13,
+    "SCREENWRITER": 10,
+    "ANTHEM": 5,
+    "PLACE_OF_BURIAL": 5,
+    "CAPITAL": 5,
+    "CONTINENT": 3,
+    "CAPITAL_OF": 3,
+    "OFFICIAL_LANGUAGE": 2,
+    "SEXUAL_ORIENTATION": 2,
+    "EYE_COLOR": 1,
+    "CURRENCY": 1,
+    "HEAD_OF_STATE": 1,
+    "ARCHITECT": 1
+  },
+  "sha256": {
+    "edits_test.jsonl": "b9da85017da7109ddebce80b03b69ba5b640fc3e4a66425ad78a2bac7d116874",
+    "edits_dev.jsonl": "e22037376848f4266e2c178d19dcdb5defabc78fdbf0505c10ce9abfbc13e96a",
+    "locality_pool.jsonl": "519d0038f7d5ab21dfb39dee83e8c036c6fecda538eb4eb45faf9806d6127117"
+  }
+}

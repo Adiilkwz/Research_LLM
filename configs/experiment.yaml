@@ -1,0 +1,44 @@
+# FROZEN EXPERIMENT PROTOCOL (Assignment 4) — see docs/protocol_freeze.docx
+# Any change after the freeze date must be reported in "Deviations from the frozen protocol".
+
+data_dir: data/processed          # built by src/prepare_data.py (hashes in data/processed/SHA256SUMS)
+results_dir: results
+
+models:
+  gpt2-xl:
+    hf_id: openai-community/gpt2-xl
+    dtype: float32                 # EasyEdit default for GPT-2 XL (fp16: false)
+    hparams_dir: configs/hparams/gpt2-xl
+    eval_batch: 32
+  llama3.2-3b:
+    hf_id: unsloth/Llama-3.2-3B    # ungated mirror of meta-llama/Llama-3.2-3B (identical weights)
+    dtype: float16                 # EasyEdit ROME config for this model uses fp16: true
+    hparams_dir: configs/hparams/llama3.2-3b
+    eval_batch: 16
+
+methods: [none, FT, ROME, MEMIT]   # none = unedited model (simple baseline); FT = FT-L (literature baseline)
+seeds: [0, 1, 2]                   # seed -> which 1000 edits and in which order (identical for all methods)
+n_max: 1000                        # length of each sequential edit stream
+milestones: [1, 10, 50, 100, 250, 500, 750, 1000]
+n_single: 100                      # isolated single-edit runs (edit -> evaluate -> restore), seed 0 only
+
+locality_probes: 500               # fixed global set of untouched facts known by the unedited model
+max_answer_tokens: 16
+ppl_passages: 100                  # wikitext-103 test paragraphs for perplexity
+ppl_max_tokens: 128
+failure_samples: 40                # failures per run/category stored with greedy generations
+
+cov:                               # MEMIT key-covariance statistics (src/compute_cov.py)
+  hf_dataset: Salesforce/wikitext
+  hf_config: wikitext-103-raw-v1
+  dataset_name: wikitext           # folder name EasyEdit's layer_stats() expects
+  n_samples: 20000
+  min_chars: 200
+  max_tokens: 256
+  seed: 2026
+  stats_dir: data/stats
+
+analysis:
+  bootstrap: 10000
+  alpha: 0.05
+  primary_metric: ERS              # harmonic mean of edit retention (ER) and locality (LOC) at n_max
