@@ -1,4 +1,4 @@
-"""Pre-compute MEMIT's key covariance statistics (second moment of the inputs to the edited MLP
+"""Pre-compute the key covariance statistics used by MEMIT and ROME (second moment of the inputs to the edited MLP
 projection) on wikitext-103 and store them exactly where EasyEdit's layer_stats() looks for them.
 
 Why: EasyEdit would otherwise download the full English Wikipedia dump (~20 GB) and run
@@ -33,7 +33,9 @@ def main():
     model, tok = load_model(cfg, args.model)
     tok.padding_side = "right"
     hp = load_hparams(cfg, args.model, "MEMIT")
-    layer_names = [hp.rewrite_module_tmp.format(l) for l in hp.layers]
+    hp_rome = load_hparams(cfg, args.model, "ROME")
+    layer_names = sorted({hp.rewrite_module_tmp.format(l) for l in hp.layers} |
+                         {hp_rome.rewrite_module_tmp.format(l) for l in hp_rome.layers})
     targets = {ln: stats_file(cfg, model, ln) for ln in layer_names}
     if all(os.path.exists(p) for p in targets.values()):
         print("All covariance files already exist:", *targets.values(), sep="\n  ")

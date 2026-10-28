@@ -3,7 +3,7 @@
 Reads results/<model>/{prefilter.json, seq/*, single/*} and writes results/analysis/:
   main_results.csv / .md     every condition x primary & secondary metrics (mean +/- SD over seeds, 95% CI)
   h1_portability.csv         H1 tests (Wilcoxon signed-rank, Holm)
-  h2_locality.csv            H2 tests (per-seed McNemar N=1 vs N=n_max, slopes vs log10 N)
+  h2_locality.csv            H2 tests (per-seed Wilcoxon signed-rank on per-probe LOC, N=1 vs N=n_max; slopes vs log10 N)
   ro4_pairwise.csv           ERS pairwise comparisons (stratified paired bootstrap, Holm)
   subgroups.csv              portability by type / entity popularity / prior knowledge; RS
   efficiency.csv             seconds per edit, total hours, peak memory
@@ -31,7 +31,7 @@ import matplotlib.pyplot as plt  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 METHODS = ["none", "FT", "ROME", "MEMIT"]
-LABEL = {"none": "No edit", "FT": "FT-L", "ROME": "ROME", "MEMIT": "MEMIT"}
+LABEL = {"none": "No edit", "FT": "FT-M", "ROME": "ROME", "MEMIT": "MEMIT"}
 COLOR = {"none": "#8a8a8a", "FT": "#d1495b", "ROME": "#2e86ab", "MEMIT": "#3b8b5a"}
 PTYPES = ["two_hop", "inverse_relation", "other_logical", "alias"]
 
@@ -65,13 +65,17 @@ def boot_ci(x, B, rng, stat=np.mean):
     return (float(np.percentile(bs, 2.5)), float(np.percentile(bs, 97.5)))
 
 
-def mcnemar_exact(before, after):
-    """paired binary vectors; returns (b, c, p) with b = 1->0 flips, c = 0->1 flips."""
-    before, after = np.asarray(before), np.asarray(after)
-    b = int(((before == 1) & (after == 0)).sum())
-    c = int(((before == 0) & (after == 1)).sum())
-    p = 1.0 if b + c == 0 else stats.binomtest(b, b + c, 0.5).pvalue
-    return b, c, float(p)
+def wilcoxon_paired(before, after):
+    """Wilcoxon signed-rank test on paired per-probe scores (N=1 vs N=n_max).
+    Returns (p, matched-pairs rank-biserial r (positive = decline), number of probes that changed)."""
+    d = np.asarray(before, float) - np.asarray(after, float)
+    nz = d[d != 0]
+    if len(nz) == 0:
+        return 1.0, 0.0, 0
+    res = stats.wilcoxon(nz)
+    ranks = stats.rankdata(np.abs(nz))
+    r_rb = (ranks[nz > 0].sum() - ranks[nz < 0].sum()) / ranks.sum()
+    return float(res.pvalue), float(r_rb), int(len(nz))
 
 
 def fmt(m, s=None, pct=True):
@@ -233,14 +237,14 @@ def main():
 
         # ---------------- H2: locality decline with edit volume -----------------
         for method in [m for m in methods if m != "none"]:
-            ps, slopes, er_slopes, drops, b_c = [], [], [], [], []
+            ps, slopes, er_slopes, drops, rbs, n_changed = [], [], [], [], [], []
             for s in seeds:
                 if (method, s) not in runs:
                     continue
                 ms = runs[(method, s)]["ms"]
                 ns = sorted(ms)
-                b, c, p = mcnemar_exact(ms[ns[0]]["loc"], ms[ns[-1]]["loc"])
-                ps.append(p); b_c.append((b, c))
+                p, r_rb, n_nz = wilcoxon_paired(ms[ns[0]]["loc"], ms[ns[-1]]["loc"])
+                ps.append(p); rbs.append(r_rb); n_changed.append(n_nz)
                 drops.append(ms[ns[0]]["LOC"] - ms[ns[-1]]["LOC"])
                 x = np.log10(ns)
                 slopes.append(stats.linregress(x, [ms[n]["LOC"] for n in ns]).slope)
@@ -253,8 +257,9 @@ def main():
                             "slope_LOC_per_decade_pp": np.mean(slopes) * 100,
                             "slope_LOC_sd_pp": (np.std(slopes, ddof=1) * 100 if len(slopes) > 1 else np.nan),
                             "slope_ER_per_decade_pp": np.mean(er_slopes) * 100,
-                            "mcnemar_flips_1to0_0to1": "; ".join(f"{b}/{c}" for b, c in b_c),
-                            "mcnemar_p_per_seed": "; ".join(f"{p:.2g}" for p in ps),
+                            "probes_changed_N1_vs_Nmax": "; ".join(str(n) for n in n_changed),
+                            "wilcoxon_p_per_seed": "; ".join(f"{p:.2g}" for p in ps),
+                            "rank_biserial_per_seed": "; ".join(f"{r:.2f}" for r in rbs),
                             "p_iut": max(ps),  # intersection-union: significant only if every seed is
                             "all_slopes_negative": bool(all(s_ < 0 for s_ in slopes)),
                             "LOC_single_edit_mean": single_loc})

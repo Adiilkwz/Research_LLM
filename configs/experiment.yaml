@@ -16,7 +16,7 @@ models:
     hparams_dir: configs/hparams/llama3.2-3b
     eval_batch: 16
 
-methods: [none, FT, ROME, MEMIT]   # none = unedited model (simple baseline); FT = FT-L (literature baseline)
+methods: [none, FT, ROME, MEMIT]   # none = unedited model (simple baseline); FT = FT-M (literature baseline)
 seeds: [0, 1, 2]                   # seed -> which 1000 edits and in which order (identical for all methods)
 n_max: 1000                        # length of each sequential edit stream
 milestones: [1, 10, 50, 100, 250, 500, 750, 1000]

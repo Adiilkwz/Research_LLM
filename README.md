@@ -13,13 +13,15 @@ editing code (vendored EasyEdit subset), configuration, run scripts, raw logs an
 | Condition | Role |
 |---|---|
 | `none` — unedited model | simple baseline (no intervention) |
-| `FT` — FT-L, fine-tuning of one MLP layer on the edit (Meng et al., 2022; L∞-constrained for GPT2-XL as in EasyEdit's defaults) | common literature baseline |
+| `FT` — FT-M, fine-tuning of one MLP layer with the loss on every target token (Zhang et al., 2024; L∞-constrained for GPT2-XL as in EasyEdit's defaults) | common literature baseline |
 | `ROME` — rank-one model editing (Meng et al., 2022) | editing method under study |
 | `MEMIT` — mass-editing memory in a transformer (Meng et al., 2023) | editing method under study |
 
 Models: **GPT2-XL** (1.5B, fp32) and **Llama-3.2-3B** (fp16, `unsloth/Llama-3.2-3B`, identical weights to
 `meta-llama/Llama-3.2-3B`). Every method edits the **same** stream of 1,000 counterfactual facts (per seed, 3 seeds)
-one after another. Hyper-parameters are EasyEdit's published defaults (`configs/hparams/`), none were tuned.
+one after another. Hyper-parameters are EasyEdit's published defaults (`configs/hparams/`), none were tuned, with two
+changes fixed on the dev split before any test run: ROME uses the covariance adjustment of the original paper
+(`mom2_adjustment: true`), and the fine-tuning baseline uses the FT-M objective (`target_new`).
 
 ## Metrics
 
@@ -28,9 +30,9 @@ one after another. Hyper-parameters are EasyEdit's published defaults (`configs/
 | **ERS (primary)** | harmonic mean of ER and LOC at N = n_max | milestones |
 | Efficacy | edited fact produced right after its edit | after every edit |
 | Portability | RippleEdits ripple tests: two-hop (Compositionality I/II), inverse relation & other logical (Logical Generalization), subject aliasing | after every edit |
-| Relation specificity | other facts about the edited subject (RippleEdits Relation_Specificity) whose prediction is unchanged vs. the unedited model; secondary: known facts still correct | after every edit |
+| Relation specificity | other facts about the edited subject (RippleEdits Relation_Specificity): share of answer tokens whose prediction is unchanged vs. the unedited model; secondary: known facts still correct | after every edit |
 | ER — edit retention | share of all edits so far still produced | milestones 1, 10, 50, 100, 250, 500, 750, 1000 |
-| LOC — locality | share of 500 untouched held-out facts whose prediction is unchanged vs. the unedited model (EasyEdit; Yao et al., 2023); 1 − LOC = side-effect distortion rate; secondary LOC_known: facts known before editing still correct | milestones |
+| LOC — locality | mean over 500 untouched held-out facts of the share of answer tokens whose argmax prediction is unchanged vs. the unedited model (EasyEdit locality; Yao et al., 2023); 1 − LOC = side-effect distortion rate; secondary LOC_known: facts known before editing still correct | milestones |
 | PPL | perplexity on 100 wikitext-103 test paragraphs | milestones |
 
 Predictions are compared on the gold-answer positions under teacher forcing (argmax token ids). A query counts as correct when, under teacher forcing, the model's argmax token equals the gold token at every
@@ -85,7 +87,9 @@ session run two job queues in parallel.
 ## Changes to third-party code
 
 `third_party/easyeditor/models/ft/ft_main.py`, *patch 1*: target strings are tokenised with
-`add_special_tokens=False`, as ROME and MEMIT already do. Without it, FT-L on Llama trains towards the BOS token.
+`add_special_tokens=False`, as ROME and MEMIT already do. Without it, FT on Llama trains towards the BOS token.
+`third_party/easyeditor/models/rome/compute_u.py`, *patch 2*: the inverse-covariance product is computed in fp32
+(entries of C⁻¹ can exceed the fp16 range on the fp16 Llama model); no effect on the fp32 GPT2-XL model.
 For FT on the fp16 model, the trained layer is kept in fp32 (`src/editors.py::_fp32_island`), because Adam updates
 underflow in fp16.
 

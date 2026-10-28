@@ -24,7 +24,8 @@ import torch
 import transformers
 
 from common import (Timer, append_jsonl, greedy_generate, load_config, load_model, perplexity, ppl_passages,
-                    predict_pairs, read_jsonl, results_dir, score_queries, set_seed, test_passes, write_json, ROOT)
+                    predict_pairs, read_jsonl, results_dir, score_queries, set_seed, test_passes, token_agreement,
+                    write_json, ROOT)
 from editors import Editor, load_hparams
 
 
@@ -68,7 +69,7 @@ class Evaluator:
         for ti, t in enumerate(e["rel_spec"]):
             r = [by[("rs", ti, qi)] for qi in range(len(t["queries"]))]
             rec["rs"].append({"ti": ti,
-                              "agree": int(rs_pred[ti] == pf["rs_pre_pred"][ti]),   # prediction unchanged (primary)
+                              "agree": token_agreement(rs_pred[ti], pf["rs_pre_pred"][ti]),  # share of tokens unchanged
                               "known": pf["rs_valid"][ti],                          # known before the edit
                               "pass": test_passes(r, t["condition_mode"])})         # still correct
         return rec
@@ -79,10 +80,10 @@ class Evaluator:
         return [r["em"] for r in res], [r["tok_acc"] for r in res]
 
     def locality(self):
-        """Returns (agree, em): agree = argmax prediction identical to the unedited model's (LOC);
-        em = gold answer still produced (used for the secondary known-fact locality)."""
+        """Returns (agree, em): agree = share of answer tokens whose argmax prediction is unchanged vs. the unedited
+        model (EasyEdit locality; LOC = mean over probes); em = gold answer still produced (secondary LOC_known)."""
         pred = predict_pairs(self.model, self.tok, [(p["prompt"], p["answers"][0]) for p in self.probes], self.bs, self.mat)
-        agree = [int(a == b) for a, b in zip(pred, self.pf["locality"]["pre_pred"])]
+        agree = [round(token_agreement(a, b), 4) for a, b in zip(pred, self.pf["locality"]["pre_pred"])]
         em = [r["em"] for r in score_queries(self.model, self.tok, self.probes, self.bs, self.mat)]
         return agree, em
 
@@ -248,7 +249,7 @@ def main():
                 if i == n_max and editor:
                     k = cfg["failure_samples"]
                     for kind, vec, items in (("retention", er, stream[:i]), ("locality", loc, probes)):
-                        fails = [j for j, v in enumerate(vec) if not v]
+                        fails = [j for j, v in enumerate(vec) if v < 1]
                         for j in sorted(rng.choice(fails, size=min(k, len(fails)), replace=False).tolist()) if fails else []:
                             it = items[j]
                             append_jsonl(fail_path, {

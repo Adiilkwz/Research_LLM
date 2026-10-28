@@ -1,11 +1,12 @@
-"""Thin wrappers around the vendored EasyEdit implementations of FT-L, ROME and MEMIT.
+"""Thin wrappers around the vendored EasyEdit implementations of FT-M, ROME and MEMIT.
 
 Algorithm hyper-parameters are EasyEdit's published defaults (configs/hparams/<model>/<METHOD>.yaml,
-copied unchanged from EasyEdit commit 4c10987). The ONLY overrides applied here are:
+copied from EasyEdit commit 4c10987) with two changes fixed on the dev split before any test run:
+ROME mom2_adjustment: true (as in the original ROME paper) and FT objective_optimization: target_new (FT-M).
+The overrides applied here are only:
   * model_name / device           -> where the model lives (no effect on the algorithm)
-  * stats_dir, mom2_dataset, mom2_n_samples (ROME, MEMIT) -> covariance statistics are pre-computed
-    on wikitext-103 by src/compute_cov.py (see protocol deviation D4). ROME's defaults use
-    mom2_adjustment=false, so only MEMIT actually reads these statistics.
+  * stats_dir, mom2_dataset, mom2_n_samples (ROME, MEMIT) -> key covariance statistics are pre-computed
+    on wikitext-103 by src/compute_cov.py (see protocol deviation D4).
 """
 import contextlib
 import os

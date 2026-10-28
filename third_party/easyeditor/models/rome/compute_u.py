@@ -120,8 +120,9 @@ def compute_u(
             hparams.mom2_n_samples,
             hparams.mom2_dtype,
             hparams=hparams,
-        ).to(device=u.device, dtype=u.dtype)
-        u = inv_cov @ u.unsqueeze(1)
-        u = u.squeeze()
+        ).to(device=u.device, dtype=torch.float32)
+        # [ke-seq patch 2] multiply in fp32: entries of C^-1 can exceed the fp16 range (65504) on fp16 models
+        u = (inv_cov @ u.float().unsqueeze(1)).squeeze()
+        return (u / u.norm()).to(cur_repr.dtype)
 
     return u / u.norm()

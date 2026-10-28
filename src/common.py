@@ -146,6 +146,12 @@ def predict_pairs(model, tok, pairs, batch_size=32, max_answer_tokens=16):
     return [r["pred"] for r in score_pairs(model, tok, pairs, batch_size, max_answer_tokens)]
 
 
+def token_agreement(pred, pre_pred):
+    """EasyEdit locality: fraction of answer positions whose argmax token is unchanged vs. the unedited model."""
+    n = max(len(pred), len(pre_pred), 1)
+    return sum(int(a == b) for a, b in zip(pred, pre_pred)) / n
+
+
 def test_passes(query_results, mode="OR"):
     ems = [r["em"] for r in query_results]
     return int(any(ems)) if mode == "OR" else int(all(ems))
