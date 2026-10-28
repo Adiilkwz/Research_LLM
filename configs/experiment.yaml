@@ -20,9 +20,10 @@ methods: [none, FT, ROME, MEMIT]   # none = unedited model (simple baseline); FT
 seeds: [0, 1, 2]                   # seed -> which 1000 edits and in which order (identical for all methods)
 n_max: 1000                        # length of each sequential edit stream
 milestones: [1, 10, 50, 100, 250, 500, 750, 1000]
+ckpt_every: 50                     # save edited weights + progress every 50 edits (resume point; no evaluation)
 n_single: 100                      # isolated single-edit runs (edit -> evaluate -> restore), seed 0 only
 
-locality_probes: 500               # fixed global set of untouched facts known by the unedited model
+locality_probes: 500               # first 500 facts of locality_pool.jsonl (same for every model)
 max_answer_tokens: 16
 ppl_passages: 100                  # wikitext-103 test paragraphs for perplexity
 ppl_max_tokens: 128

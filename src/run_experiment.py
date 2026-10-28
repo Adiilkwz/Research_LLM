@@ -255,6 +255,7 @@ def main():
                                 "kind": kind, "i": i, "outcome": "fail", "index": j, "case_id": it.get("case_id", it.get("probe_id")),
                                 "prompt": it["prompt"], "gold": [it["target_new"]] if kind == "retention" else it["answers"],
                                 "target_true": it.get("target_true"), "generation": greedy_generate(model, tok, it["prompt"])})
+            if i in milestones or i % int(cfg.get("ckpt_every", 50)) == 0:
                 if editor:
                     torch.save({"done": i, "state": editor.state(), "templates": Editor.template_caches()}, ckpt_path + ".tmp")
                     os.replace(ckpt_path + ".tmp", ckpt_path)  # atomic: a kill never leaves a half-written checkpoint
