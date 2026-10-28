@@ -244,7 +244,7 @@ def main():
                         for j in sorted(rng.choice(fails, size=min(k, len(fails)), replace=False).tolist()) if fails else []:
                             it = items[j]
                             append_jsonl(fail_path, {
-                                "kind": kind, "outcome": "fail", "index": j, "case_id": it.get("case_id", it.get("probe_id")),
+                                "kind": kind, "i": i, "outcome": "fail", "index": j, "case_id": it.get("case_id", it.get("probe_id")),
                                 "prompt": it["prompt"], "gold": [it["target_new"]] if kind == "retention" else it["answers"],
                                 "target_true": it.get("target_true"), "generation": greedy_generate(model, tok, it["prompt"])})
                 if editor:

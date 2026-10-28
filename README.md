@@ -79,7 +79,7 @@ python src/analyze.py                               # -> results/analysis/main_r
 Only the analysis step is needed to regenerate the tables and figures from the committed raw logs:
 `python src/analyze.py` (CPU, < 1 min).
 
-On Kaggle use `notebooks/kaggle_runner.ipynb` (instructions inside). One model per account; the two GPUs of a
+On Kaggle use `notebooks/kaggle_runner.ipynb` (instructions inside; modes pilot / main / analysis, setup runs automatically). One model per account; the two GPUs of a
 session run two job queues in parallel.
 
 ## Changes to third-party code

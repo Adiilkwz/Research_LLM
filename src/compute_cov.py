@@ -31,6 +31,7 @@ def main():
     set_seed(ccfg["seed"])
 
     model, tok = load_model(cfg, args.model)
+    tok.padding_side = "right"
     hp = load_hparams(cfg, args.model, "MEMIT")
     layer_names = [hp.rewrite_module_tmp.format(l) for l in hp.layers]
     targets = {ln: stats_file(cfg, model, ln) for ln in layer_names}
