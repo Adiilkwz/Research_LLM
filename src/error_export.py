@@ -54,11 +54,13 @@ def auto_label(row, stream_targets):
         if any(contains(g, t) for t in stream_targets if t not in row["gold"]):
             return "overwritten_by_other_edit_target"
         return "other_wrong_answer"
-    # locality
-    if gold_hit:
-        return "measurement_artifact_gold_in_generation"
-    if any(contains(g, t) for t in stream_targets):
+    # locality: the teacher-forced prediction changed relative to the unedited model
+    if any(contains(g, t) for t in stream_targets) and not any(contains(row.get("pre_generation", ""), t) for t in stream_targets):
         return "contaminated_by_edited_object"
+    if row.get("pre_generation") is not None and norm(g) == norm(row["pre_generation"]):
+        return "minor_change_same_greedy_output"
+    if gold_hit and not any(contains(row.get("pre_generation", ""), a) for a in row["gold"]):
+        return "changed_now_correct"
     return "drift_to_other_answer"
 
 
@@ -92,7 +94,7 @@ def main():
         model, tok = load_model(cfg, args.model)
         cache = {}
         for r in rows:
-            if r["kind"] == "portability":
+            if r["kind"] in ("portability", "locality"):
                 if r["prompt"] not in cache:
                     cache[r["prompt"]] = greedy_generate(model, tok, r["prompt"])
                 r["pre_generation"] = cache[r["prompt"]]

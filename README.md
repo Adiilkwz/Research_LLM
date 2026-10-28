@@ -28,12 +28,12 @@ one after another. Hyper-parameters are EasyEdit's published defaults (`configs/
 | **ERS (primary)** | harmonic mean of ER and LOC at N = n_max | milestones |
 | Efficacy | edited fact produced right after its edit | after every edit |
 | Portability | RippleEdits ripple tests: two-hop (Compositionality I/II), inverse relation & other logical (Logical Generalization), subject aliasing | after every edit |
-| Relation specificity | other, previously known facts about the edited subject still correct | after every edit |
+| Relation specificity | other facts about the edited subject (RippleEdits Relation_Specificity) whose prediction is unchanged vs. the unedited model; secondary: known facts still correct | after every edit |
 | ER — edit retention | share of all edits so far still produced | milestones 1, 10, 50, 100, 250, 500, 750, 1000 |
-| LOC — locality | share of 500 untouched facts (known before editing) still correct; 1 − LOC = side-effect distortion rate | milestones |
+| LOC — locality | share of 500 untouched held-out facts whose prediction is unchanged vs. the unedited model (EasyEdit; Yao et al., 2023); 1 − LOC = side-effect distortion rate; secondary LOC_known: facts known before editing still correct | milestones |
 | PPL | perplexity on 100 wikitext-103 test paragraphs | milestones |
 
-A query counts as correct when, under teacher forcing, the model's argmax token equals the gold token at every
+Predictions are compared on the gold-answer positions under teacher forcing (argmax token ids). A query counts as correct when, under teacher forcing, the model's argmax token equals the gold token at every
 position of the gold answer or of one of its aliases (exact match; EasyEdit's `decoder_only_teacher_forcing`).
 
 ## Repository structure

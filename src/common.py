@@ -84,10 +84,11 @@ def model_device(model):
 def score_pairs(model, tok, pairs, batch_size=32, max_answer_tokens=16):
     """Score (prompt, answer) pairs with teacher forcing.
 
-    Returns a list of dicts {em, tok_acc, logp}:
+    Returns a list of dicts {em, tok_acc, logp, pred}:
       em      1 if the greedy (argmax) token equals the answer token at EVERY answer position
       tok_acc fraction of answer tokens predicted correctly (EasyEdit's token_accuracy protocol)
       logp    mean log-probability of the answer tokens
+      pred    argmax token ids at the answer positions (compared with the unedited model for locality)
     """
     if not pairs:
         return []
@@ -119,7 +120,7 @@ def score_pairs(model, tok, pairs, batch_size=32, max_answer_tokens=16):
             correct = (pred == tgt)
             lp = torch.log_softmax(lg, -1).gather(-1, tgt[:, None]).squeeze(-1)
             out[i] = {"em": int(correct.all().item()), "tok_acc": float(correct.float().mean().item()),
-                      "logp": float(lp.mean().item())}
+                      "logp": float(lp.mean().item()), "pred": pred.tolist()}
         del logits
     return out
 
@@ -138,6 +139,11 @@ def score_queries(model, tok, queries, batch_size=32, max_answer_tokens=16):
         b["tok_acc"] = max(b["tok_acc"], r["tok_acc"])
         b["logp"] = max(b["logp"], r["logp"])
     return best
+
+
+def predict_pairs(model, tok, pairs, batch_size=32, max_answer_tokens=16):
+    """Argmax token ids at the answer positions (teacher forcing) for each (prompt, answer) pair."""
+    return [r["pred"] for r in score_pairs(model, tok, pairs, batch_size, max_answer_tokens)]
 
 
 def test_passes(query_results, mode="OR"):

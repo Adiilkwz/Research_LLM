@@ -24,7 +24,7 @@ import torch
 import transformers
 
 from common import (Timer, append_jsonl, greedy_generate, load_config, load_model, perplexity, ppl_passages,
-                    read_jsonl, results_dir, score_queries, set_seed, test_passes, write_json, ROOT)
+                    predict_pairs, read_jsonl, results_dir, score_queries, set_seed, test_passes, write_json, ROOT)
 from editors import Editor, load_hparams
 
 
@@ -51,11 +51,12 @@ class Evaluator:
                 for qi, q in enumerate(t["queries"]):
                     qs.append(q); tags.append(("port", ti, qi))
         for ti, t in enumerate(e["rel_spec"]):
-            if pf["rs_valid"][ti]:
-                for qi, q in enumerate(t["queries"]):
-                    qs.append(q); tags.append(("rs", ti, qi))
+            for qi, q in enumerate(t["queries"]):
+                qs.append(q); tags.append(("rs", ti, qi))
         res = score_queries(self.model, self.tok, qs, self.bs, self.mat)
         by = dict(zip(tags, res))
+        rs_pred = predict_pairs(self.model, self.tok, [(t["queries"][0]["prompt"], t["queries"][0]["answers"][0])
+                                                       for t in e["rel_spec"]], self.bs, self.mat)
         rec = {"eff_em": by[("eff",)]["em"], "eff_tok_acc": by[("eff",)]["tok_acc"], "eff_logp": by[("eff",)]["logp"],
                "true_em": by[("true",)]["em"], "port": [], "rs": []}
         for ti, t in enumerate(e["portability"]):
@@ -65,9 +66,11 @@ class Evaluator:
                                     "pass": test_passes(r, t["condition_mode"]), "pre": pf["port_pre"][ti],
                                     "tok_acc": max(x["tok_acc"] for x in r)})
         for ti, t in enumerate(e["rel_spec"]):
-            if pf["rs_valid"][ti]:
-                r = [by[("rs", ti, qi)] for qi in range(len(t["queries"]))]
-                rec["rs"].append({"ti": ti, "pass": test_passes(r, t["condition_mode"])})
+            r = [by[("rs", ti, qi)] for qi in range(len(t["queries"]))]
+            rec["rs"].append({"ti": ti,
+                              "agree": int(rs_pred[ti] == pf["rs_pre_pred"][ti]),   # prediction unchanged (primary)
+                              "known": pf["rs_valid"][ti],                          # known before the edit
+                              "pass": test_passes(r, t["condition_mode"])})         # still correct
         return rec
 
     def retention(self, edits):
@@ -76,7 +79,12 @@ class Evaluator:
         return [r["em"] for r in res], [r["tok_acc"] for r in res]
 
     def locality(self):
-        return [r["em"] for r in score_queries(self.model, self.tok, self.probes, self.bs, self.mat)]
+        """Returns (agree, em): agree = argmax prediction identical to the unedited model's (LOC);
+        em = gold answer still produced (used for the secondary known-fact locality)."""
+        pred = predict_pairs(self.model, self.tok, [(p["prompt"], p["answers"][0]) for p in self.probes], self.bs, self.mat)
+        agree = [int(a == b) for a, b in zip(pred, self.pf["locality"]["pre_pred"])]
+        em = [r["em"] for r in score_queries(self.model, self.tok, self.probes, self.bs, self.mat)]
+        return agree, em
 
     def ppl(self):
         return perplexity(self.model, self.tok, self.passages, self.ppl_max)
@@ -176,11 +184,11 @@ def main():
             finite = editor.weights_finite() if editor else True
             with Timer() as tv:
                 rec = ev.immediate(e)
-                loc = ev.locality()
+                loc, loc_em = ev.locality()
             if editor:
                 editor.restore(orig)
             rec.update({"i": i, "case_id": e["case_id"], "edit_s": round(te.s, 3), "eval_s": round(tv.s, 3),
-                        "finite": int(finite), "loc": loc, "edit_error": err})
+                        "finite": int(finite), "loc": loc, "loc_em": loc_em, "edit_error": err})
             append_jsonl(edits_path, rec)
             write_json(progress_path, {"done": i})
             print(f"[single {args.model} {args.method}] {i}/{n_max} eff={rec['eff_em']} "
@@ -230,9 +238,9 @@ def main():
             if i in milestones:
                 with Timer() as tm:
                     er, er_acc = ev.retention(stream[:i])
-                    loc = ev.locality()
+                    loc, loc_em = ev.locality()
                     ppl = ev.ppl()
-                ms = {"n": i, "er": er, "er_tok_acc_mean": float(np.mean(er_acc)), "loc": loc, "ppl": ppl,
+                ms = {"n": i, "er": er, "er_tok_acc_mean": float(np.mean(er_acc)), "loc": loc, "loc_em": loc_em, "ppl": ppl,
                       "ER": float(np.mean(er)), "LOC": float(np.mean(loc)), "eval_s": round(tm.s, 1)}
                 append_jsonl(ms_path, ms)
                 print(f"[{args.model} {args.method} s{args.seed}] N={i} ER={ms['ER']:.3f} LOC={ms['LOC']:.3f} "

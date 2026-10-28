@@ -149,13 +149,18 @@ def main():
                 ms = r["ms"][n_end]
                 eff = [e["eff_em"] for e in r["edits"]]
                 port_all = [p["pass"] for e in r["edits"] for p in e["port"]]
-                rs = [x["pass"] for e in r["edits"] for x in e["rs"]]
+                rs = [x["agree"] for e in r["edits"] for x in e["rs"]]                       # prediction unchanged
+                rs_known = [x["pass"] for e in r["edits"] for x in e["rs"] if x["known"]]   # known fact still correct
+                pre_em = pf["locality"]["pre_em"]
+                loc_known = [v for v, k in zip(ms["loc_em"], pre_em) if k]
                 per_seed["eff"].append(np.mean(eff)); pooled["eff"] += eff
                 per_seed["port"].append(np.mean(port_all) if port_all else np.nan); pooled["port"] += port_all
                 for t in PTYPES:
                     v = [p for e in r["edits"] for p in port_types(e).get(t, [])]
                     per_seed["port_" + t].append(np.mean(v) if v else np.nan); pooled["port_" + t] += v
                 per_seed["rs"].append(np.mean(rs) if rs else np.nan); pooled["rs"] += rs
+                per_seed["rs_known"].append(np.mean(rs_known) if rs_known else np.nan); pooled["rs_known"] += rs_known
+                per_seed["LOC_known"].append(np.mean(loc_known) if loc_known else np.nan); pooled["LOC_known"] += loc_known
                 per_seed["ER"].append(ms["ER"]); pooled["ER"] += ms["er"]
                 per_seed["LOC"].append(ms["LOC"]); pooled["LOC"] += ms["loc"]
                 per_seed["ERS"].append(hm(ms["ER"], ms["LOC"]))
@@ -166,7 +171,7 @@ def main():
                 continue
             row = {"model": model, "method": LABEL[method], "seeds": len(per_seed["ER"]), "N": int(np.min(per_seed["n_end"]))}
             for k in ["ERS", "eff", "port", "port_two_hop", "port_inverse_relation", "port_other_logical", "port_alias",
-                      "rs", "ER", "LOC"]:
+                      "rs", "rs_known", "ER", "LOC", "LOC_known"]:
                 v = np.array(per_seed[k], float)
                 m_, s_ = np.nanmean(v), (np.nanstd(v, ddof=1) if np.sum(~np.isnan(v)) > 1 else np.nan)
                 ci = boot_ci(pooled[k], B // 5, rng) if k in pooled else (np.nan, np.nan)
@@ -303,7 +308,7 @@ def main():
                         groups[("portability", "true_fact_known=" + str(pfe["true_known"]))].append(p["pass"])
                         groups[("portability", "edit_succeeded=" + str(e["eff_em"]))].append(p["pass"])
                     for x in e["rs"]:
-                        groups[("rel_specificity", "all")].append(x["pass"])
+                        groups[("rel_specificity_unchanged", "true_fact_known=" + str(pfe["true_known"]))].append(x["agree"])
                     pos = e["i"]
                     bucket = "1-100" if pos <= 100 else ("101-500" if pos <= 500 else "501+")
                     groups[("efficacy", "stream_position=" + bucket)].append(e["eff_em"])
@@ -323,7 +328,7 @@ def main():
 
         # ---------------- figures -----------------
         fig, axes = plt.subplots(1, 3, figsize=(15, 4.2))
-        for ax, key, ttl in zip(axes, ["ER", "LOC", "PPL"], ["Edit retention (ER)", "Locality on untouched facts (LOC)", "Perplexity (wikitext-103)"]):
+        for ax, key, ttl in zip(axes, ["ER", "LOC", "PPL"], ["Edit retention (ER)", "Locality: untouched predictions unchanged (LOC)", "Perplexity (wikitext-103)"]):
             for method in methods:
                 cr = [c for c in curve_rows if c["model"] == model and c["method"] == method]
                 ns = sorted({c["n"] for c in cr})
@@ -342,7 +347,7 @@ def main():
 
         fig, ax = plt.subplots(figsize=(9, 4.2))
         cats = ["eff", "port_two_hop", "port_inverse_relation", "port_other_logical", "port_alias", "rs"]
-        names = ["Efficacy\n(immediate)", "Two-hop", "Inverse\nrelation", "Other\nlogical", "Subject\nalias", "Relation\nspecificity"]
+        names = ["Efficacy\n(immediate)", "Two-hop", "Inverse\nrelation", "Other\nlogical", "Subject\nalias", "Relation specif.\n(unchanged)"]
         w = 0.8 / max(len(methods), 1)
         for j, method in enumerate(methods):
             vals = [numbers[model].get(method, {}).get(c, {}).get("mean", np.nan) * 100 for c in cats]
@@ -404,7 +409,7 @@ def main():
     # markdown version of the main table
     if main_rows:
         cols = ["model", "method", "seeds", "N", "ERS", "eff", "port", "port_two_hop", "port_inverse_relation",
-                "port_alias", "rs", "ER", "LOC", "PPL"]
+                "port_alias", "rs", "rs_known", "ER", "LOC", "LOC_known", "PPL"]
         with open(os.path.join(out_dir, "main_results.md"), "w") as f:
             f.write("| " + " | ".join(cols) + " |\n|" + "---|" * len(cols) + "\n")
             for r in main_rows:
