@@ -1,0 +1,16 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/580 [00:00<?, ?it/s]Loading weights:  52%|█████▏    | 302/580 [00:00<00:00, 3017.61it/s]Loading weights: 100%|██████████| 580/580 [00:00<00:00, 3100.32it/s]
+  0%|          | 0/200 [00:00<?, ?it/s]  0%|          | 0/200 [00:00<?, ?it/s]
+[gpt2-xl ROME s2] N=1 ER=1.000 LOC=0.991 PPL=33.11 last_edit=20.4s
+[gpt2-xl ROME s2] N=10 ER=1.000 LOC=0.949 PPL=33.11 last_edit=21.5s
+[gpt2-xl ROME s2] N=50 ER=0.960 LOC=0.714 PPL=33.37 last_edit=24.4s
+[gpt2-xl ROME s2] N=100 ER=0.860 LOC=0.524 PPL=34.13 last_edit=13.1s
+[gpt2-xl ROME s2] N=250 ER=0.680 LOC=0.326 PPL=37.27 last_edit=16.0s
+[gpt2-xl ROME s2] N=500 ER=0.576 LOC=0.243 PPL=42.00 last_edit=2.5s
+[gpt2-xl ROME s2] N=750 ER=0.371 LOC=0.233 PPL=42.53 last_edit=12.0s
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/580 [00:00<?, ?it/s]Loading weights:  41%|████      | 236/580 [00:00<00:00, 2349.32it/s]Loading weights:  81%|████████  | 471/580 [00:00<00:00, 2326.70it/s]Loading weights: 100%|██████████| 580/580 [00:00<00:00, 2494.88it/s]
+Resuming /kaggle/working/ke-seq/results/gpt2-xl/seq/ROME_seed2 after edit 850
+  0%|          | 0/200 [00:00<?, ?it/s]  0%|          | 0/200 [00:00<?, ?it/s]
+[gpt2-xl ROME s2] N=1000 ER=0.225 LOC=0.170 PPL=47.48 last_edit=20.5s
+DONE /kaggle/working/ke-seq/results/gpt2-xl/seq/ROME_seed2 {'status': 'completed', 'n_done': 1000, 'peak_gpu_mem_gb': 12.02, 'mean_edit_s': 14.097}

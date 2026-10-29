@@ -1,0 +1,11 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/580 [00:00<?, ?it/s]Loading weights:  46%|████▌     | 264/580 [00:00<00:00, 2635.71it/s]Loading weights:  91%|█████████ | 528/580 [00:00<00:00, 2591.05it/s]Loading weights: 100%|██████████| 580/580 [00:00<00:00, 2642.71it/s]
+[gpt2-xl none s2] N=1 ER=0.000 LOC=1.000 PPL=33.11 last_edit=0.0s
+[gpt2-xl none s2] N=10 ER=0.000 LOC=1.000 PPL=33.11 last_edit=0.0s
+[gpt2-xl none s2] N=50 ER=0.020 LOC=1.000 PPL=33.11 last_edit=0.0s
+[gpt2-xl none s2] N=100 ER=0.010 LOC=1.000 PPL=33.11 last_edit=0.0s
+[gpt2-xl none s2] N=250 ER=0.004 LOC=1.000 PPL=33.11 last_edit=0.0s
+[gpt2-xl none s2] N=500 ER=0.004 LOC=1.000 PPL=33.11 last_edit=0.0s
+[gpt2-xl none s2] N=750 ER=0.003 LOC=1.000 PPL=33.11 last_edit=0.0s
+[gpt2-xl none s2] N=1000 ER=0.003 LOC=1.000 PPL=33.11 last_edit=0.0s
+DONE /kaggle/working/ke-seq/results/gpt2-xl/seq/none_seed2 {'status': 'completed', 'n_done': 1000, 'peak_gpu_mem_gb': 7.43, 'mean_edit_s': 0.0}

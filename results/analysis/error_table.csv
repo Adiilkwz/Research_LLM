@@ -1,0 +1,33 @@
+scope,error_type,count,pct_of_errors,by_kind,by_method,example
+gpt2-xl,degenerate_output,18,42.9,locality 6; portability 5; retention 7,FT-M 7; MEMIT 5; ROME 6,"E01 gpt2-xl FT-M: 'The gender of Jose Oscar Barahona Castillo is' -> ',,,,,,,,, among within the' (gold: travesti | travestility | travestism | t)"
+gpt2-xl,interference_from_other_edits,8,19.0,locality 4; retention 4,FT-M 6; MEMIT 2,"E19 gpt2-xl FT-M: 'The gender of Digby Pilot Starkey is' -> 'X-gender female organism,gender female organism,gender femal' (gold: takatāpui)"
+gpt2-xl,unedited_behaviour,6,14.3,portability 6,MEMIT 2; ROME 4,E07 gpt2-xl ROME: 'The name of the mother of the director of Argo is' -> 'the same as the mother of the actress who played the mother' (gold: Consuelo Duval | María del Consuelo Duss)
+gpt2-xl,wrong_entity,5,11.9,locality 2; portability 3,MEMIT 2; ROME 3,"E08 gpt2-xl ROME: 'The place of birth of Barend Kalraat is' -> 'Hanoi, Vietnam. He is a native of H' (gold: Blooming Grove | Blooming Grove, Indiana)"
+gpt2-xl,partial_propagation,2,4.8,portability 2,FT-M 1; MEMIT 1,"E02 gpt2-xl FT-M: 'The name of the capital city of the country Balussery West is associated with is' -> 'Bologna
+
+Republic of Bulgaria
+
+Head of' (gold: Sofia | Serdica | Sredets | Sredez)"
+gpt2-xl,partial_target,2,4.8,portability 1; retention 1,MEMIT 1; ROME 1,E14 gpt2-xl MEMIT: 'The occupation of Anna V. Eskamani is' -> 'Moroccan Moroccan. Moroccan is a Moroccan-Moroccan.' (gold: Moroccan Wali | Wali)
+gpt2-xl,no_second_hop,1,2.4,portability 1,MEMIT 1,"E17 gpt2-xl MEMIT: 'The official language of the country Kwanzaa is associated with is' -> 'Bogor, Indonesia.
+
+The official language of the' (gold: Mongolian | Mongolian language | mn | Mo)"
+llama3.2-3b,degenerate_output,24,57.1,locality 8; portability 9; retention 7,MEMIT 14; ROME 10,E50 llama3.2-3b ROME: 'The name of the child of Lorna May Graham is' -> 'ananary Wet Wet Wet Wet Wet Wet Wet Wet Wet' (gold: Hilary Davan Wetton | Hilary John Davan )
+llama3.2-3b,interference_from_other_edits,7,16.7,locality 4; portability 1; retention 2,FT-M 6; ROME 1,"E47 llama3.2-3b FT-M: 'The name of the mother of the director of Gone Baby Gone is' -> 'Dolores Gage, 1st Baron Gage of' (gold: Consuelo Duval | María del Consuelo Duss)"
+llama3.2-3b,no_second_hop,6,14.3,portability 6,FT-M 5; ROME 1,"E43 llama3.2-3b FT-M: 'The official language of the place of birth of Abdulaziz Abo Shaqraa is' -> 'Pirkkala, Finland (Pirkkala,' (gold: Finnish | Finnish language | fi | Suomi)"
+llama3.2-3b,partial_target,3,7.1,retention 3,FT-M 3,E61 llama3.2-3b FT-M: 'The name of the country which Skywalk Cinemas is associated with is' -> 'Ambazononsky Kingdom of the Philippines and its capital of' (gold: Ambazonia)
+llama3.2-3b,unedited_behaviour,2,4.8,portability 2,ROME 2,"E49 llama3.2-3b ROME: '20302 Kevinwang is followed by' -> '1 user and is not followed by anyone.
+20303' (gold: 901-902 one-year-period | 901/902 season)"
+both,degenerate_output,42,50.0,locality 14; portability 14; retention 14,FT-M 7; MEMIT 19; ROME 16,"E01 gpt2-xl FT-M: 'The gender of Jose Oscar Barahona Castillo is' -> ',,,,,,,,, among within the' (gold: travesti | travestility | travestism | t)"
+both,interference_from_other_edits,15,17.9,locality 8; portability 1; retention 6,FT-M 12; MEMIT 2; ROME 1,"E19 gpt2-xl FT-M: 'The gender of Digby Pilot Starkey is' -> 'X-gender female organism,gender female organism,gender femal' (gold: takatāpui)"
+both,unedited_behaviour,8,9.5,portability 8,MEMIT 2; ROME 6,E07 gpt2-xl ROME: 'The name of the mother of the director of Argo is' -> 'the same as the mother of the actress who played the mother' (gold: Consuelo Duval | María del Consuelo Duss)
+both,no_second_hop,7,8.3,portability 7,FT-M 5; MEMIT 1; ROME 1,"E17 gpt2-xl MEMIT: 'The official language of the country Kwanzaa is associated with is' -> 'Bogor, Indonesia.
+
+The official language of the' (gold: Mongolian | Mongolian language | mn | Mo)"
+both,wrong_entity,5,6.0,locality 2; portability 3,MEMIT 2; ROME 3,"E08 gpt2-xl ROME: 'The place of birth of Barend Kalraat is' -> 'Hanoi, Vietnam. He is a native of H' (gold: Blooming Grove | Blooming Grove, Indiana)"
+both,partial_target,5,6.0,portability 1; retention 4,FT-M 3; MEMIT 1; ROME 1,E14 gpt2-xl MEMIT: 'The occupation of Anna V. Eskamani is' -> 'Moroccan Moroccan. Moroccan is a Moroccan-Moroccan.' (gold: Moroccan Wali | Wali)
+both,partial_propagation,2,2.4,portability 2,FT-M 1; MEMIT 1,"E02 gpt2-xl FT-M: 'The name of the capital city of the country Balussery West is associated with is' -> 'Bologna
+
+Republic of Bulgaria
+
+Head of' (gold: Sofia | Serdica | Sredets | Sredez)"

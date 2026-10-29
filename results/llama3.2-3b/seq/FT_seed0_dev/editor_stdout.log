@@ -1,0 +1,135 @@
+Executing FT algo for: [The name of the country which Blaxhall is associated with is] -> [ Nizari Ismaili state]
+Weights to be updated: ['model.layers.21.mlp.down_proj.weight']
+====================
+Epoch: 0
+====================
+Batch loss 3.771484375
+Total loss 3.771484375
+====================
+Epoch: 1
+====================
+Batch loss 0.468505859375
+Total loss 0.468505859375
+====================
+Epoch: 2
+====================
+Batch loss 0.06939697265625
+Total loss 0.06939697265625
+====================
+Epoch: 3
+====================
+Batch loss 0.0638427734375
+Total loss 0.0638427734375
+====================
+Epoch: 4
+====================
+Batch loss 0.0121002197265625
+Total loss 0.0121002197265625
+====================
+Epoch: 5
+====================
+Batch loss 0.00502777099609375
+Total loss 0.00502777099609375
+Deltas successfully computed for ['model.layers.21.mlp.down_proj.weight']
+New weights successfully inserted into ['model.layers.21.mlp.down_proj.weight']
+Executing FT algo for: [The name of the father of Hugh Pryce is] -> [ Isaac Moody Bingham]
+Weights to be updated: ['model.layers.21.mlp.down_proj.weight']
+====================
+Epoch: 0
+====================
+Batch loss 7.87109375
+Total loss 7.87109375
+====================
+Epoch: 1
+====================
+Batch loss 1.1787109375
+Total loss 1.1787109375
+====================
+Epoch: 2
+====================
+Batch loss 0.1168212890625
+Total loss 0.1168212890625
+====================
+Epoch: 3
+====================
+Batch loss 0.0026950836181640625
+Total loss 0.0026950836181640625
+Deltas successfully computed for ['model.layers.21.mlp.down_proj.weight']
+New weights successfully inserted into ['model.layers.21.mlp.down_proj.weight']
+Executing FT algo for: [The names of the siblings of Robin Williams are] -> [ Krishna Hutheesing]
+Weights to be updated: ['model.layers.21.mlp.down_proj.weight']
+====================
+Epoch: 0
+====================
+Batch loss 5.453125
+Total loss 5.453125
+====================
+Epoch: 1
+====================
+Batch loss 0.294189453125
+Total loss 0.294189453125
+====================
+Epoch: 2
+====================
+Batch loss 0.0011739730834960938
+Total loss 0.0011739730834960938
+Deltas successfully computed for ['model.layers.21.mlp.down_proj.weight']
+New weights successfully inserted into ['model.layers.21.mlp.down_proj.weight']
+Executing FT algo for: [The name of the father of Edward Lowes is] -> [ Peregrine Osborne, 3rd Duke of Leeds]
+Weights to be updated: ['model.layers.21.mlp.down_proj.weight']
+====================
+Epoch: 0
+====================
+Batch loss 2.73828125
+Total loss 2.73828125
+====================
+Epoch: 1
+====================
+Batch loss 0.413330078125
+Total loss 0.413330078125
+====================
+Epoch: 2
+====================
+Batch loss 0.05010986328125
+Total loss 0.05010986328125
+====================
+Epoch: 3
+====================
+Batch loss 0.0193328857421875
+Total loss 0.0193328857421875
+====================
+Epoch: 4
+====================
+Batch loss 0.00914764404296875
+Total loss 0.00914764404296875
+Deltas successfully computed for ['model.layers.21.mlp.down_proj.weight']
+New weights successfully inserted into ['model.layers.21.mlp.down_proj.weight']
+Executing FT algo for: [The occupation of George Gilbert Goodwin is] -> [ software engineering]
+Weights to be updated: ['model.layers.21.mlp.down_proj.weight']
+====================
+Epoch: 0
+====================
+Batch loss 8.3671875
+Total loss 8.3671875
+====================
+Epoch: 1
+====================
+Batch loss 2.0703125
+Total loss 2.0703125
+====================
+Epoch: 2
+====================
+Batch loss 0.34033203125
+Total loss 0.34033203125
+====================
+Epoch: 3
+====================
+Batch loss 0.031768798828125
+Total loss 0.031768798828125
+====================
+Epoch: 4
+====================
+Batch loss 0.007476806640625
+Total loss 0.007476806640625
+Deltas successfully computed for ['model.layers.21.mlp.down_proj.weight']
+New weights successfully inserted into ['model.layers.21.mlp.down_proj.weight']

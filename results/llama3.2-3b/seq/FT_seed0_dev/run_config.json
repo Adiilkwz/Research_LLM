@@ -1,0 +1,53 @@
+{
+  "model": "llama3.2-3b",
+  "method": "FT",
+  "seed": 0,
+  "mode": "seq",
+  "split": "dev",
+  "n_max": 5,
+  "milestones": [
+    1,
+    5
+  ],
+  "hparams": {
+    "layers": [
+      21
+    ],
+    "num_steps": 25,
+    "lr": 0.0005,
+    "weight_decay": 0,
+    "kl_factor": 0,
+    "norm_constraint": false,
+    "rewrite_module_tmp": "model.layers.{}.mlp.down_proj.weight",
+    "layer_module_tmp": "model.layers.{}",
+    "mlp_module_tmp": "model.layers.{}.mlp",
+    "attn_module_tmp": "model.layers.{}.self_attn",
+    "ln_f_module": "model.norm",
+    "lm_head_module": "lm_head",
+    "device": 0,
+    "alg_name": "FT",
+    "model_name": "unsloth/Llama-3.2-3B",
+    "objective_optimization": "target_new",
+    "batch_size": 1,
+    "max_length": 40,
+    "model_parallel": false,
+    "use_chat_template": false,
+    "enable_thinking": null
+  },
+  "env": {
+    "python": "3.13.15",
+    "torch": "2.11.0+cu128",
+    "transformers": "5.5.4",
+    "cuda": "12.8",
+    "platform": "Linux-6.18.55+-x86_64-with-glibc2.39",
+    "gpu": "Tesla T4"
+  },
+  "stream_case_ids": [
+    "random-1720",
+    "random-1848",
+    "popular-734",
+    "random-151",
+    "random-1244"
+  ],
+  "n_locality_probes": 500
+}

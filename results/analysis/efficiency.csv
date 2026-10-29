@@ -1,0 +1,9 @@
+model,method,mean_s_per_edit,hours_per_run,peak_gpu_mem_gb,n_edit_errors,status
+gpt2-xl,No edit,0.0,0.13,7.43,0,completed
+gpt2-xl,FT-M,1.97,0.68,7.48,0,completed
+gpt2-xl,ROME,15.18,4.35,12.26,0,completed
+gpt2-xl,MEMIT,11.62,3.36,8.39,0,completed
+llama3.2-3b,No edit,0.0,0.07,8.01,0,completed
+llama3.2-3b,FT-M,0.24,0.14,8.06,0,completed
+llama3.2-3b,ROME,9.04,2.57,9.82,0,completed
+llama3.2-3b,MEMIT,14.9,4.2,8.98,0,completed

@@ -1,0 +1,29 @@
+{
+  "model": "gpt2-xl",
+  "method": "none",
+  "seed": 0,
+  "mode": "seq",
+  "split": "dev",
+  "n_max": 5,
+  "milestones": [
+    1,
+    5
+  ],
+  "hparams": {},
+  "env": {
+    "python": "3.13.15",
+    "torch": "2.11.0+cu128",
+    "transformers": "5.5.4",
+    "cuda": "12.8",
+    "platform": "Linux-6.18.55+-x86_64-with-glibc2.39",
+    "gpu": "Tesla T4"
+  },
+  "stream_case_ids": [
+    "random-1720",
+    "random-1848",
+    "popular-734",
+    "random-151",
+    "random-1244"
+  ],
+  "n_locality_probes": 500
+}

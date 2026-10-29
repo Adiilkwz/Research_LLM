@@ -1,0 +1,145 @@
+Executing ROME algorithm for the update: [The name of the country which Blaxhall is associated with is] -> [ Nizari Ismaili state]
+Cached context templates ['{}', 'The new 3. {}', 'The 2015. {}', 'Therefore, the question. {}', 'Therefore the LORD will. {}', 'Because of the high. {}', 'Because we are in. {}', 'I was born in. {}', "I'm a huge. {}", 'You are here:. {}', 'You are at:. {}', 'The 2017-2018 school year. {}', 'The first step to creating a new business is. {}', 'Therefore, it is essential for you to have. {}', 'Therefore, it is important to consider how the. {}', 'Because the majority of our clients use the Internet. {}', 'Because of this, you can use a VPN. {}', 'I have always been very interested in the way. {}', 'I was a little late to the party on. {}', 'You are here: Home / Blog / News. {}', 'You are here: Home > Things To Do. {}']
+Computing left vector (u)...
+Selected u projection object Blaxhall
+Retrieving inverse covariance statistics for unsloth_Llama-3.2-3B @ model.layers.5.mlp.down_proj. The result will be cached to avoid repetitive computation.
+Computing Cov locally....
+Loading cached /kaggle/working/ke-seq/data/stats/Llama-3.2-3B/wikitext_stats/model.layers.5.mlp.down_proj_float32_mom2_20000.npz
+Left vector shape: torch.Size([8192])
+Computing right vector (v)
+Lookup index found: 9 | Sentence: The name of the country which Blaxhall is associated with is Nizari Ismaili | Token: hall
+Rewrite layer is 5
+Tying optimization objective to 27
+Recording initial value of v*
+loss 3.892 = 3.892 + 0.0 + 0.0 avg prob of [ Nizari Ismaili state] 0.021234480664134026
+loss 3.313 = 3.218 + 0.095 + 0.001 avg prob of [ Nizari Ismaili state] 0.0407746396958828
+loss 2.674 = 2.609 + 0.064 + 0.001 avg prob of [ Nizari Ismaili state] 0.07451213151216507
+loss 1.916 = 1.828 + 0.087 + 0.001 avg prob of [ Nizari Ismaili state] 0.16176556050777435
+loss 0.815 = 0.719 + 0.095 + 0.001 avg prob of [ Nizari Ismaili state] 0.48773789405822754
+loss 0.548 = 0.316 + 0.231 + 0.001 avg prob of [ Nizari Ismaili state] 0.7304511666297913
+loss 1.081 = 0.853 + 0.227 + 0.001 avg prob of [ Nizari Ismaili state] 0.4327312707901001
+loss 2.074 = 1.897 + 0.176 + 0.001 avg prob of [ Nizari Ismaili state] 0.16961511969566345
+loss 1.693 = 1.557 + 0.135 + 0.001 avg prob of [ Nizari Ismaili state] 0.21650977432727814
+loss 1.239 = 1.137 + 0.101 + 0.001 avg prob of [ Nizari Ismaili state] 0.3296884000301361
+loss 0.456 = 0.355 + 0.101 + 0.001 avg prob of [ Nizari Ismaili state] 0.7111524343490601
+loss 0.18 = 0.103 + 0.077 + 0.001 avg prob of [ Nizari Ismaili state] 0.9029277563095093
+loss 0.159 = 0.081 + 0.077 + 0.001 avg prob of [ Nizari Ismaili state] 0.9222360253334045
+loss 0.144 = 0.065 + 0.078 + 0.001 avg prob of [ Nizari Ismaili state] 0.9373279213905334
+loss 0.111 = 0.042 + 0.068 + 0.001 avg prob of [ Nizari Ismaili state] 0.959125816822052
+loss 0.097 = 0.036 + 0.06 + 0.001 avg prob of [ Nizari Ismaili state] 0.9644156098365784
+loss 0.095 = 0.037 + 0.058 + 0.001 avg prob of [ Nizari Ismaili state] 0.9641461968421936
+loss 0.069 = 0.017 + 0.051 + 0.001 avg prob of [ Nizari Ismaili state] 0.9832449555397034
+loss 0.078 = 0.028 + 0.05 + 0.001 avg prob of [ Nizari Ismaili state] 0.9726533889770508
+loss 0.261 = 0.208 + 0.052 + 0.001 avg prob of [ Nizari Ismaili state] 0.8151017427444458
+loss 1.358 = 1.202 + 0.155 + 0.001 avg prob of [ Nizari Ismaili state] 0.3359695076942444
+loss 1.368 = 1.068 + 0.3 + 0.001 avg prob of [ Nizari Ismaili state] 0.35380202531814575
+loss 0.474 = 0.172 + 0.301 + 0.001 avg prob of [ Nizari Ismaili state] 0.8455596566200256
+loss 0.534 = 0.309 + 0.224 + 0.001 avg prob of [ Nizari Ismaili state] 0.7411831021308899
+loss 1.49 = 1.39 + 0.099 + 0.001 avg prob of [ Nizari Ismaili state] 0.2516018748283386
+Delta norm: 19.078125
+Change in target norm: 4.76953125 to 19.625 => 14.859375
+Division Factor: 3.10546875
+Right vector norm: 6.14453125
+Right vector shape: torch.Size([3072])
+Deltas successfully computed for ['model.layers.5.mlp.down_proj.weight']
+New weights successfully inserted into ['model.layers.5.mlp.down_proj.weight']
+Executing ROME algorithm for the update: [The name of the father of Hugh Pryce is] -> [ Isaac Moody Bingham]
+Computing left vector (u)...
+Selected u projection object Hugh Pryce
+Left vector shape: torch.Size([8192])
+Computing right vector (v)
+Lookup index found: 9 | Sentence: The name of the father of Hugh Pryce is Isaac Moody B | Token: ce
+Rewrite layer is 5
+Tying optimization objective to 27
+Recording initial value of v*
+loss 7.861 = 7.861 + 0.0 + 0.0 avg prob of [ Isaac Moody Bingham] 0.0003947737568523735
+loss 6.608 = 6.59 + 0.017 + 0.001 avg prob of [ Isaac Moody Bingham] 0.0013868865789845586
+loss 5.577 = 5.563 + 0.013 + 0.001 avg prob of [ Isaac Moody Bingham] 0.003891897387802601
+loss 3.143 = 3.125 + 0.016 + 0.001 avg prob of [ Isaac Moody Bingham] 0.0440731905400753
+loss 2.463 = 2.448 + 0.014 + 0.001 avg prob of [ Isaac Moody Bingham] 0.08693770319223404
+loss 1.133 = 1.111 + 0.021 + 0.001 avg prob of [ Isaac Moody Bingham] 0.33109137415885925
+loss 1.385 = 1.332 + 0.052 + 0.001 avg prob of [ Isaac Moody Bingham] 0.2677745223045349
+loss 1.89 = 1.861 + 0.028 + 0.001 avg prob of [ Isaac Moody Bingham] 0.16021133959293365
+loss 0.729 = 0.704 + 0.024 + 0.001 avg prob of [ Isaac Moody Bingham] 0.49733391404151917
+loss 0.31 = 0.285 + 0.024 + 0.001 avg prob of [ Isaac Moody Bingham] 0.7527496218681335
+loss 0.175 = 0.147 + 0.027 + 0.001 avg prob of [ Isaac Moody Bingham] 0.8638231158256531
+loss 0.049 = 0.015 + 0.034 + 0.001 avg prob of [ Isaac Moody Bingham] 0.9856086373329163
+Delta norm: 16.890625
+Change in target norm: 4.22265625 to 17.359375 => 13.140625
+Division Factor: 2.775390625
+Right vector norm: 6.0859375
+Right vector shape: torch.Size([3072])
+Deltas successfully computed for ['model.layers.5.mlp.down_proj.weight']
+New weights successfully inserted into ['model.layers.5.mlp.down_proj.weight']
+Executing ROME algorithm for the update: [The names of the siblings of Robin Williams are] -> [ Krishna Hutheesing]
+Computing left vector (u)...
+Selected u projection object Robin Williams
+Left vector shape: torch.Size([8192])
+Computing right vector (v)
+Lookup index found: 8 | Sentence: The names of the siblings of Robin Williams are Krishna Huthees | Token:  Williams
+Rewrite layer is 5
+Tying optimization objective to 27
+Recording initial value of v*
+loss 5.093 = 5.093 + 0.0 + 0.0 avg prob of [ Krishna Hutheesing] 0.006244387943297625
+loss 3.822 = 3.714 + 0.108 + 0.001 avg prob of [ Krishna Hutheesing] 0.024622267112135887
+loss 3.058 = 3.028 + 0.029 + 0.001 avg prob of [ Krishna Hutheesing] 0.04919316619634628
+loss 1.851 = 1.831 + 0.019 + 0.001 avg prob of [ Krishna Hutheesing] 0.16101929545402527
+loss 0.752 = 0.729 + 0.023 + 0.001 avg prob of [ Krishna Hutheesing] 0.48373523354530334
+loss 0.103 = 0.071 + 0.032 + 0.001 avg prob of [ Krishna Hutheesing] 0.9320490956306458
+loss 0.052 = 0.026 + 0.025 + 0.001 avg prob of [ Krishna Hutheesing] 0.9743037819862366
+loss 0.039 = 0.019 + 0.019 + 0.001 avg prob of [ Krishna Hutheesing] 0.9814382195472717
+Delta norm: 16.25
+Change in target norm: 4.0625 to 16.8125 => 12.75
+Division Factor: 2.798828125
+Right vector norm: 5.8046875
+Right vector shape: torch.Size([3072])
+Deltas successfully computed for ['model.layers.5.mlp.down_proj.weight']
+New weights successfully inserted into ['model.layers.5.mlp.down_proj.weight']
+Executing ROME algorithm for the update: [The name of the father of Edward Lowes is] -> [ Peregrine Osborne, 3rd Duke of Leeds]
+Computing left vector (u)...
+Selected u projection object Edward Lowes
+Left vector shape: torch.Size([8192])
+Computing right vector (v)
+Lookup index found: 9 | Sentence: The name of the father of Edward Lowes is Peregrine Osborne, 3rd Duke of | Token: es
+Rewrite layer is 5
+Tying optimization objective to 27
+Recording initial value of v*
+loss 2.291 = 2.291 + 0.0 + 0.0 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.1019100695848465
+loss 1.932 = 1.806 + 0.124 + 0.001 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.16480101644992828
+loss 1.089 = 1.051 + 0.037 + 0.001 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.3504040539264679
+loss 1.055 = 1.01 + 0.044 + 0.001 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.3654874563217163
+loss 0.861 = 0.824 + 0.037 + 0.001 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.43944051861763
+loss 0.275 = 0.235 + 0.039 + 0.001 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.7916325330734253
+loss 0.075 = 0.031 + 0.043 + 0.001 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.9693810939788818
+loss 0.056 = 0.012 + 0.044 + 0.001 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.9884788393974304
+loss 0.045 = 0.007 + 0.037 + 0.001 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.993196964263916
+Delta norm: 17.28125
+Change in target norm: 4.3203125 to 17.953125 => 13.6328125
+Division Factor: 3.03125
+Right vector norm: 5.69921875
+Right vector shape: torch.Size([3072])
+Deltas successfully computed for ['model.layers.5.mlp.down_proj.weight']
+New weights successfully inserted into ['model.layers.5.mlp.down_proj.weight']
+Executing ROME algorithm for the update: [The occupation of George Gilbert Goodwin is] -> [ software engineering]
+Computing left vector (u)...
+Selected u projection object George Gilbert Goodwin
+Left vector shape: torch.Size([8192])
+Computing right vector (v)
+Lookup index found: 7 | Sentence: The occupation of George Gilbert Goodwin is software | Token: win
+Rewrite layer is 5
+Tying optimization objective to 27
+Recording initial value of v*
+loss 6.966 = 6.966 + 0.0 + 0.0 avg prob of [ software engineering] 0.001487811328843236
+loss 6.176 = 6.104 + 0.071 + 0.001 avg prob of [ software engineering] 0.002891765208914876
+loss 3.708 = 3.636 + 0.07 + 0.001 avg prob of [ software engineering] 0.027143698185682297
+loss 0.975 = 0.887 + 0.087 + 0.001 avg prob of [ software engineering] 0.43111321330070496
+loss 0.231 = 0.048 + 0.181 + 0.001 avg prob of [ software engineering] 0.9532000422477722
+loss 0.062 = 0.03 + 0.032 + 0.001 avg prob of [ software engineering] 0.9709590673446655
+loss 0.034 = 0.005 + 0.028 + 0.001 avg prob of [ software engineering] 0.9946543574333191
+Delta norm: 17.453125
+Change in target norm: 4.36328125 to 17.953125 => 13.59375
+Division Factor: 2.7265625
+Right vector norm: 6.40234375
+Right vector shape: torch.Size([3072])
+Deltas successfully computed for ['model.layers.5.mlp.down_proj.weight']
+New weights successfully inserted into ['model.layers.5.mlp.down_proj.weight']

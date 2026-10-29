@@ -1,0 +1,11 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/254 [00:00<?, ?it/s]Loading weights:   0%|          | 1/254 [00:01<05:14,  1.24s/it]Loading weights:  37%|███▋      | 93/254 [00:01<00:01, 94.94it/s]Loading weights:  57%|█████▋    | 145/254 [00:01<00:01, 97.54it/s]Loading weights:  70%|███████   | 178/254 [00:02<00:00, 94.09it/s]Loading weights:  80%|███████▉  | 202/254 [00:02<00:00, 91.46it/s]Loading weights:  87%|████████▋ | 220/254 [00:02<00:00, 91.53it/s]Loading weights:  93%|█████████▎| 235/254 [00:02<00:00, 98.23it/s]Loading weights:  98%|█████████▊| 250/254 [00:03<00:00, 92.97it/s]Loading weights: 100%|██████████| 254/254 [00:03<00:00, 83.89it/s]
+[llama3.2-3b none s2] N=1 ER=0.000 LOC=1.000 PPL=15.16 last_edit=0.0s
+[llama3.2-3b none s2] N=10 ER=0.000 LOC=1.000 PPL=15.16 last_edit=0.0s
+[llama3.2-3b none s2] N=50 ER=0.000 LOC=1.000 PPL=15.16 last_edit=0.0s
+[llama3.2-3b none s2] N=100 ER=0.000 LOC=1.000 PPL=15.16 last_edit=0.0s
+[llama3.2-3b none s2] N=250 ER=0.000 LOC=1.000 PPL=15.16 last_edit=0.0s
+[llama3.2-3b none s2] N=500 ER=0.000 LOC=1.000 PPL=15.16 last_edit=0.0s
+[llama3.2-3b none s2] N=750 ER=0.000 LOC=1.000 PPL=15.16 last_edit=0.0s
+[llama3.2-3b none s2] N=1000 ER=0.001 LOC=1.000 PPL=15.16 last_edit=0.0s
+DONE /kaggle/working/ke-seq/results/llama3.2-3b/seq/none_seed2 {'status': 'completed', 'n_done': 1000, 'peak_gpu_mem_gb': 8.01, 'mean_edit_s': 0.0}

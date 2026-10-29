@@ -1,0 +1,401 @@
+MEMIT request sample: [The name of the country which Blaxhall is associated with is] -> [ Nizari Ismaili state]
+Cached context templates [['{}'], ['The new 3D printed, 3. {}', 'Therefore, it is necessary that you take the. {}', 'Because we know how to do it, we. {}', 'I am a big fan of the 3. {}', 'You are here: Home / Archives for The. {}']]
+Computing right vector (v)
+Lookup index found: 9 | Sentence: The name of the country which Blaxhall is associated with is Nizari Ismaili | Token: hall
+Rewrite layer is 8
+Tying optimization objective to 27
+Recording initial value of v*
+loss 3.908 = 3.908 + 0.0 + 0.0 avg prob of [ Nizari Ismaili state] 0.020358121022582054
+loss 3.265 = 3.186 + 0.079 + 0.0 avg prob of [ Nizari Ismaili state] 0.04180481284856796
+loss 3.078 = 3.011 + 0.066 + 0.0 avg prob of [ Nizari Ismaili state] 0.04971940442919731
+loss 2.708 = 2.651 + 0.057 + 0.0 avg prob of [ Nizari Ismaili state] 0.07131652534008026
+loss 1.682 = 1.625 + 0.056 + 0.0 avg prob of [ Nizari Ismaili state] 0.197577103972435
+loss 1.04 = 0.976 + 0.064 + 0.0 avg prob of [ Nizari Ismaili state] 0.37827229499816895
+loss 0.618 = 0.552 + 0.065 + 0.0 avg prob of [ Nizari Ismaili state] 0.5771197080612183
+loss 0.237 = 0.16 + 0.077 + 0.0 avg prob of [ Nizari Ismaili state] 0.8537590503692627
+loss 0.138 = 0.022 + 0.116 + 0.0 avg prob of [ Nizari Ismaili state] 0.9787092208862305
+loss 0.141 = 0.025 + 0.116 + 0.0 avg prob of [ Nizari Ismaili state] 0.9753305912017822
+loss 0.12 = 0.01 + 0.109 + 0.0 avg prob of [ Nizari Ismaili state] 0.9898165464401245
+loss 0.099 = 0.006 + 0.093 + 0.0 avg prob of [ Nizari Ismaili state] 0.9939634203910828
+loss 0.084 = 0.004 + 0.079 + 0.0 avg prob of [ Nizari Ismaili state] 0.9957313537597656
+loss 0.08 = 0.003 + 0.076 + 0.0 avg prob of [ Nizari Ismaili state] 0.9965736269950867
+loss 0.075 = 0.003 + 0.072 + 0.0 avg prob of [ Nizari Ismaili state] 0.9971837997436523
+loss 0.069 = 0.002 + 0.066 + 0.0 avg prob of [ Nizari Ismaili state] 0.9976572394371033
+loss 0.063 = 0.002 + 0.061 + 0.0 avg prob of [ Nizari Ismaili state] 0.9980122447013855
+loss 0.062 = 0.002 + 0.06 + 0.0 avg prob of [ Nizari Ismaili state] 0.998314380645752
+loss 0.061 = 0.001 + 0.059 + 0.0 avg prob of [ Nizari Ismaili state] 0.9986087679862976
+loss 0.057 = 0.001 + 0.055 + 0.0 avg prob of [ Nizari Ismaili state] 0.9988654851913452
+loss 0.053 = 0.001 + 0.051 + 0.0 avg prob of [ Nizari Ismaili state] 0.9990434646606445
+loss 0.05 = 0.001 + 0.048 + 0.0 avg prob of [ Nizari Ismaili state] 0.9991488456726074
+Init norm 8.46875 | Delta norm 33.875 | Target norm 34.8125
+
+
+LAYER 4
+
+Writing 1 key/value pair(s) into layer 4
+z error tensor(33.8750, device='cuda:0', dtype=torch.float16, grad_fn=<MeanBackward0>)
+Retrieving covariance statistics for unsloth_Llama-3.2-3B @ model.layers.4.mlp.down_proj.
+Computing Cov locally....
+Loading cached /kaggle/working/ke-seq/data/stats/Llama-3.2-3B/wikitext_stats/model.layers.4.mlp.down_proj_float32_mom2_20000.npz
+orig norm tensor(86.1250, device='cuda:0', dtype=torch.float16)
+upd norm tensor(1.2771, device='cuda:0', dtype=torch.float64,
+       grad_fn=<LinalgVectorNormBackward0>)
+
+
+LAYER 5
+
+Writing 1 key/value pair(s) into layer 5
+z error tensor(33.1562, device='cuda:0', dtype=torch.float16, grad_fn=<MeanBackward0>)
+Retrieving covariance statistics for unsloth_Llama-3.2-3B @ model.layers.5.mlp.down_proj.
+Computing Cov locally....
+Loading cached /kaggle/working/ke-seq/data/stats/Llama-3.2-3B/wikitext_stats/model.layers.5.mlp.down_proj_float32_mom2_20000.npz
+orig norm tensor(86.8125, device='cuda:0', dtype=torch.float16)
+upd norm tensor(1.3674, device='cuda:0', dtype=torch.float64,
+       grad_fn=<LinalgVectorNormBackward0>)
+
+
+LAYER 6
+
+Writing 1 key/value pair(s) into layer 6
+z error tensor(31.8750, device='cuda:0', dtype=torch.float16, grad_fn=<MeanBackward0>)
+Retrieving covariance statistics for unsloth_Llama-3.2-3B @ model.layers.6.mlp.down_proj.
+Computing Cov locally....
+Loading cached /kaggle/working/ke-seq/data/stats/Llama-3.2-3B/wikitext_stats/model.layers.6.mlp.down_proj_float32_mom2_20000.npz
+orig norm tensor(86.6875, device='cuda:0', dtype=torch.float16)
+upd norm tensor(1.5980, device='cuda:0', dtype=torch.float64,
+       grad_fn=<LinalgVectorNormBackward0>)
+
+
+LAYER 7
+
+Writing 1 key/value pair(s) into layer 7
+z error tensor(29.0156, device='cuda:0', dtype=torch.float16, grad_fn=<MeanBackward0>)
+Retrieving covariance statistics for unsloth_Llama-3.2-3B @ model.layers.7.mlp.down_proj.
+Computing Cov locally....
+Loading cached /kaggle/working/ke-seq/data/stats/Llama-3.2-3B/wikitext_stats/model.layers.7.mlp.down_proj_float32_mom2_20000.npz
+orig norm tensor(87.6875, device='cuda:0', dtype=torch.float16)
+upd norm tensor(2.1325, device='cuda:0', dtype=torch.float64,
+       grad_fn=<LinalgVectorNormBackward0>)
+
+
+LAYER 8
+
+Writing 1 key/value pair(s) into layer 8
+z error tensor(23.7656, device='cuda:0', dtype=torch.float16, grad_fn=<MeanBackward0>)
+Retrieving covariance statistics for unsloth_Llama-3.2-3B @ model.layers.8.mlp.down_proj.
+Computing Cov locally....
+Loading cached /kaggle/working/ke-seq/data/stats/Llama-3.2-3B/wikitext_stats/model.layers.8.mlp.down_proj_float32_mom2_20000.npz
+orig norm tensor(86.8750, device='cuda:0', dtype=torch.float16)
+upd norm tensor(3.6705, device='cuda:0', dtype=torch.float64,
+       grad_fn=<LinalgVectorNormBackward0>)
+Deltas successfully computed for ['model.layers.4.mlp.down_proj.weight', 'model.layers.5.mlp.down_proj.weight', 'model.layers.6.mlp.down_proj.weight', 'model.layers.7.mlp.down_proj.weight', 'model.layers.8.mlp.down_proj.weight']
+New weights successfully inserted into ['model.layers.4.mlp.down_proj.weight', 'model.layers.5.mlp.down_proj.weight', 'model.layers.6.mlp.down_proj.weight', 'model.layers.7.mlp.down_proj.weight', 'model.layers.8.mlp.down_proj.weight']
+MEMIT request sample: [The name of the father of Hugh Pryce is] -> [ Isaac Moody Bingham]
+Computing right vector (v)
+Lookup index found: 9 | Sentence: The name of the father of Hugh Pryce is Isaac Moody B | Token: ce
+Rewrite layer is 8
+Tying optimization objective to 27
+Recording initial value of v*
+loss 7.873 = 7.873 + 0.0 + 0.0 avg prob of [ Isaac Moody Bingham] 0.00038298533763736486
+loss 7.397 = 7.269 + 0.128 + 0.001 avg prob of [ Isaac Moody Bingham] 0.0007031140848994255
+loss 6.321 = 6.265 + 0.056 + 0.001 avg prob of [ Isaac Moody Bingham] 0.0019039481412619352
+loss 4.212 = 4.176 + 0.036 + 0.001 avg prob of [ Isaac Moody Bingham] 0.015682268887758255
+loss 0.565 = 0.491 + 0.073 + 0.001 avg prob of [ Isaac Moody Bingham] 0.6140516996383667
+loss 0.148 = 0.023 + 0.124 + 0.001 avg prob of [ Isaac Moody Bingham] 0.9772967100143433
+loss 0.1 = 0.009 + 0.091 + 0.001 avg prob of [ Isaac Moody Bingham] 0.9914717674255371
+loss 0.076 = 0.005 + 0.07 + 0.001 avg prob of [ Isaac Moody Bingham] 0.9946324825286865
+loss 0.066 = 0.003 + 0.062 + 0.001 avg prob of [ Isaac Moody Bingham] 0.9965313673019409
+loss 0.05 = 0.002 + 0.048 + 0.001 avg prob of [ Isaac Moody Bingham] 0.9978899955749512
+loss 0.037 = 0.001 + 0.035 + 0.001 avg prob of [ Isaac Moody Bingham] 0.9985767602920532
+Init norm 7.33984375 | Delta norm 29.359373092651367 | Target norm 30.296875
+
+
+LAYER 4
+
+Writing 1 key/value pair(s) into layer 4
+z error tensor(29.3594, device='cuda:0', dtype=torch.float16, grad_fn=<MeanBackward0>)
+Retrieving covariance statistics for unsloth_Llama-3.2-3B @ model.layers.4.mlp.down_proj.
+orig norm tensor(86.1250, device='cuda:0', dtype=torch.float16)
+upd norm tensor(1.1182, device='cuda:0', dtype=torch.float64,
+       grad_fn=<LinalgVectorNormBackward0>)
+
+
+LAYER 5
+
+Writing 1 key/value pair(s) into layer 5
+z error tensor(28.7500, device='cuda:0', dtype=torch.float16, grad_fn=<MeanBackward0>)
+Retrieving covariance statistics for unsloth_Llama-3.2-3B @ model.layers.5.mlp.down_proj.
+orig norm tensor(86.8125, device='cuda:0', dtype=torch.float16)
+upd norm tensor(1.1765, device='cuda:0', dtype=torch.float64,
+       grad_fn=<LinalgVectorNormBackward0>)
+
+
+LAYER 6
+
+Writing 1 key/value pair(s) into layer 6
+z error tensor(27.7812, device='cuda:0', dtype=torch.float16, grad_fn=<MeanBackward0>)
+Retrieving covariance statistics for unsloth_Llama-3.2-3B @ model.layers.6.mlp.down_proj.
+orig norm tensor(86.6875, device='cuda:0', dtype=torch.float16)
+upd norm tensor(1.3515, device='cuda:0', dtype=torch.float64,
+       grad_fn=<LinalgVectorNormBackward0>)
+
+
+LAYER 7
+
+Writing 1 key/value pair(s) into layer 7
+z error tensor(25.4531, device='cuda:0', dtype=torch.float16, grad_fn=<MeanBackward0>)
+Retrieving covariance statistics for unsloth_Llama-3.2-3B @ model.layers.7.mlp.down_proj.
+orig norm tensor(87.6875, device='cuda:0', dtype=torch.float16)
+upd norm tensor(1.8659, device='cuda:0', dtype=torch.float64,
+       grad_fn=<LinalgVectorNormBackward0>)
+
+
+LAYER 8
+
+Writing 1 key/value pair(s) into layer 8
+z error tensor(20.5938, device='cuda:0', dtype=torch.float16, grad_fn=<MeanBackward0>)
+Retrieving covariance statistics for unsloth_Llama-3.2-3B @ model.layers.8.mlp.down_proj.
+orig norm tensor(86.9375, device='cuda:0', dtype=torch.float16)
+upd norm tensor(3.0696, device='cuda:0', dtype=torch.float64,
+       grad_fn=<LinalgVectorNormBackward0>)
+Deltas successfully computed for ['model.layers.4.mlp.down_proj.weight', 'model.layers.5.mlp.down_proj.weight', 'model.layers.6.mlp.down_proj.weight', 'model.layers.7.mlp.down_proj.weight', 'model.layers.8.mlp.down_proj.weight']
+New weights successfully inserted into ['model.layers.4.mlp.down_proj.weight', 'model.layers.5.mlp.down_proj.weight', 'model.layers.6.mlp.down_proj.weight', 'model.layers.7.mlp.down_proj.weight', 'model.layers.8.mlp.down_proj.weight']
+MEMIT request sample: [The names of the siblings of Robin Williams are] -> [ Krishna Hutheesing]
+Computing right vector (v)
+Lookup index found: 8 | Sentence: The names of the siblings of Robin Williams are Krishna Huthees | Token:  Williams
+Rewrite layer is 8
+Tying optimization objective to 27
+Recording initial value of v*
+loss 5.164 = 5.164 + 0.0 + 0.0 avg prob of [ Krishna Hutheesing] 0.00578182702884078
+loss 4.011 = 3.864 + 0.147 + 0.0 avg prob of [ Krishna Hutheesing] 0.02115527167916298
+loss 3.415 = 3.295 + 0.12 + 0.0 avg prob of [ Krishna Hutheesing] 0.037219371646642685
+loss 3.129 = 3.03 + 0.098 + 0.0 avg prob of [ Krishna Hutheesing] 0.04849092289805412
+loss 2.456 = 2.37 + 0.086 + 0.0 avg prob of [ Krishna Hutheesing] 0.09388472884893417
+loss 0.723 = 0.643 + 0.079 + 0.0 avg prob of [ Krishna Hutheesing] 0.5276164412498474
+loss 0.395 = 0.317 + 0.077 + 0.0 avg prob of [ Krishna Hutheesing] 0.7321568727493286
+loss 0.122 = 0.046 + 0.075 + 0.0 avg prob of [ Krishna Hutheesing] 0.9549987316131592
+loss 0.089 = 0.015 + 0.073 + 0.0 avg prob of [ Krishna Hutheesing] 0.9850427508354187
+loss 0.079 = 0.009 + 0.07 + 0.0 avg prob of [ Krishna Hutheesing] 0.9906203746795654
+loss 0.073 = 0.007 + 0.066 + 0.0 avg prob of [ Krishna Hutheesing] 0.9930473566055298
+loss 0.069 = 0.006 + 0.063 + 0.0 avg prob of [ Krishna Hutheesing] 0.9944716691970825
+loss 0.065 = 0.005 + 0.06 + 0.0 avg prob of [ Krishna Hutheesing] 0.9954407215118408
+loss 0.062 = 0.004 + 0.058 + 0.0 avg prob of [ Krishna Hutheesing] 0.9961196780204773
+loss 0.059 = 0.003 + 0.055 + 0.0 avg prob of [ Krishna Hutheesing] 0.9966246485710144
+loss 0.057 = 0.003 + 0.054 + 0.0 avg prob of [ Krishna Hutheesing] 0.9969856142997742
+loss 0.057 = 0.003 + 0.054 + 0.0 avg prob of [ Krishna Hutheesing] 0.9972759485244751
+loss 0.056 = 0.003 + 0.053 + 0.0 avg prob of [ Krishna Hutheesing] 0.9975005984306335
+loss 0.055 = 0.002 + 0.052 + 0.0 avg prob of [ Krishna Hutheesing] 0.9976691007614136
+loss 0.053 = 0.002 + 0.051 + 0.0 avg prob of [ Krishna Hutheesing] 0.9978203177452087
+loss 0.052 = 0.002 + 0.049 + 0.0 avg prob of [ Krishna Hutheesing] 0.9979507327079773
+loss 0.051 = 0.002 + 0.049 + 0.0 avg prob of [ Krishna Hutheesing] 0.9980584979057312
+loss 0.05 = 0.002 + 0.048 + 0.0 avg prob of [ Krishna Hutheesing] 0.9981532096862793
+loss 0.049 = 0.002 + 0.047 + 0.0 avg prob of [ Krishna Hutheesing] 0.9982473254203796
+Init norm 10.0 | Delta norm 40.0 | Target norm 41.8125
+
+
+LAYER 4
+
+Writing 1 key/value pair(s) into layer 4
+z error tensor(40., device='cuda:0', dtype=torch.float16, grad_fn=<MeanBackward0>)
+Retrieving covariance statistics for unsloth_Llama-3.2-3B @ model.layers.4.mlp.down_proj.
+orig norm tensor(86.1250, device='cuda:0', dtype=torch.float16)
+upd norm tensor(1.4383, device='cuda:0', dtype=torch.float64,
+       grad_fn=<LinalgVectorNormBackward0>)
+
+
+LAYER 5
+
+Writing 1 key/value pair(s) into layer 5
+z error tensor(38.4062, device='cuda:0', dtype=torch.float16, grad_fn=<MeanBackward0>)
+Retrieving covariance statistics for unsloth_Llama-3.2-3B @ model.layers.5.mlp.down_proj.
+orig norm tensor(86.8125, device='cuda:0', dtype=torch.float16)
+upd norm tensor(1.6017, device='cuda:0', dtype=torch.float64,
+       grad_fn=<LinalgVectorNormBackward0>)
+
+
+LAYER 6
+
+Writing 1 key/value pair(s) into layer 6
+z error tensor(36.3438, device='cuda:0', dtype=torch.float16, grad_fn=<MeanBackward0>)
+Retrieving covariance statistics for unsloth_Llama-3.2-3B @ model.layers.6.mlp.down_proj.
+orig norm tensor(86.6875, device='cuda:0', dtype=torch.float16)
+upd norm tensor(1.9175, device='cuda:0', dtype=torch.float64,
+       grad_fn=<LinalgVectorNormBackward0>)
+
+
+LAYER 7
+
+Writing 1 key/value pair(s) into layer 7
+z error tensor(32.2812, device='cuda:0', dtype=torch.float16, grad_fn=<MeanBackward0>)
+Retrieving covariance statistics for unsloth_Llama-3.2-3B @ model.layers.7.mlp.down_proj.
+orig norm tensor(87.7500, device='cuda:0', dtype=torch.float16)
+upd norm tensor(2.4085, device='cuda:0', dtype=torch.float64,
+       grad_fn=<LinalgVectorNormBackward0>)
+
+
+LAYER 8
+
+Writing 1 key/value pair(s) into layer 8
+z error tensor(25.6250, device='cuda:0', dtype=torch.float16, grad_fn=<MeanBackward0>)
+Retrieving covariance statistics for unsloth_Llama-3.2-3B @ model.layers.8.mlp.down_proj.
+orig norm tensor(87., device='cuda:0', dtype=torch.float16)
+upd norm tensor(3.7814, device='cuda:0', dtype=torch.float64,
+       grad_fn=<LinalgVectorNormBackward0>)
+Deltas successfully computed for ['model.layers.4.mlp.down_proj.weight', 'model.layers.5.mlp.down_proj.weight', 'model.layers.6.mlp.down_proj.weight', 'model.layers.7.mlp.down_proj.weight', 'model.layers.8.mlp.down_proj.weight']
+New weights successfully inserted into ['model.layers.4.mlp.down_proj.weight', 'model.layers.5.mlp.down_proj.weight', 'model.layers.6.mlp.down_proj.weight', 'model.layers.7.mlp.down_proj.weight', 'model.layers.8.mlp.down_proj.weight']
+MEMIT request sample: [The name of the father of Edward Lowes is] -> [ Peregrine Osborne, 3rd Duke of Leeds]
+Computing right vector (v)
+Lookup index found: 9 | Sentence: The name of the father of Edward Lowes is Peregrine Osborne, 3rd Duke of | Token: es
+Rewrite layer is 8
+Tying optimization objective to 27
+Recording initial value of v*
+loss 2.267 = 2.267 + 0.0 + 0.0 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.1038777232170105
+loss 1.975 = 1.757 + 0.218 + 0.0 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.17388586699962616
+loss 1.334 = 1.29 + 0.043 + 0.0 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.2763930857181549
+loss 0.984 = 0.946 + 0.037 + 0.0 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.38911470770835876
+loss 0.6 = 0.564 + 0.036 + 0.0 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.56915682554245
+loss 0.382 = 0.34 + 0.041 + 0.0 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.7122740745544434
+loss 0.163 = 0.123 + 0.04 + 0.0 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.884726881980896
+loss 0.108 = 0.067 + 0.041 + 0.0 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.9354981780052185
+loss 0.072 = 0.03 + 0.042 + 0.0 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.9707775115966797
+loss 0.063 = 0.019 + 0.043 + 0.0 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.9809669852256775
+loss 0.056 = 0.014 + 0.042 + 0.0 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.9865235090255737
+loss 0.05 = 0.009 + 0.04 + 0.0 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.9908896684646606
+loss 0.047 = 0.006 + 0.041 + 0.0 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.9937731623649597
+Init norm 8.1328125 | Delta norm 32.53125 | Target norm 33.71875
+
+
+LAYER 4
+
+Writing 1 key/value pair(s) into layer 4
+z error tensor(32.5312, device='cuda:0', dtype=torch.float16, grad_fn=<MeanBackward0>)
+Retrieving covariance statistics for unsloth_Llama-3.2-3B @ model.layers.4.mlp.down_proj.
+orig norm tensor(86.1250, device='cuda:0', dtype=torch.float16)
+upd norm tensor(1.2106, device='cuda:0', dtype=torch.float64,
+       grad_fn=<LinalgVectorNormBackward0>)
+
+
+LAYER 5
+
+Writing 1 key/value pair(s) into layer 5
+z error tensor(31.6406, device='cuda:0', dtype=torch.float16, grad_fn=<MeanBackward0>)
+Retrieving covariance statistics for unsloth_Llama-3.2-3B @ model.layers.5.mlp.down_proj.
+orig norm tensor(86.8125, device='cuda:0', dtype=torch.float16)
+upd norm tensor(1.3062, device='cuda:0', dtype=torch.float64,
+       grad_fn=<LinalgVectorNormBackward0>)
+
+
+LAYER 6
+
+Writing 1 key/value pair(s) into layer 6
+z error tensor(30.1094, device='cuda:0', dtype=torch.float16, grad_fn=<MeanBackward0>)
+Retrieving covariance statistics for unsloth_Llama-3.2-3B @ model.layers.6.mlp.down_proj.
+orig norm tensor(86.6875, device='cuda:0', dtype=torch.float16)
+upd norm tensor(1.4809, device='cuda:0', dtype=torch.float64,
+       grad_fn=<LinalgVectorNormBackward0>)
+
+
+LAYER 7
+
+Writing 1 key/value pair(s) into layer 7
+z error tensor(27.5312, device='cuda:0', dtype=torch.float16, grad_fn=<MeanBackward0>)
+Retrieving covariance statistics for unsloth_Llama-3.2-3B @ model.layers.7.mlp.down_proj.
+orig norm tensor(87.7500, device='cuda:0', dtype=torch.float16)
+upd norm tensor(1.9825, device='cuda:0', dtype=torch.float64,
+       grad_fn=<LinalgVectorNormBackward0>)
+
+
+LAYER 8
+
+Writing 1 key/value pair(s) into layer 8
+z error tensor(22.9844, device='cuda:0', dtype=torch.float16, grad_fn=<MeanBackward0>)
+Retrieving covariance statistics for unsloth_Llama-3.2-3B @ model.layers.8.mlp.down_proj.
+orig norm tensor(87.0625, device='cuda:0', dtype=torch.float16)
+upd norm tensor(3.2968, device='cuda:0', dtype=torch.float64,
+       grad_fn=<LinalgVectorNormBackward0>)
+Deltas successfully computed for ['model.layers.4.mlp.down_proj.weight', 'model.layers.5.mlp.down_proj.weight', 'model.layers.6.mlp.down_proj.weight', 'model.layers.7.mlp.down_proj.weight', 'model.layers.8.mlp.down_proj.weight']
+New weights successfully inserted into ['model.layers.4.mlp.down_proj.weight', 'model.layers.5.mlp.down_proj.weight', 'model.layers.6.mlp.down_proj.weight', 'model.layers.7.mlp.down_proj.weight', 'model.layers.8.mlp.down_proj.weight']
+MEMIT request sample: [The occupation of George Gilbert Goodwin is] -> [ software engineering]
+Computing right vector (v)
+Lookup index found: 7 | Sentence: The occupation of George Gilbert Goodwin is software | Token: win
+Rewrite layer is 8
+Tying optimization objective to 27
+Recording initial value of v*
+loss 6.824 = 6.824 + 0.0 + 0.0 avg prob of [ software engineering] 0.0016099753556773067
+loss 4.884 = 4.655 + 0.228 + 0.0 avg prob of [ software engineering] 0.009954282082617283
+loss 1.293 = 1.073 + 0.219 + 0.001 avg prob of [ software engineering] 0.3464657664299011
+loss 0.942 = 0.335 + 0.606 + 0.001 avg prob of [ software engineering] 0.7210469245910645
+loss 0.272 = 0.077 + 0.195 + 0.001 avg prob of [ software engineering] 0.9270083904266357
+loss 0.198 = 0.02 + 0.178 + 0.001 avg prob of [ software engineering] 0.9805774688720703
+loss 0.158 = 0.009 + 0.148 + 0.001 avg prob of [ software engineering] 0.9907487630844116
+loss 0.126 = 0.006 + 0.119 + 0.001 avg prob of [ software engineering] 0.993718147277832
+loss 0.11 = 0.005 + 0.105 + 0.001 avg prob of [ software engineering] 0.9951393008232117
+loss 0.112 = 0.004 + 0.107 + 0.001 avg prob of [ software engineering] 0.9959578514099121
+loss 0.112 = 0.003 + 0.108 + 0.001 avg prob of [ software engineering] 0.9965724945068359
+loss 0.108 = 0.003 + 0.105 + 0.001 avg prob of [ software engineering] 0.9970581531524658
+loss 0.103 = 0.003 + 0.1 + 0.001 avg prob of [ software engineering] 0.99745774269104
+loss 0.096 = 0.002 + 0.093 + 0.001 avg prob of [ software engineering] 0.9977585673332214
+loss 0.091 = 0.002 + 0.089 + 0.001 avg prob of [ software engineering] 0.9979831576347351
+loss 0.088 = 0.002 + 0.086 + 0.001 avg prob of [ software engineering] 0.9981604814529419
+loss 0.086 = 0.002 + 0.083 + 0.001 avg prob of [ software engineering] 0.9983139038085938
+loss 0.082 = 0.002 + 0.08 + 0.001 avg prob of [ software engineering] 0.998447597026825
+loss 0.077 = 0.001 + 0.075 + 0.001 avg prob of [ software engineering] 0.9985394477844238
+loss 0.072 = 0.001 + 0.07 + 0.001 avg prob of [ software engineering] 0.9985935688018799
+loss 0.065 = 0.001 + 0.063 + 0.001 avg prob of [ software engineering] 0.9986093044281006
+loss 0.06 = 0.001 + 0.058 + 0.001 avg prob of [ software engineering] 0.9985731840133667
+loss 0.055 = 0.002 + 0.053 + 0.001 avg prob of [ software engineering] 0.9984841346740723
+loss 0.051 = 0.002 + 0.048 + 0.001 avg prob of [ software engineering] 0.9983231425285339
+loss 0.046 = 0.002 + 0.044 + 0.001 avg prob of [ software engineering] 0.9980902671813965
+Init norm 7.49609375 | Delta norm 29.984375 | Target norm 31.15625
+
+
+LAYER 4
+
+Writing 1 key/value pair(s) into layer 4
+z error tensor(29.9844, device='cuda:0', dtype=torch.float16, grad_fn=<MeanBackward0>)
+Retrieving covariance statistics for unsloth_Llama-3.2-3B @ model.layers.4.mlp.down_proj.
+orig norm tensor(86.1250, device='cuda:0', dtype=torch.float16)
+upd norm tensor(1.1289, device='cuda:0', dtype=torch.float64,
+       grad_fn=<LinalgVectorNormBackward0>)
+
+
+LAYER 5
+
+Writing 1 key/value pair(s) into layer 5
+z error tensor(29.5938, device='cuda:0', dtype=torch.float16, grad_fn=<MeanBackward0>)
+Retrieving covariance statistics for unsloth_Llama-3.2-3B @ model.layers.5.mlp.down_proj.
+orig norm tensor(86.8125, device='cuda:0', dtype=torch.float16)
+upd norm tensor(1.2187, device='cuda:0', dtype=torch.float64,
+       grad_fn=<LinalgVectorNormBackward0>)
+
+
+LAYER 6
+
+Writing 1 key/value pair(s) into layer 6
+z error tensor(28.4688, device='cuda:0', dtype=torch.float16, grad_fn=<MeanBackward0>)
+Retrieving covariance statistics for unsloth_Llama-3.2-3B @ model.layers.6.mlp.down_proj.
+orig norm tensor(86.6875, device='cuda:0', dtype=torch.float16)
+upd norm tensor(1.4127, device='cuda:0', dtype=torch.float64,
+       grad_fn=<LinalgVectorNormBackward0>)
+
+
+LAYER 7
+
+Writing 1 key/value pair(s) into layer 7
+z error tensor(26.2656, device='cuda:0', dtype=torch.float16, grad_fn=<MeanBackward0>)
+Retrieving covariance statistics for unsloth_Llama-3.2-3B @ model.layers.7.mlp.down_proj.
+orig norm tensor(87.7500, device='cuda:0', dtype=torch.float16)
+upd norm tensor(1.9047, device='cuda:0', dtype=torch.float64,
+       grad_fn=<LinalgVectorNormBackward0>)
+
+
+LAYER 8
+
+Writing 1 key/value pair(s) into layer 8
+z error tensor(21.4062, device='cuda:0', dtype=torch.float16, grad_fn=<MeanBackward0>)
+Retrieving covariance statistics for unsloth_Llama-3.2-3B @ model.layers.8.mlp.down_proj.
+orig norm tensor(87.1250, device='cuda:0', dtype=torch.float16)
+upd norm tensor(3.1400, device='cuda:0', dtype=torch.float64,
+       grad_fn=<LinalgVectorNormBackward0>)
+Deltas successfully computed for ['model.layers.4.mlp.down_proj.weight', 'model.layers.5.mlp.down_proj.weight', 'model.layers.6.mlp.down_proj.weight', 'model.layers.7.mlp.down_proj.weight', 'model.layers.8.mlp.down_proj.weight']
+New weights successfully inserted into ['model.layers.4.mlp.down_proj.weight', 'model.layers.5.mlp.down_proj.weight', 'model.layers.6.mlp.down_proj.weight', 'model.layers.7.mlp.down_proj.weight', 'model.layers.8.mlp.down_proj.weight']

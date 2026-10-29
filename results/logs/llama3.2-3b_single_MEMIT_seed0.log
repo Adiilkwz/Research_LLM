@@ -1,0 +1,108 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/254 [00:00<?, ?it/s]Loading weights:   0%|          | 1/254 [00:02<10:52,  2.58s/it]Loading weights:  40%|████      | 102/254 [00:02<00:03, 49.53it/s]Loading weights:  50%|█████     | 127/254 [00:03<00:02, 50.27it/s]Loading weights:  56%|█████▋    | 143/254 [00:03<00:02, 49.32it/s]Loading weights:  61%|██████    | 155/254 [00:03<00:02, 49.43it/s]Loading weights:  65%|██████▍   | 164/254 [00:04<00:01, 47.46it/s]Loading weights:  68%|██████▊   | 172/254 [00:04<00:01, 45.93it/s]Loading weights:  70%|███████   | 179/254 [00:04<00:01, 46.21it/s]Loading weights:  73%|███████▎  | 185/254 [00:04<00:01, 41.73it/s]Loading weights:  76%|███████▌  | 192/254 [00:04<00:01, 43.68it/s]Loading weights:  79%|███████▉  | 201/254 [00:05<00:01, 41.46it/s]Loading weights:  83%|████████▎ | 210/254 [00:05<00:00, 44.59it/s]Loading weights:  86%|████████▌ | 219/254 [00:05<00:00, 51.51it/s]Loading weights:  90%|█████████ | 229/254 [00:05<00:00, 54.14it/s]Loading weights:  94%|█████████▍| 239/254 [00:05<00:00, 63.03it/s]Loading weights:  97%|█████████▋| 247/254 [00:05<00:00, 66.09it/s]Loading weights: 100%|██████████| 254/254 [00:05<00:00, 44.37it/s]
+  0%|          | 0/200 [00:00<?, ?it/s]  0%|          | 0/200 [00:00<?, ?it/s]
+  0%|          | 0/200 [00:00<?, ?it/s]  0%|          | 0/200 [00:00<?, ?it/s]
+  0%|          | 0/200 [00:00<?, ?it/s]  0%|          | 0/200 [00:00<?, ?it/s]
+  0%|          | 0/200 [00:00<?, ?it/s]  0%|          | 0/200 [00:00<?, ?it/s]
+  0%|          | 0/200 [00:00<?, ?it/s]  0%|          | 0/200 [00:00<?, ?it/s]
+[single llama3.2-3b MEMIT] 1/100 eff=0 loc=0.965 edit=16.4s
+[single llama3.2-3b MEMIT] 2/100 eff=1 loc=0.975 edit=11.4s
+[single llama3.2-3b MEMIT] 3/100 eff=1 loc=0.984 edit=11.8s
+[single llama3.2-3b MEMIT] 4/100 eff=1 loc=0.972 edit=11.8s
+[single llama3.2-3b MEMIT] 5/100 eff=1 loc=0.979 edit=13.5s
+[single llama3.2-3b MEMIT] 6/100 eff=1 loc=0.975 edit=15.0s
+[single llama3.2-3b MEMIT] 7/100 eff=1 loc=0.960 edit=14.4s
+[single llama3.2-3b MEMIT] 8/100 eff=0 loc=0.993 edit=15.3s
+[single llama3.2-3b MEMIT] 9/100 eff=1 loc=0.983 edit=13.3s
+[single llama3.2-3b MEMIT] 10/100 eff=0 loc=0.989 edit=12.6s
+[single llama3.2-3b MEMIT] 11/100 eff=1 loc=0.989 edit=12.8s
+[single llama3.2-3b MEMIT] 12/100 eff=1 loc=0.983 edit=12.9s
+[single llama3.2-3b MEMIT] 13/100 eff=1 loc=0.983 edit=15.3s
+[single llama3.2-3b MEMIT] 14/100 eff=1 loc=0.974 edit=13.4s
+[single llama3.2-3b MEMIT] 15/100 eff=1 loc=0.986 edit=12.9s
+[single llama3.2-3b MEMIT] 16/100 eff=1 loc=0.966 edit=13.3s
+[single llama3.2-3b MEMIT] 17/100 eff=1 loc=0.971 edit=11.6s
+[single llama3.2-3b MEMIT] 18/100 eff=1 loc=0.974 edit=14.5s
+[single llama3.2-3b MEMIT] 19/100 eff=1 loc=0.989 edit=12.9s
+[single llama3.2-3b MEMIT] 20/100 eff=1 loc=0.967 edit=14.5s
+[single llama3.2-3b MEMIT] 21/100 eff=1 loc=0.955 edit=13.1s
+[single llama3.2-3b MEMIT] 22/100 eff=1 loc=0.984 edit=14.6s
+[single llama3.2-3b MEMIT] 23/100 eff=1 loc=0.976 edit=15.2s
+[single llama3.2-3b MEMIT] 24/100 eff=1 loc=0.940 edit=13.5s
+[single llama3.2-3b MEMIT] 25/100 eff=1 loc=0.937 edit=12.1s
+[single llama3.2-3b MEMIT] 26/100 eff=1 loc=0.939 edit=13.7s
+[single llama3.2-3b MEMIT] 27/100 eff=1 loc=0.979 edit=13.1s
+[single llama3.2-3b MEMIT] 28/100 eff=0 loc=0.981 edit=13.2s
+[single llama3.2-3b MEMIT] 29/100 eff=1 loc=0.984 edit=11.8s
+[single llama3.2-3b MEMIT] 30/100 eff=1 loc=0.982 edit=12.8s
+[single llama3.2-3b MEMIT] 31/100 eff=1 loc=0.990 edit=15.2s
+[single llama3.2-3b MEMIT] 32/100 eff=1 loc=0.966 edit=13.4s
+[single llama3.2-3b MEMIT] 33/100 eff=1 loc=0.979 edit=15.3s
+[single llama3.2-3b MEMIT] 34/100 eff=1 loc=0.976 edit=12.1s
+[single llama3.2-3b MEMIT] 35/100 eff=1 loc=0.971 edit=15.9s
+[single llama3.2-3b MEMIT] 36/100 eff=1 loc=0.982 edit=15.1s
+[single llama3.2-3b MEMIT] 37/100 eff=1 loc=0.967 edit=14.8s
+[single llama3.2-3b MEMIT] 38/100 eff=1 loc=0.903 edit=12.3s
+[single llama3.2-3b MEMIT] 39/100 eff=1 loc=0.979 edit=13.1s
+[single llama3.2-3b MEMIT] 40/100 eff=1 loc=0.991 edit=12.5s
+[single llama3.2-3b MEMIT] 41/100 eff=1 loc=0.984 edit=13.5s
+[single llama3.2-3b MEMIT] 42/100 eff=1 loc=0.987 edit=12.3s
+[single llama3.2-3b MEMIT] 43/100 eff=1 loc=0.951 edit=13.9s
+[single llama3.2-3b MEMIT] 44/100 eff=1 loc=0.935 edit=14.1s
+[single llama3.2-3b MEMIT] 45/100 eff=1 loc=0.960 edit=12.5s
+[single llama3.2-3b MEMIT] 46/100 eff=1 loc=0.973 edit=11.8s
+[single llama3.2-3b MEMIT] 47/100 eff=1 loc=0.982 edit=13.7s
+[single llama3.2-3b MEMIT] 48/100 eff=0 loc=0.981 edit=13.4s
+[single llama3.2-3b MEMIT] 49/100 eff=0 loc=0.993 edit=12.7s
+[single llama3.2-3b MEMIT] 50/100 eff=0 loc=0.985 edit=13.5s
+[single llama3.2-3b MEMIT] 51/100 eff=1 loc=0.985 edit=12.5s
+[single llama3.2-3b MEMIT] 52/100 eff=1 loc=0.949 edit=11.8s
+[single llama3.2-3b MEMIT] 53/100 eff=1 loc=0.968 edit=12.4s
+[single llama3.2-3b MEMIT] 54/100 eff=0 loc=0.966 edit=12.7s
+[single llama3.2-3b MEMIT] 55/100 eff=1 loc=0.972 edit=12.8s
+[single llama3.2-3b MEMIT] 56/100 eff=1 loc=0.971 edit=12.9s
+[single llama3.2-3b MEMIT] 57/100 eff=1 loc=0.975 edit=12.0s
+[single llama3.2-3b MEMIT] 58/100 eff=1 loc=0.947 edit=12.0s
+[single llama3.2-3b MEMIT] 59/100 eff=1 loc=0.976 edit=12.0s
+[single llama3.2-3b MEMIT] 60/100 eff=1 loc=0.963 edit=14.0s
+[single llama3.2-3b MEMIT] 61/100 eff=1 loc=0.983 edit=14.2s
+[single llama3.2-3b MEMIT] 62/100 eff=1 loc=0.975 edit=11.7s
+[single llama3.2-3b MEMIT] 63/100 eff=1 loc=0.974 edit=13.0s
+[single llama3.2-3b MEMIT] 64/100 eff=1 loc=0.979 edit=12.0s
+[single llama3.2-3b MEMIT] 65/100 eff=1 loc=0.971 edit=12.1s
+[single llama3.2-3b MEMIT] 66/100 eff=1 loc=0.977 edit=13.3s
+[single llama3.2-3b MEMIT] 67/100 eff=1 loc=0.969 edit=13.5s
+[single llama3.2-3b MEMIT] 68/100 eff=1 loc=0.964 edit=15.1s
+[single llama3.2-3b MEMIT] 69/100 eff=0 loc=0.959 edit=13.0s
+[single llama3.2-3b MEMIT] 70/100 eff=1 loc=0.982 edit=12.5s
+[single llama3.2-3b MEMIT] 71/100 eff=1 loc=0.950 edit=13.3s
+[single llama3.2-3b MEMIT] 72/100 eff=1 loc=0.990 edit=12.5s
+[single llama3.2-3b MEMIT] 73/100 eff=1 loc=0.983 edit=13.3s
+[single llama3.2-3b MEMIT] 74/100 eff=1 loc=0.967 edit=14.6s
+[single llama3.2-3b MEMIT] 75/100 eff=1 loc=0.969 edit=12.5s
+[single llama3.2-3b MEMIT] 76/100 eff=1 loc=0.968 edit=11.7s
+[single llama3.2-3b MEMIT] 77/100 eff=1 loc=0.975 edit=12.4s
+[single llama3.2-3b MEMIT] 78/100 eff=1 loc=0.964 edit=13.2s
+[single llama3.2-3b MEMIT] 79/100 eff=1 loc=0.990 edit=12.5s
+[single llama3.2-3b MEMIT] 80/100 eff=1 loc=0.982 edit=14.8s
+[single llama3.2-3b MEMIT] 81/100 eff=1 loc=0.989 edit=13.0s
+[single llama3.2-3b MEMIT] 82/100 eff=1 loc=0.986 edit=12.1s
+[single llama3.2-3b MEMIT] 83/100 eff=1 loc=0.976 edit=11.8s
+[single llama3.2-3b MEMIT] 84/100 eff=1 loc=0.987 edit=11.7s
+[single llama3.2-3b MEMIT] 85/100 eff=1 loc=0.982 edit=13.9s
+[single llama3.2-3b MEMIT] 86/100 eff=1 loc=0.975 edit=12.2s
+[single llama3.2-3b MEMIT] 87/100 eff=1 loc=0.944 edit=12.3s
+[single llama3.2-3b MEMIT] 88/100 eff=1 loc=0.985 edit=15.0s
+[single llama3.2-3b MEMIT] 89/100 eff=1 loc=0.984 edit=15.4s
+[single llama3.2-3b MEMIT] 90/100 eff=1 loc=0.986 edit=15.2s
+[single llama3.2-3b MEMIT] 91/100 eff=1 loc=0.983 edit=16.1s
+[single llama3.2-3b MEMIT] 92/100 eff=1 loc=0.981 edit=12.7s
+[single llama3.2-3b MEMIT] 93/100 eff=0 loc=0.978 edit=16.2s
+[single llama3.2-3b MEMIT] 94/100 eff=1 loc=0.979 edit=14.9s
+[single llama3.2-3b MEMIT] 95/100 eff=1 loc=0.986 edit=11.6s
+[single llama3.2-3b MEMIT] 96/100 eff=1 loc=0.983 edit=12.5s
+[single llama3.2-3b MEMIT] 97/100 eff=1 loc=0.964 edit=15.4s
+[single llama3.2-3b MEMIT] 98/100 eff=1 loc=0.979 edit=12.6s
+[single llama3.2-3b MEMIT] 99/100 eff=1 loc=0.976 edit=12.9s
+[single llama3.2-3b MEMIT] 100/100 eff=1 loc=0.980 edit=15.4s
+DONE /kaggle/working/ke-seq/results/llama3.2-3b/single/MEMIT_seed0 {'status': 'completed', 'n_done': 100, 'peak_gpu_mem_gb': 9.23, 'mean_edit_s': 13.334}

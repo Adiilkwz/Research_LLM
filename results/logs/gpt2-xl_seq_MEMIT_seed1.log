@@ -1,0 +1,16 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/580 [00:00<?, ?it/s]Loading weights:  58%|█████▊    | 335/580 [00:00<00:00, 3345.46it/s]Loading weights: 100%|██████████| 580/580 [00:00<00:00, 3572.30it/s]
+  0%|          | 0/200 [00:00<?, ?it/s]  0%|          | 0/200 [00:00<?, ?it/s]
+  0%|          | 0/200 [00:00<?, ?it/s]  0%|          | 0/200 [00:00<?, ?it/s]
+  0%|          | 0/200 [00:00<?, ?it/s]  0%|          | 0/200 [00:00<?, ?it/s]
+  0%|          | 0/200 [00:00<?, ?it/s]  0%|          | 0/200 [00:00<?, ?it/s]
+  0%|          | 0/200 [00:00<?, ?it/s]  0%|          | 0/200 [00:00<?, ?it/s]
+[gpt2-xl MEMIT s1] N=1 ER=0.000 LOC=0.999 PPL=33.11 last_edit=16.5s
+[gpt2-xl MEMIT s1] N=10 ER=0.200 LOC=0.992 PPL=33.11 last_edit=10.7s
+[gpt2-xl MEMIT s1] N=50 ER=0.340 LOC=0.874 PPL=33.10 last_edit=10.9s
+[gpt2-xl MEMIT s1] N=100 ER=0.420 LOC=0.729 PPL=33.13 last_edit=14.5s
+[gpt2-xl MEMIT s1] N=250 ER=0.396 LOC=0.463 PPL=33.90 last_edit=17.4s
+[gpt2-xl MEMIT s1] N=500 ER=0.284 LOC=0.281 PPL=39.28 last_edit=11.1s
+[gpt2-xl MEMIT s1] N=750 ER=0.156 LOC=0.176 PPL=48.14 last_edit=13.0s
+[gpt2-xl MEMIT s1] N=1000 ER=0.046 LOC=0.123 PPL=104.66 last_edit=10.2s
+DONE /kaggle/working/ke-seq/results/gpt2-xl/seq/MEMIT_seed1 {'status': 'completed', 'n_done': 1000, 'peak_gpu_mem_gb': 8.39, 'mean_edit_s': 11.781}

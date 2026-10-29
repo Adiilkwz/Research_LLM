@@ -1,0 +1,108 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/580 [00:00<?, ?it/s]Loading weights:  45%|████▌     | 262/580 [00:00<00:00, 2598.84it/s]Loading weights:  90%|█████████ | 522/580 [00:00<00:00, 2595.31it/s]Loading weights: 100%|██████████| 580/580 [00:00<00:00, 2808.23it/s]
+  0%|          | 0/200 [00:00<?, ?it/s]  0%|          | 0/200 [00:00<?, ?it/s]
+  0%|          | 0/200 [00:00<?, ?it/s]  0%|          | 0/200 [00:00<?, ?it/s]
+  0%|          | 0/200 [00:00<?, ?it/s]  0%|          | 0/200 [00:00<?, ?it/s]
+  0%|          | 0/200 [00:00<?, ?it/s]  0%|          | 0/200 [00:00<?, ?it/s]
+  0%|          | 0/200 [00:00<?, ?it/s]  0%|          | 0/200 [00:00<?, ?it/s]
+[single gpt2-xl MEMIT] 1/100 eff=1 loc=1.000 edit=13.4s
+[single gpt2-xl MEMIT] 2/100 eff=0 loc=0.997 edit=15.3s
+[single gpt2-xl MEMIT] 3/100 eff=0 loc=0.999 edit=14.5s
+[single gpt2-xl MEMIT] 4/100 eff=1 loc=0.997 edit=11.7s
+[single gpt2-xl MEMIT] 5/100 eff=0 loc=0.998 edit=12.2s
+[single gpt2-xl MEMIT] 6/100 eff=0 loc=0.997 edit=13.3s
+[single gpt2-xl MEMIT] 7/100 eff=0 loc=0.992 edit=13.2s
+[single gpt2-xl MEMIT] 8/100 eff=0 loc=1.000 edit=12.6s
+[single gpt2-xl MEMIT] 9/100 eff=0 loc=1.000 edit=12.9s
+[single gpt2-xl MEMIT] 10/100 eff=0 loc=1.000 edit=13.6s
+[single gpt2-xl MEMIT] 11/100 eff=1 loc=1.000 edit=11.6s
+[single gpt2-xl MEMIT] 12/100 eff=0 loc=1.000 edit=13.4s
+[single gpt2-xl MEMIT] 13/100 eff=0 loc=0.996 edit=12.9s
+[single gpt2-xl MEMIT] 14/100 eff=0 loc=0.998 edit=10.9s
+[single gpt2-xl MEMIT] 15/100 eff=1 loc=1.000 edit=12.3s
+[single gpt2-xl MEMIT] 16/100 eff=1 loc=0.998 edit=11.8s
+[single gpt2-xl MEMIT] 17/100 eff=0 loc=0.996 edit=10.6s
+[single gpt2-xl MEMIT] 18/100 eff=0 loc=0.999 edit=12.4s
+[single gpt2-xl MEMIT] 19/100 eff=0 loc=0.995 edit=12.6s
+[single gpt2-xl MEMIT] 20/100 eff=0 loc=1.000 edit=12.4s
+[single gpt2-xl MEMIT] 21/100 eff=0 loc=0.996 edit=15.3s
+[single gpt2-xl MEMIT] 22/100 eff=0 loc=0.995 edit=12.3s
+[single gpt2-xl MEMIT] 23/100 eff=0 loc=0.996 edit=10.6s
+[single gpt2-xl MEMIT] 24/100 eff=0 loc=0.994 edit=9.7s
+[single gpt2-xl MEMIT] 25/100 eff=1 loc=0.998 edit=10.6s
+[single gpt2-xl MEMIT] 26/100 eff=0 loc=0.995 edit=10.7s
+[single gpt2-xl MEMIT] 27/100 eff=0 loc=1.000 edit=12.5s
+[single gpt2-xl MEMIT] 28/100 eff=0 loc=0.998 edit=14.7s
+[single gpt2-xl MEMIT] 29/100 eff=0 loc=0.999 edit=12.5s
+[single gpt2-xl MEMIT] 30/100 eff=1 loc=1.000 edit=13.3s
+[single gpt2-xl MEMIT] 31/100 eff=0 loc=1.000 edit=14.4s
+[single gpt2-xl MEMIT] 32/100 eff=0 loc=0.999 edit=12.4s
+[single gpt2-xl MEMIT] 33/100 eff=0 loc=0.994 edit=13.0s
+[single gpt2-xl MEMIT] 34/100 eff=1 loc=0.999 edit=12.1s
+[single gpt2-xl MEMIT] 35/100 eff=0 loc=0.996 edit=13.4s
+[single gpt2-xl MEMIT] 36/100 eff=0 loc=0.996 edit=12.7s
+[single gpt2-xl MEMIT] 37/100 eff=0 loc=0.998 edit=12.4s
+[single gpt2-xl MEMIT] 38/100 eff=0 loc=0.998 edit=10.9s
+[single gpt2-xl MEMIT] 39/100 eff=1 loc=0.999 edit=13.6s
+[single gpt2-xl MEMIT] 40/100 eff=0 loc=1.000 edit=12.3s
+[single gpt2-xl MEMIT] 41/100 eff=0 loc=0.997 edit=12.9s
+[single gpt2-xl MEMIT] 42/100 eff=0 loc=1.000 edit=13.3s
+[single gpt2-xl MEMIT] 43/100 eff=0 loc=0.990 edit=13.0s
+[single gpt2-xl MEMIT] 44/100 eff=0 loc=0.997 edit=10.3s
+[single gpt2-xl MEMIT] 45/100 eff=0 loc=0.994 edit=12.5s
+[single gpt2-xl MEMIT] 46/100 eff=1 loc=1.000 edit=14.4s
+[single gpt2-xl MEMIT] 47/100 eff=0 loc=1.000 edit=14.9s
+[single gpt2-xl MEMIT] 48/100 eff=0 loc=1.000 edit=12.8s
+[single gpt2-xl MEMIT] 49/100 eff=0 loc=0.997 edit=13.3s
+[single gpt2-xl MEMIT] 50/100 eff=0 loc=0.999 edit=13.1s
+[single gpt2-xl MEMIT] 51/100 eff=0 loc=0.999 edit=13.1s
+[single gpt2-xl MEMIT] 52/100 eff=0 loc=0.997 edit=11.6s
+[single gpt2-xl MEMIT] 53/100 eff=0 loc=0.998 edit=13.1s
+[single gpt2-xl MEMIT] 54/100 eff=0 loc=1.000 edit=13.3s
+[single gpt2-xl MEMIT] 55/100 eff=0 loc=0.996 edit=14.8s
+[single gpt2-xl MEMIT] 56/100 eff=0 loc=0.996 edit=12.8s
+[single gpt2-xl MEMIT] 57/100 eff=0 loc=0.995 edit=11.7s
+[single gpt2-xl MEMIT] 58/100 eff=1 loc=0.998 edit=12.2s
+[single gpt2-xl MEMIT] 59/100 eff=0 loc=0.999 edit=10.7s
+[single gpt2-xl MEMIT] 60/100 eff=0 loc=0.998 edit=12.7s
+[single gpt2-xl MEMIT] 61/100 eff=0 loc=0.998 edit=12.3s
+[single gpt2-xl MEMIT] 62/100 eff=1 loc=0.998 edit=12.3s
+[single gpt2-xl MEMIT] 63/100 eff=1 loc=0.998 edit=9.9s
+[single gpt2-xl MEMIT] 64/100 eff=0 loc=0.999 edit=15.0s
+[single gpt2-xl MEMIT] 65/100 eff=0 loc=1.000 edit=11.4s
+[single gpt2-xl MEMIT] 66/100 eff=1 loc=0.998 edit=12.7s
+[single gpt2-xl MEMIT] 67/100 eff=0 loc=0.996 edit=13.3s
+[single gpt2-xl MEMIT] 68/100 eff=1 loc=0.999 edit=12.8s
+[single gpt2-xl MEMIT] 69/100 eff=0 loc=0.994 edit=11.9s
+[single gpt2-xl MEMIT] 70/100 eff=1 loc=0.999 edit=13.3s
+[single gpt2-xl MEMIT] 71/100 eff=0 loc=0.984 edit=12.3s
+[single gpt2-xl MEMIT] 72/100 eff=0 loc=0.999 edit=15.3s
+[single gpt2-xl MEMIT] 73/100 eff=0 loc=1.000 edit=12.6s
+[single gpt2-xl MEMIT] 74/100 eff=0 loc=0.995 edit=12.1s
+[single gpt2-xl MEMIT] 75/100 eff=0 loc=0.999 edit=13.1s
+[single gpt2-xl MEMIT] 76/100 eff=0 loc=1.000 edit=11.6s
+[single gpt2-xl MEMIT] 77/100 eff=0 loc=0.994 edit=10.7s
+[single gpt2-xl MEMIT] 78/100 eff=1 loc=0.999 edit=11.9s
+[single gpt2-xl MEMIT] 79/100 eff=0 loc=0.995 edit=12.7s
+[single gpt2-xl MEMIT] 80/100 eff=0 loc=0.999 edit=12.2s
+[single gpt2-xl MEMIT] 81/100 eff=0 loc=0.998 edit=12.3s
+[single gpt2-xl MEMIT] 82/100 eff=1 loc=0.997 edit=12.3s
+[single gpt2-xl MEMIT] 83/100 eff=0 loc=0.998 edit=12.2s
+[single gpt2-xl MEMIT] 84/100 eff=1 loc=1.000 edit=11.2s
+[single gpt2-xl MEMIT] 85/100 eff=1 loc=0.999 edit=11.3s
+[single gpt2-xl MEMIT] 86/100 eff=0 loc=1.000 edit=15.3s
+[single gpt2-xl MEMIT] 87/100 eff=1 loc=0.997 edit=9.3s
+[single gpt2-xl MEMIT] 88/100 eff=0 loc=0.997 edit=12.6s
+[single gpt2-xl MEMIT] 89/100 eff=0 loc=0.998 edit=12.9s
+[single gpt2-xl MEMIT] 90/100 eff=0 loc=1.000 edit=13.4s
+[single gpt2-xl MEMIT] 91/100 eff=0 loc=1.000 edit=13.2s
+[single gpt2-xl MEMIT] 92/100 eff=1 loc=1.000 edit=15.2s
+[single gpt2-xl MEMIT] 93/100 eff=0 loc=1.000 edit=15.1s
+[single gpt2-xl MEMIT] 94/100 eff=0 loc=1.000 edit=12.4s
+[single gpt2-xl MEMIT] 95/100 eff=0 loc=1.000 edit=9.4s
+[single gpt2-xl MEMIT] 96/100 eff=0 loc=0.997 edit=13.4s
+[single gpt2-xl MEMIT] 97/100 eff=0 loc=0.998 edit=13.4s
+[single gpt2-xl MEMIT] 98/100 eff=0 loc=1.000 edit=12.5s
+[single gpt2-xl MEMIT] 99/100 eff=1 loc=0.999 edit=12.0s
+[single gpt2-xl MEMIT] 100/100 eff=1 loc=0.997 edit=11.1s
+DONE /kaggle/working/ke-seq/results/gpt2-xl/single/MEMIT_seed0 {'status': 'completed', 'n_done': 100, 'peak_gpu_mem_gb': 8.28, 'mean_edit_s': 12.591}

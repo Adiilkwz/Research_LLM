@@ -1,0 +1,406 @@
+MEMIT request sample: [The name of the country which Blaxhall is associated with is] -> [ Nizari Ismaili state]
+Cached context templates [['{}'], ['The "Io Epstein Doctrine of theInvalidated. {}', "Therefore, it is there's, we Cosponsors:. {}", "Because I'm not everyone knows a) I was. {}", 'I think it is a.  . {}', "You can see the onlyDownloadha'luajAbstract\n. {}"]]
+Computing right vector (v)
+Lookup index found: 8 | Sentence: The name of the country which Blaxhall is associated with is Nizari Ismaili | Token: hall
+Rewrite layer is 17
+Tying optimization objective to 47
+Recording initial value of v*
+loss 4.306 = 4.306 + 0.0 + 0.0 avg prob of [ Nizari Ismaili state] 0.013944761827588081
+loss 4.051 = 4.047 + 0.003 + 0.001 avg prob of [ Nizari Ismaili state] 0.01827862672507763
+loss 3.664 = 3.649 + 0.013 + 0.001 avg prob of [ Nizari Ismaili state] 0.027056550607085228
+loss 3.15 = 3.114 + 0.034 + 0.002 avg prob of [ Nizari Ismaili state] 0.04548391327261925
+loss 2.859 = 2.807 + 0.05 + 0.002 avg prob of [ Nizari Ismaili state] 0.06136712431907654
+loss 2.591 = 2.545 + 0.044 + 0.003 avg prob of [ Nizari Ismaili state] 0.07958584278821945
+loss 2.292 = 2.252 + 0.037 + 0.003 avg prob of [ Nizari Ismaili state] 0.10631464421749115
+loss 2.045 = 2.008 + 0.033 + 0.003 avg prob of [ Nizari Ismaili state] 0.13533374667167664
+loss 1.808 = 1.774 + 0.031 + 0.003 avg prob of [ Nizari Ismaili state] 0.1708347499370575
+loss 1.559 = 1.527 + 0.029 + 0.003 avg prob of [ Nizari Ismaili state] 0.21859072148799896
+loss 1.279 = 1.248 + 0.028 + 0.003 avg prob of [ Nizari Ismaili state] 0.2888367176055908
+loss 0.997 = 0.965 + 0.029 + 0.003 avg prob of [ Nizari Ismaili state] 0.3830227255821228
+loss 0.741 = 0.705 + 0.032 + 0.003 avg prob of [ Nizari Ismaili state] 0.49545127153396606
+loss 0.546 = 0.508 + 0.035 + 0.003 avg prob of [ Nizari Ismaili state] 0.6040480136871338
+loss 0.362 = 0.322 + 0.036 + 0.003 avg prob of [ Nizari Ismaili state] 0.7273379564285278
+loss 0.241 = 0.2 + 0.038 + 0.003 avg prob of [ Nizari Ismaili state] 0.8200399279594421
+loss 0.148 = 0.106 + 0.039 + 0.003 avg prob of [ Nizari Ismaili state] 0.9003404378890991
+loss 0.096 = 0.054 + 0.039 + 0.003 avg prob of [ Nizari Ismaili state] 0.9476973414421082
+loss 0.08 = 0.04 + 0.037 + 0.003 avg prob of [ Nizari Ismaili state] 0.9604861736297607
+loss 0.075 = 0.036 + 0.035 + 0.003 avg prob of [ Nizari Ismaili state] 0.9645134806632996
+Init norm 112.0577392578125 | Delta norm 84.04330444335938 | Target norm 134.0836639404297
+
+
+LAYER 13
+
+Writing 1 key/value pair(s) into layer 13
+z error tensor(84.0433, device='cuda:0', grad_fn=<MeanBackward0>)
+Retrieving covariance statistics for openai-community_gpt2-xl @ transformer.h.13.mlp.c_proj.
+Computing Cov locally....
+Loading cached /kaggle/working/ke-seq/data/stats/gpt2-xl/wikitext_stats/transformer.h.13.mlp.c_proj_float32_mom2_20000.npz
+orig norm tensor(112.7657, device='cuda:0')
+upd norm tensor(0.6462, device='cuda:0', dtype=torch.float64,
+       grad_fn=<LinalgVectorNormBackward0>)
+
+
+LAYER 14
+
+Writing 1 key/value pair(s) into layer 14
+z error tensor(79.6238, device='cuda:0', grad_fn=<MeanBackward0>)
+Retrieving covariance statistics for openai-community_gpt2-xl @ transformer.h.14.mlp.c_proj.
+Computing Cov locally....
+Loading cached /kaggle/working/ke-seq/data/stats/gpt2-xl/wikitext_stats/transformer.h.14.mlp.c_proj_float32_mom2_20000.npz
+orig norm tensor(113.2846, device='cuda:0')
+upd norm tensor(1.2612, device='cuda:0', dtype=torch.float64,
+       grad_fn=<LinalgVectorNormBackward0>)
+
+
+LAYER 15
+
+Writing 1 key/value pair(s) into layer 15
+z error tensor(74.8295, device='cuda:0', grad_fn=<MeanBackward0>)
+Retrieving covariance statistics for openai-community_gpt2-xl @ transformer.h.15.mlp.c_proj.
+Computing Cov locally....
+Loading cached /kaggle/working/ke-seq/data/stats/gpt2-xl/wikitext_stats/transformer.h.15.mlp.c_proj_float32_mom2_20000.npz
+orig norm tensor(113.0412, device='cuda:0')
+upd norm tensor(0.9359, device='cuda:0', dtype=torch.float64,
+       grad_fn=<LinalgVectorNormBackward0>)
+
+
+LAYER 16
+
+Writing 1 key/value pair(s) into layer 16
+z error tensor(68.4937, device='cuda:0', grad_fn=<MeanBackward0>)
+Retrieving covariance statistics for openai-community_gpt2-xl @ transformer.h.16.mlp.c_proj.
+Computing Cov locally....
+Loading cached /kaggle/working/ke-seq/data/stats/gpt2-xl/wikitext_stats/transformer.h.16.mlp.c_proj_float32_mom2_20000.npz
+orig norm tensor(113.9795, device='cuda:0')
+upd norm tensor(1.1853, device='cuda:0', dtype=torch.float64,
+       grad_fn=<LinalgVectorNormBackward0>)
+
+
+LAYER 17
+
+Writing 1 key/value pair(s) into layer 17
+z error tensor(59.2541, device='cuda:0', grad_fn=<MeanBackward0>)
+Retrieving covariance statistics for openai-community_gpt2-xl @ transformer.h.17.mlp.c_proj.
+Computing Cov locally....
+Loading cached /kaggle/working/ke-seq/data/stats/gpt2-xl/wikitext_stats/transformer.h.17.mlp.c_proj_float32_mom2_20000.npz
+orig norm tensor(117.1293, device='cuda:0')
+upd norm tensor(1.6983, device='cuda:0', dtype=torch.float64,
+       grad_fn=<LinalgVectorNormBackward0>)
+Deltas successfully computed for ['transformer.h.13.mlp.c_proj.weight', 'transformer.h.14.mlp.c_proj.weight', 'transformer.h.15.mlp.c_proj.weight', 'transformer.h.16.mlp.c_proj.weight', 'transformer.h.17.mlp.c_proj.weight']
+New weights successfully inserted into ['transformer.h.13.mlp.c_proj.weight', 'transformer.h.14.mlp.c_proj.weight', 'transformer.h.15.mlp.c_proj.weight', 'transformer.h.16.mlp.c_proj.weight', 'transformer.h.17.mlp.c_proj.weight']
+MEMIT request sample: [The name of the father of Hugh Pryce is] -> [ Isaac Moody Bingham]
+Computing right vector (v)
+Lookup index found: 8 | Sentence: The name of the father of Hugh Pryce is Isaac Moody Bing | Token: ryce
+Rewrite layer is 17
+Tying optimization objective to 47
+Recording initial value of v*
+loss 7.724 = 7.724 + 0.0 + 0.0 avg prob of [ Isaac Moody Bingham] 0.0005125996540300548
+loss 7.327 = 7.326 + 0.001 + 0.001 avg prob of [ Isaac Moody Bingham] 0.0007751192315481603
+loss 7.086 = 7.083 + 0.002 + 0.001 avg prob of [ Isaac Moody Bingham] 0.0009592041606083512
+loss 6.791 = 6.787 + 0.003 + 0.002 avg prob of [ Isaac Moody Bingham] 0.0012478192802518606
+loss 6.366 = 6.361 + 0.003 + 0.002 avg prob of [ Isaac Moody Bingham] 0.0018927408382296562
+loss 5.795 = 5.789 + 0.004 + 0.002 avg prob of [ Isaac Moody Bingham] 0.003340919269248843
+loss 5.061 = 5.052 + 0.006 + 0.003 avg prob of [ Isaac Moody Bingham] 0.006934502627700567
+loss 4.135 = 4.123 + 0.009 + 0.003 avg prob of [ Isaac Moody Bingham] 0.01695261150598526
+loss 3.277 = 3.261 + 0.013 + 0.003 avg prob of [ Isaac Moody Bingham] 0.03880925104022026
+loss 2.587 = 2.568 + 0.016 + 0.003 avg prob of [ Isaac Moody Bingham] 0.07754158228635788
+loss 2.04 = 2.015 + 0.022 + 0.003 avg prob of [ Isaac Moody Bingham] 0.13424962759017944
+loss 1.586 = 1.556 + 0.027 + 0.003 avg prob of [ Isaac Moody Bingham] 0.21191191673278809
+loss 1.201 = 1.167 + 0.03 + 0.003 avg prob of [ Isaac Moody Bingham] 0.3126259446144104
+loss 0.908 = 0.874 + 0.031 + 0.003 avg prob of [ Isaac Moody Bingham] 0.4203476905822754
+loss 0.644 = 0.611 + 0.03 + 0.003 avg prob of [ Isaac Moody Bingham] 0.5474996566772461
+loss 0.364 = 0.334 + 0.027 + 0.003 avg prob of [ Isaac Moody Bingham] 0.7195281982421875
+loss 0.182 = 0.154 + 0.025 + 0.003 avg prob of [ Isaac Moody Bingham] 0.8577491641044617
+loss 0.114 = 0.087 + 0.024 + 0.003 avg prob of [ Isaac Moody Bingham] 0.91689532995224
+loss 0.071 = 0.045 + 0.023 + 0.003 avg prob of [ Isaac Moody Bingham] 0.9562680125236511
+loss 0.064 = 0.038 + 0.023 + 0.003 avg prob of [ Isaac Moody Bingham] 0.9634172320365906
+Init norm 122.33148956298828 | Delta norm 91.74861907958984 | Target norm 137.28021240234375
+
+
+LAYER 13
+
+Writing 1 key/value pair(s) into layer 13
+z error tensor(91.7486, device='cuda:0', grad_fn=<MeanBackward0>)
+Retrieving covariance statistics for openai-community_gpt2-xl @ transformer.h.13.mlp.c_proj.
+orig norm tensor(112.7671, device='cuda:0')
+upd norm tensor(0.7105, device='cuda:0', dtype=torch.float64,
+       grad_fn=<LinalgVectorNormBackward0>)
+
+
+LAYER 14
+
+Writing 1 key/value pair(s) into layer 14
+z error tensor(86.8215, device='cuda:0', grad_fn=<MeanBackward0>)
+Retrieving covariance statistics for openai-community_gpt2-xl @ transformer.h.14.mlp.c_proj.
+orig norm tensor(113.2923, device='cuda:0')
+upd norm tensor(1.8606, device='cuda:0', dtype=torch.float64,
+       grad_fn=<LinalgVectorNormBackward0>)
+
+
+LAYER 15
+
+Writing 1 key/value pair(s) into layer 15
+z error tensor(81.8898, device='cuda:0', grad_fn=<MeanBackward0>)
+Retrieving covariance statistics for openai-community_gpt2-xl @ transformer.h.15.mlp.c_proj.
+orig norm tensor(113.0444, device='cuda:0')
+upd norm tensor(0.8980, device='cuda:0', dtype=torch.float64,
+       grad_fn=<LinalgVectorNormBackward0>)
+
+
+LAYER 16
+
+Writing 1 key/value pair(s) into layer 16
+z error tensor(74.8156, device='cuda:0', grad_fn=<MeanBackward0>)
+Retrieving covariance statistics for openai-community_gpt2-xl @ transformer.h.16.mlp.c_proj.
+orig norm tensor(113.9845, device='cuda:0')
+upd norm tensor(1.2463, device='cuda:0', dtype=torch.float64,
+       grad_fn=<LinalgVectorNormBackward0>)
+
+
+LAYER 17
+
+Writing 1 key/value pair(s) into layer 17
+z error tensor(63.8829, device='cuda:0', grad_fn=<MeanBackward0>)
+Retrieving covariance statistics for openai-community_gpt2-xl @ transformer.h.17.mlp.c_proj.
+orig norm tensor(117.1394, device='cuda:0')
+upd norm tensor(1.8448, device='cuda:0', dtype=torch.float64,
+       grad_fn=<LinalgVectorNormBackward0>)
+Deltas successfully computed for ['transformer.h.13.mlp.c_proj.weight', 'transformer.h.14.mlp.c_proj.weight', 'transformer.h.15.mlp.c_proj.weight', 'transformer.h.16.mlp.c_proj.weight', 'transformer.h.17.mlp.c_proj.weight']
+New weights successfully inserted into ['transformer.h.13.mlp.c_proj.weight', 'transformer.h.14.mlp.c_proj.weight', 'transformer.h.15.mlp.c_proj.weight', 'transformer.h.16.mlp.c_proj.weight', 'transformer.h.17.mlp.c_proj.weight']
+MEMIT request sample: [The names of the siblings of Robin Williams are] -> [ Krishna Hutheesing]
+Computing right vector (v)
+Lookup index found: 7 | Sentence: The names of the siblings of Robin Williams are Krishna Huthees | Token:  Williams
+Rewrite layer is 17
+Tying optimization objective to 47
+Recording initial value of v*
+loss 9.396 = 9.396 + 0.0 + 0.0 avg prob of [ Krishna Hutheesing] 8.735041774343699e-05
+loss 8.85 = 8.849 + 0.0 + 0.001 avg prob of [ Krishna Hutheesing] 0.00015024011372588575
+loss 8.435 = 8.432 + 0.002 + 0.001 avg prob of [ Krishna Hutheesing] 0.0002280535118188709
+loss 7.833 = 7.827 + 0.004 + 0.001 avg prob of [ Krishna Hutheesing] 0.0004180800751782954
+loss 6.844 = 6.835 + 0.008 + 0.002 avg prob of [ Krishna Hutheesing] 0.0011246099602431059
+loss 6.003 = 5.986 + 0.015 + 0.002 avg prob of [ Krishna Hutheesing] 0.002559924265369773
+loss 5.301 = 5.277 + 0.022 + 0.002 avg prob of [ Krishna Hutheesing] 0.0051657576113939285
+loss 4.63 = 4.601 + 0.027 + 0.002 avg prob of [ Krishna Hutheesing] 0.0101343784481287
+loss 3.926 = 3.887 + 0.036 + 0.003 avg prob of [ Krishna Hutheesing] 0.020624838769435883
+loss 3.312 = 3.267 + 0.042 + 0.003 avg prob of [ Krishna Hutheesing] 0.03828281909227371
+loss 2.638 = 2.584 + 0.051 + 0.003 avg prob of [ Krishna Hutheesing] 0.07577520608901978
+loss 1.937 = 1.869 + 0.066 + 0.003 avg prob of [ Krishna Hutheesing] 0.15523330867290497
+loss 1.133 = 1.063 + 0.067 + 0.003 avg prob of [ Krishna Hutheesing] 0.34775465726852417
+loss 0.518 = 0.444 + 0.072 + 0.003 avg prob of [ Krishna Hutheesing] 0.6435638666152954
+loss 0.227 = 0.142 + 0.082 + 0.003 avg prob of [ Krishna Hutheesing] 0.8680142164230347
+loss 0.126 = 0.054 + 0.069 + 0.003 avg prob of [ Krishna Hutheesing] 0.9472014307975769
+loss 0.101 = 0.03 + 0.069 + 0.003 avg prob of [ Krishna Hutheesing] 0.9706507921218872
+loss 0.092 = 0.023 + 0.066 + 0.003 avg prob of [ Krishna Hutheesing] 0.9773229360580444
+loss 0.081 = 0.022 + 0.057 + 0.003 avg prob of [ Krishna Hutheesing] 0.9787229299545288
+loss 0.069 = 0.02 + 0.046 + 0.003 avg prob of [ Krishna Hutheesing] 0.9798868894577026
+Init norm 134.76055908203125 | Delta norm 101.07042694091797 | Target norm 154.2510223388672
+
+
+LAYER 13
+
+Writing 1 key/value pair(s) into layer 13
+z error tensor(101.0704, device='cuda:0', grad_fn=<MeanBackward0>)
+Retrieving covariance statistics for openai-community_gpt2-xl @ transformer.h.13.mlp.c_proj.
+orig norm tensor(112.7690, device='cuda:0')
+upd norm tensor(0.7830, device='cuda:0', dtype=torch.float64,
+       grad_fn=<LinalgVectorNormBackward0>)
+
+
+LAYER 14
+
+Writing 1 key/value pair(s) into layer 14
+z error tensor(94.2697, device='cuda:0', grad_fn=<MeanBackward0>)
+Retrieving covariance statistics for openai-community_gpt2-xl @ transformer.h.14.mlp.c_proj.
+orig norm tensor(113.3058, device='cuda:0')
+upd norm tensor(1.5807, device='cuda:0', dtype=torch.float64,
+       grad_fn=<LinalgVectorNormBackward0>)
+
+
+LAYER 15
+
+Writing 1 key/value pair(s) into layer 15
+z error tensor(86.1234, device='cuda:0', grad_fn=<MeanBackward0>)
+Retrieving covariance statistics for openai-community_gpt2-xl @ transformer.h.15.mlp.c_proj.
+orig norm tensor(113.0470, device='cuda:0')
+upd norm tensor(1.4545, device='cuda:0', dtype=torch.float64,
+       grad_fn=<LinalgVectorNormBackward0>)
+
+
+LAYER 16
+
+Writing 1 key/value pair(s) into layer 16
+z error tensor(74.4775, device='cuda:0', grad_fn=<MeanBackward0>)
+Retrieving covariance statistics for openai-community_gpt2-xl @ transformer.h.16.mlp.c_proj.
+orig norm tensor(113.9901, device='cuda:0')
+upd norm tensor(1.2806, device='cuda:0', dtype=torch.float64,
+       grad_fn=<LinalgVectorNormBackward0>)
+
+
+LAYER 17
+
+Writing 1 key/value pair(s) into layer 17
+z error tensor(60.0350, device='cuda:0', grad_fn=<MeanBackward0>)
+Retrieving covariance statistics for openai-community_gpt2-xl @ transformer.h.17.mlp.c_proj.
+orig norm tensor(117.1511, device='cuda:0')
+upd norm tensor(1.8903, device='cuda:0', dtype=torch.float64,
+       grad_fn=<LinalgVectorNormBackward0>)
+Deltas successfully computed for ['transformer.h.13.mlp.c_proj.weight', 'transformer.h.14.mlp.c_proj.weight', 'transformer.h.15.mlp.c_proj.weight', 'transformer.h.16.mlp.c_proj.weight', 'transformer.h.17.mlp.c_proj.weight']
+New weights successfully inserted into ['transformer.h.13.mlp.c_proj.weight', 'transformer.h.14.mlp.c_proj.weight', 'transformer.h.15.mlp.c_proj.weight', 'transformer.h.16.mlp.c_proj.weight', 'transformer.h.17.mlp.c_proj.weight']
+MEMIT request sample: [The name of the father of Edward Lowes is] -> [ Peregrine Osborne, 3rd Duke of Leeds]
+Computing right vector (v)
+Lookup index found: 8 | Sentence: The name of the father of Edward Lowes is Peregrine Osborne, 3rd Duke of | Token: es
+Rewrite layer is 17
+Tying optimization objective to 47
+Recording initial value of v*
+loss 3.733 = 3.733 + 0.0 + 0.0 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.024276046082377434
+loss 3.474 = 3.471 + 0.003 + 0.001 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.03137083351612091
+loss 3.262 = 3.246 + 0.015 + 0.001 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.03921714797616005
+loss 3.004 = 2.988 + 0.014 + 0.002 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.05064544081687927
+loss 2.724 = 2.706 + 0.015 + 0.002 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.06709636002779007
+loss 2.463 = 2.445 + 0.016 + 0.003 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.08704061806201935
+loss 2.189 = 2.171 + 0.016 + 0.003 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.11461222171783447
+loss 1.843 = 1.822 + 0.017 + 0.003 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.16295912861824036
+loss 1.6 = 1.578 + 0.018 + 0.003 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.20715036988258362
+loss 1.245 = 1.218 + 0.023 + 0.003 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.296669602394104
+loss 0.898 = 0.865 + 0.03 + 0.003 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.4223453402519226
+loss 0.582 = 0.545 + 0.034 + 0.003 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.5820683836936951
+loss 0.377 = 0.341 + 0.032 + 0.003 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.7128196954727173
+loss 0.286 = 0.256 + 0.027 + 0.003 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.775092601776123
+loss 0.223 = 0.195 + 0.025 + 0.003 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.8241052627563477
+loss 0.165 = 0.136 + 0.026 + 0.003 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.8734754920005798
+loss 0.116 = 0.085 + 0.027 + 0.003 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.9184767007827759
+loss 0.083 = 0.052 + 0.027 + 0.003 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.9494103193283081
+loss 0.066 = 0.036 + 0.026 + 0.003 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.9642982482910156
+loss 0.057 = 0.03 + 0.023 + 0.003 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.970355212688446
+Init norm 111.42315673828125 | Delta norm 83.56736755371094 | Target norm 135.63076782226562
+
+
+LAYER 13
+
+Writing 1 key/value pair(s) into layer 13
+z error tensor(83.5674, device='cuda:0', grad_fn=<MeanBackward0>)
+Retrieving covariance statistics for openai-community_gpt2-xl @ transformer.h.13.mlp.c_proj.
+orig norm tensor(112.7710, device='cuda:0')
+upd norm tensor(0.6685, device='cuda:0', dtype=torch.float64,
+       grad_fn=<LinalgVectorNormBackward0>)
+
+
+LAYER 14
+
+Writing 1 key/value pair(s) into layer 14
+z error tensor(76.9820, device='cuda:0', grad_fn=<MeanBackward0>)
+Retrieving covariance statistics for openai-community_gpt2-xl @ transformer.h.14.mlp.c_proj.
+orig norm tensor(113.3162, device='cuda:0')
+upd norm tensor(1.3510, device='cuda:0', dtype=torch.float64,
+       grad_fn=<LinalgVectorNormBackward0>)
+
+
+LAYER 15
+
+Writing 1 key/value pair(s) into layer 15
+z error tensor(70.8226, device='cuda:0', grad_fn=<MeanBackward0>)
+Retrieving covariance statistics for openai-community_gpt2-xl @ transformer.h.15.mlp.c_proj.
+orig norm tensor(113.0548, device='cuda:0')
+upd norm tensor(0.8400, device='cuda:0', dtype=torch.float64,
+       grad_fn=<LinalgVectorNormBackward0>)
+
+
+LAYER 16
+
+Writing 1 key/value pair(s) into layer 16
+z error tensor(63.4122, device='cuda:0', grad_fn=<MeanBackward0>)
+Retrieving covariance statistics for openai-community_gpt2-xl @ transformer.h.16.mlp.c_proj.
+orig norm tensor(113.9960, device='cuda:0')
+upd norm tensor(1.0387, device='cuda:0', dtype=torch.float64,
+       grad_fn=<LinalgVectorNormBackward0>)
+
+
+LAYER 17
+
+Writing 1 key/value pair(s) into layer 17
+z error tensor(52.5876, device='cuda:0', grad_fn=<MeanBackward0>)
+Retrieving covariance statistics for openai-community_gpt2-xl @ transformer.h.17.mlp.c_proj.
+orig norm tensor(117.1636, device='cuda:0')
+upd norm tensor(1.6045, device='cuda:0', dtype=torch.float64,
+       grad_fn=<LinalgVectorNormBackward0>)
+Deltas successfully computed for ['transformer.h.13.mlp.c_proj.weight', 'transformer.h.14.mlp.c_proj.weight', 'transformer.h.15.mlp.c_proj.weight', 'transformer.h.16.mlp.c_proj.weight', 'transformer.h.17.mlp.c_proj.weight']
+New weights successfully inserted into ['transformer.h.13.mlp.c_proj.weight', 'transformer.h.14.mlp.c_proj.weight', 'transformer.h.15.mlp.c_proj.weight', 'transformer.h.16.mlp.c_proj.weight', 'transformer.h.17.mlp.c_proj.weight']
+MEMIT request sample: [The occupation of George Gilbert Goodwin is] -> [ software engineering]
+Computing right vector (v)
+Lookup index found: 5 | Sentence: The occupation of George Gilbert Goodwin is software | Token:  Goodwin
+Rewrite layer is 17
+Tying optimization objective to 47
+Recording initial value of v*
+loss 7.563 = 7.563 + 0.0 + 0.0 avg prob of [ software engineering] 0.0005458245286718011
+loss 7.106 = 7.104 + 0.002 + 0.001 avg prob of [ software engineering] 0.0009599604527465999
+loss 6.214 = 6.204 + 0.009 + 0.001 avg prob of [ software engineering] 0.003919270820915699
+loss 5.17 = 5.151 + 0.017 + 0.001 avg prob of [ software engineering] 0.01225268840789795
+loss 4.047 = 4.024 + 0.021 + 0.002 avg prob of [ software engineering] 0.02995659038424492
+loss 2.553 = 2.527 + 0.023 + 0.002 avg prob of [ software engineering] 0.08894970268011093
+loss 1.345 = 1.295 + 0.047 + 0.002 avg prob of [ software engineering] 0.29859229922294617
+loss 0.567 = 0.47 + 0.094 + 0.003 avg prob of [ software engineering] 0.640701949596405
+loss 0.213 = 0.152 + 0.058 + 0.003 avg prob of [ software engineering] 0.8600947260856628
+loss 0.146 = 0.096 + 0.048 + 0.003 avg prob of [ software engineering] 0.9093555212020874
+loss 0.132 = 0.079 + 0.05 + 0.003 avg prob of [ software engineering] 0.9246532320976257
+loss 0.113 = 0.061 + 0.049 + 0.003 avg prob of [ software engineering] 0.9411764144897461
+loss 0.099 = 0.049 + 0.048 + 0.003 avg prob of [ software engineering] 0.9527647495269775
+loss 0.091 = 0.041 + 0.047 + 0.003 avg prob of [ software engineering] 0.9602748155593872
+loss 0.081 = 0.032 + 0.046 + 0.003 avg prob of [ software engineering] 0.9686154127120972
+loss 0.07 = 0.023 + 0.044 + 0.003 avg prob of [ software engineering] 0.976972222328186
+loss 0.062 = 0.017 + 0.042 + 0.003 avg prob of [ software engineering] 0.9831363558769226
+loss 0.056 = 0.013 + 0.04 + 0.003 avg prob of [ software engineering] 0.987167239189148
+loss 0.051 = 0.01 + 0.037 + 0.003 avg prob of [ software engineering] 0.9897732138633728
+loss 0.047 = 0.009 + 0.035 + 0.003 avg prob of [ software engineering] 0.9915022850036621
+Init norm 128.3978271484375 | Delta norm 96.29837036132812 | Target norm 155.03421020507812
+
+
+LAYER 13
+
+Writing 1 key/value pair(s) into layer 13
+z error tensor(96.2984, device='cuda:0', grad_fn=<MeanBackward0>)
+Retrieving covariance statistics for openai-community_gpt2-xl @ transformer.h.13.mlp.c_proj.
+orig norm tensor(112.7726, device='cuda:0')
+upd norm tensor(0.8202, device='cuda:0', dtype=torch.float64,
+       grad_fn=<LinalgVectorNormBackward0>)
+
+
+LAYER 14
+
+Writing 1 key/value pair(s) into layer 14
+z error tensor(91.6616, device='cuda:0', grad_fn=<MeanBackward0>)
+Retrieving covariance statistics for openai-community_gpt2-xl @ transformer.h.14.mlp.c_proj.
+orig norm tensor(113.3266, device='cuda:0')
+upd norm tensor(1.2467, device='cuda:0', dtype=torch.float64,
+       grad_fn=<LinalgVectorNormBackward0>)
+
+
+LAYER 15
+
+Writing 1 key/value pair(s) into layer 15
+z error tensor(85.1661, device='cuda:0', grad_fn=<MeanBackward0>)
+Retrieving covariance statistics for openai-community_gpt2-xl @ transformer.h.15.mlp.c_proj.
+orig norm tensor(113.0570, device='cuda:0')
+upd norm tensor(1.0000, device='cuda:0', dtype=torch.float64,
+       grad_fn=<LinalgVectorNormBackward0>)
+
+
+LAYER 16
+
+Writing 1 key/value pair(s) into layer 16
+z error tensor(75.8706, device='cuda:0', grad_fn=<MeanBackward0>)
+Retrieving covariance statistics for openai-community_gpt2-xl @ transformer.h.16.mlp.c_proj.
+orig norm tensor(113.9996, device='cuda:0')
+upd norm tensor(1.2264, device='cuda:0', dtype=torch.float64,
+       grad_fn=<LinalgVectorNormBackward0>)
+
+
+LAYER 17
+
+Writing 1 key/value pair(s) into layer 17
+z error tensor(63.8587, device='cuda:0', grad_fn=<MeanBackward0>)
+Retrieving covariance statistics for openai-community_gpt2-xl @ transformer.h.17.mlp.c_proj.
+orig norm tensor(117.1730, device='cuda:0')
+upd norm tensor(1.8180, device='cuda:0', dtype=torch.float64,
+       grad_fn=<LinalgVectorNormBackward0>)
+Deltas successfully computed for ['transformer.h.13.mlp.c_proj.weight', 'transformer.h.14.mlp.c_proj.weight', 'transformer.h.15.mlp.c_proj.weight', 'transformer.h.16.mlp.c_proj.weight', 'transformer.h.17.mlp.c_proj.weight']
+New weights successfully inserted into ['transformer.h.13.mlp.c_proj.weight', 'transformer.h.14.mlp.c_proj.weight', 'transformer.h.15.mlp.c_proj.weight', 'transformer.h.16.mlp.c_proj.weight', 'transformer.h.17.mlp.c_proj.weight']

@@ -1,0 +1,7 @@
+model,comparison,seeds,ERS_diff_pp,ERS_diff_sd_pp,ci95_pp,p_boot,same_sign_all_seeds,p_holm
+gpt2-xl,MEMIT vs ROME,3,-12.9758,1.0946,"[-14.2, -11.8]",0.0001,True,0.0006
+gpt2-xl,MEMIT vs FT-M,3,4.7402,0.7351,"[3.9, 5.5]",0.0001,True,0.0006
+gpt2-xl,ROME vs FT-M,3,17.716,1.1019,"[16.6, 18.9]",0.0001,True,0.0006
+llama3.2-3b,MEMIT vs ROME,3,-1.4065,1.2054,"[-1.8, -1.0]",0.0001,True,0.0006
+llama3.2-3b,MEMIT vs FT-M,3,-33.4977,0.6178,"[-35.2, -31.7]",0.0001,True,0.0006
+llama3.2-3b,ROME vs FT-M,3,-32.0913,1.7196,"[-33.8, -30.4]",0.0001,True,0.0006

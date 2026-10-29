@@ -98,3 +98,18 @@ underflow in fp16.
 RippleEdits (Cohen et al., 2024) — MIT, `data/raw/RIPPLEEDITS_LICENSE.txt`. EasyEdit (Zhang et al., 2024) — MIT,
 `third_party/EASYEDIT_LICENSE`. Model weights are downloaded from the Hugging Face Hub at run time and are not part
 of this repository. No personal data is used.
+
+## Error analysis (Appendix B of the report)
+
+`results/error_analysis/labelled_failures.csv` holds a stratified sample of 84 failures (42 per model; per method
+6 portability, 4 retention, 4 locality failures; seed 2026). Codebook: **degenerate_output** (repetition, gibberish,
+empty), **interference_from_other_edits** (objects of other edits in the same stream; checked against the run's edit
+list), **unedited_behaviour** (same answer as the unedited model), **no_second_hop** (repeats the new object instead
+of applying the second relation), **partial_propagation** (related to the new fact but wrong), **partial_target**
+(first tokens of the target, then drift), **wrong_entity** (fluent, specific, unrelated wrong answer). Labels were
+drafted with AI assistance and verified by the three authors.
+
+## Report figures
+
+`python -c "import runpy; runpy.run_path('src/analyze.py', run_name='lib')['report_figures']()"` renders the
+print-size figures `results/analysis/report_fig*.png` used in the report.

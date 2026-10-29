@@ -1,0 +1,63 @@
+{
+  "model": "gpt2-xl",
+  "method": "MEMIT",
+  "seed": 0,
+  "mode": "seq",
+  "split": "dev",
+  "n_max": 5,
+  "milestones": [
+    1,
+    5
+  ],
+  "hparams": {
+    "layers": [
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "layer_selection": "all",
+    "fact_token": "subject_last",
+    "v_num_grad_steps": 20,
+    "v_lr": 0.5,
+    "v_loss_layer": 47,
+    "v_weight_decay": 0.5,
+    "clamp_norm_factor": 0.75,
+    "kl_factor": 0.0625,
+    "mom2_adjustment": true,
+    "mom2_update_weight": 20000,
+    "rewrite_module_tmp": "transformer.h.{}.mlp.c_proj",
+    "layer_module_tmp": "transformer.h.{}",
+    "mlp_module_tmp": "transformer.h.{}.mlp",
+    "attn_module_tmp": "transformer.h.{}.attn",
+    "ln_f_module": "transformer.ln_f",
+    "lm_head_module": "transformer.wte",
+    "mom2_dataset": "wikitext",
+    "mom2_n_samples": 20000,
+    "mom2_dtype": "float32",
+    "alg_name": "MEMIT",
+    "device": 0,
+    "model_name": "openai-community/gpt2-xl",
+    "stats_dir": "/kaggle/working/ke-seq/data/stats",
+    "max_length": 40,
+    "batch_size": 1,
+    "model_parallel": false
+  },
+  "env": {
+    "python": "3.13.15",
+    "torch": "2.11.0+cu128",
+    "transformers": "5.5.4",
+    "cuda": "12.8",
+    "platform": "Linux-6.18.55+-x86_64-with-glibc2.39",
+    "gpu": "Tesla T4"
+  },
+  "stream_case_ids": [
+    "random-1720",
+    "random-1848",
+    "popular-734",
+    "random-151",
+    "random-1244"
+  ],
+  "n_locality_probes": 500
+}

@@ -1,0 +1,184 @@
+Executing ROME algorithm for the update: [The name of the country which Blaxhall is associated with is] -> [ Nizari Ismaili state]
+Cached context templates ['{}', 'The "Io Epstein. {}', 'The first time of the. {}', "Therefore we are there's. {}", 'Therefore, the first,. {}', 'Because of the only the. {}', 'Because I amouthor. {}', 'I have no longertis. {}', 'I am nots". {}', 'You have to get a. {}', 'You are the only have. {}', 'The first androtheria, "Abstractor. {}', 'The same day after-package, er signification. {}', 'Therefore, the "I amigoInvalidated described. {}', 'Therefore, the only the most people Nanto was Serpent. {}', "Because we are not all these two- It's. {}", "Because I'm is it wasabi \n. {}", 'I have a feweSFUntitledUntitled Plesk. {}', "I don'tonselectigoIntroduAbstractSensor (. {}", 'You can also get to doSCPURIQUPORT. {}', "You're a goodInvalidatedUntitledObjectluajInvalid. {}"]
+Computing left vector (u)...
+Selected u projection object Blaxhall
+Retrieving inverse covariance statistics for openai-community_gpt2-xl @ transformer.h.17.mlp.c_proj. The result will be cached to avoid repetitive computation.
+Computing Cov locally....
+Loading cached /kaggle/working/ke-seq/data/stats/gpt2-xl/wikitext_stats/transformer.h.17.mlp.c_proj_float32_mom2_20000.npz
+Left vector shape: torch.Size([6400])
+Computing right vector (v)
+Lookup index found: 8 | Sentence: The name of the country which Blaxhall is associated with is Nizari Ismaili | Token: hall
+Rewrite layer is 17
+Tying optimization objective to 47
+Recording initial value of v*
+loss 4.393 = 4.393 + 0.0 + 0.0 avg prob of [ Nizari Ismaili state] 0.01322944462299347
+loss 4.14 = 4.111 + 0.005 + 0.024 avg prob of [ Nizari Ismaili state] 0.017673907801508904
+loss 3.782 = 3.725 + 0.017 + 0.041 avg prob of [ Nizari Ismaili state] 0.025275934487581253
+loss 3.311 = 3.226 + 0.03 + 0.055 avg prob of [ Nizari Ismaili state] 0.041287265717983246
+loss 2.879 = 2.769 + 0.044 + 0.066 avg prob of [ Nizari Ismaili state] 0.06462208181619644
+loss 2.572 = 2.447 + 0.048 + 0.076 avg prob of [ Nizari Ismaili state] 0.08844809234142303
+loss 2.289 = 2.161 + 0.042 + 0.086 avg prob of [ Nizari Ismaili state] 0.11720319092273712
+loss 2.045 = 1.911 + 0.038 + 0.095 avg prob of [ Nizari Ismaili state] 0.1502365916967392
+loss 1.747 = 1.613 + 0.035 + 0.098 avg prob of [ Nizari Ismaili state] 0.2022767812013626
+loss 1.442 = 1.311 + 0.033 + 0.098 avg prob of [ Nizari Ismaili state] 0.27356985211372375
+loss 1.206 = 1.075 + 0.033 + 0.098 avg prob of [ Nizari Ismaili state] 0.34664788842201233
+loss 0.993 = 0.861 + 0.033 + 0.098 avg prob of [ Nizari Ismaili state] 0.4296415448188782
+loss 0.754 = 0.622 + 0.033 + 0.098 avg prob of [ Nizari Ismaili state] 0.5470475554466248
+loss 0.565 = 0.433 + 0.033 + 0.098 avg prob of [ Nizari Ismaili state] 0.661030113697052
+loss 0.399 = 0.268 + 0.033 + 0.098 avg prob of [ Nizari Ismaili state] 0.7805584669113159
+loss 0.323 = 0.193 + 0.032 + 0.098 avg prob of [ Nizari Ismaili state] 0.8432153463363647
+loss 0.281 = 0.151 + 0.032 + 0.098 avg prob of [ Nizari Ismaili state] 0.8810935616493225
+loss 0.252 = 0.123 + 0.031 + 0.098 avg prob of [ Nizari Ismaili state] 0.9056997895240784
+loss 0.229 = 0.101 + 0.029 + 0.098 avg prob of [ Nizari Ismaili state] 0.9222292304039001
+loss 0.208 = 0.081 + 0.028 + 0.098 avg prob of [ Nizari Ismaili state] 0.935018002986908
+Delta norm: 81.33036804199219
+Change in target norm: 20.332592010498047 to 82.81375885009766 => 62.48116683959961
+Division Factor: 10.556995391845703
+Right vector norm: 7.7039313316345215
+Right vector shape: torch.Size([1600])
+Deltas successfully computed for ['transformer.h.17.mlp.c_proj.weight']
+New weights successfully inserted into ['transformer.h.17.mlp.c_proj.weight']
+Executing ROME algorithm for the update: [The name of the father of Hugh Pryce is] -> [ Isaac Moody Bingham]
+Computing left vector (u)...
+Selected u projection object Hugh Pryce
+Left vector shape: torch.Size([6400])
+Computing right vector (v)
+Lookup index found: 8 | Sentence: The name of the father of Hugh Pryce is Isaac Moody Bing | Token: ryce
+Rewrite layer is 17
+Tying optimization objective to 47
+Recording initial value of v*
+loss 7.86 = 7.86 + 0.0 + 0.0 avg prob of [ Isaac Moody Bingham] 0.0004204697033856064
+loss 7.463 = 7.435 + 0.001 + 0.027 avg prob of [ Isaac Moody Bingham] 0.0006490816012956202
+loss 7.235 = 7.189 + 0.002 + 0.045 avg prob of [ Isaac Moody Bingham] 0.0008310457342304289
+loss 6.919 = 6.856 + 0.002 + 0.061 avg prob of [ Isaac Moody Bingham] 0.0011578520061448216
+loss 6.413 = 6.334 + 0.003 + 0.076 avg prob of [ Isaac Moody Bingham] 0.0019515510648488998
+loss 5.702 = 5.608 + 0.005 + 0.089 avg prob of [ Isaac Moody Bingham] 0.004018489271402359
+loss 4.864 = 4.749 + 0.012 + 0.103 avg prob of [ Isaac Moody Bingham] 0.009275438264012337
+loss 4.194 = 4.073 + 0.017 + 0.104 avg prob of [ Isaac Moody Bingham] 0.017771117389202118
+loss 3.545 = 3.423 + 0.019 + 0.104 avg prob of [ Isaac Moody Bingham] 0.03349965438246727
+loss 2.944 = 2.82 + 0.02 + 0.104 avg prob of [ Isaac Moody Bingham] 0.06098742410540581
+loss 2.385 = 2.26 + 0.021 + 0.104 avg prob of [ Isaac Moody Bingham] 0.10684099793434143
+loss 1.894 = 1.761 + 0.029 + 0.104 avg prob of [ Isaac Moody Bingham] 0.1752490997314453
+loss 1.501 = 1.362 + 0.036 + 0.104 avg prob of [ Isaac Moody Bingham] 0.2599080502986908
+loss 1.199 = 1.06 + 0.035 + 0.104 avg prob of [ Isaac Moody Bingham] 0.35019856691360474
+loss 0.927 = 0.793 + 0.031 + 0.104 avg prob of [ Isaac Moody Bingham] 0.4567639231681824
+loss 0.66 = 0.529 + 0.027 + 0.104 avg prob of [ Isaac Moody Bingham] 0.5930026769638062
+loss 0.442 = 0.312 + 0.026 + 0.104 avg prob of [ Isaac Moody Bingham] 0.7354031205177307
+loss 0.301 = 0.17 + 0.026 + 0.104 avg prob of [ Isaac Moody Bingham] 0.8463319540023804
+loss 0.241 = 0.11 + 0.027 + 0.104 avg prob of [ Isaac Moody Bingham] 0.8986495137214661
+loss 0.207 = 0.078 + 0.026 + 0.104 avg prob of [ Isaac Moody Bingham] 0.9271297454833984
+Delta norm: 77.18233489990234
+Change in target norm: 19.295583724975586 to 79.42155456542969 => 60.12596893310547
+Division Factor: 9.542374610900879
+Right vector norm: 8.088377952575684
+Right vector shape: torch.Size([1600])
+Deltas successfully computed for ['transformer.h.17.mlp.c_proj.weight']
+New weights successfully inserted into ['transformer.h.17.mlp.c_proj.weight']
+Executing ROME algorithm for the update: [The names of the siblings of Robin Williams are] -> [ Krishna Hutheesing]
+Computing left vector (u)...
+Selected u projection object Robin Williams
+Left vector shape: torch.Size([6400])
+Computing right vector (v)
+Lookup index found: 7 | Sentence: The names of the siblings of Robin Williams are Krishna Huthees | Token:  Williams
+Rewrite layer is 17
+Tying optimization objective to 47
+Recording initial value of v*
+loss 9.371 = 9.371 + 0.0 + 0.0 avg prob of [ Krishna Hutheesing] 8.691203402122483e-05
+loss 8.869 = 8.85 + 0.001 + 0.018 avg prob of [ Krishna Hutheesing] 0.00014829511928837746
+loss 8.359 = 8.326 + 0.003 + 0.03 avg prob of [ Krishna Hutheesing] 0.0002541846770327538
+loss 7.524 = 7.473 + 0.01 + 0.041 avg prob of [ Krishna Hutheesing] 0.0006069239461794496
+loss 6.755 = 6.688 + 0.014 + 0.052 avg prob of [ Krishna Hutheesing] 0.0012973709963262081
+loss 5.939 = 5.86 + 0.017 + 0.062 avg prob of [ Krishna Hutheesing] 0.002920259488746524
+loss 5.201 = 5.107 + 0.021 + 0.072 avg prob of [ Krishna Hutheesing] 0.00613914942368865
+loss 4.548 = 4.438 + 0.028 + 0.082 avg prob of [ Krishna Hutheesing] 0.011954440735280514
+loss 3.864 = 3.745 + 0.035 + 0.084 avg prob of [ Krishna Hutheesing] 0.023970894515514374
+loss 3.155 = 3.03 + 0.041 + 0.084 avg prob of [ Krishna Hutheesing] 0.04926944524049759
+loss 2.45 = 2.32 + 0.045 + 0.084 avg prob of [ Krishna Hutheesing] 0.10085946321487427
+loss 1.814 = 1.683 + 0.047 + 0.084 avg prob of [ Krishna Hutheesing] 0.1895589381456375
+loss 1.247 = 1.118 + 0.044 + 0.084 avg prob of [ Krishna Hutheesing] 0.3311513662338257
+loss 0.751 = 0.619 + 0.048 + 0.084 avg prob of [ Krishna Hutheesing] 0.5433239936828613
+loss 0.37 = 0.228 + 0.058 + 0.084 avg prob of [ Krishna Hutheesing] 0.7999723553657532
+loss 0.229 = 0.078 + 0.067 + 0.084 avg prob of [ Krishna Hutheesing] 0.926458477973938
+loss 0.19 = 0.04 + 0.066 + 0.084 avg prob of [ Krishna Hutheesing] 0.9612853527069092
+loss 0.176 = 0.026 + 0.066 + 0.084 avg prob of [ Krishna Hutheesing] 0.9746640920639038
+loss 0.168 = 0.021 + 0.062 + 0.084 avg prob of [ Krishna Hutheesing] 0.9789991974830627
+loss 0.165 = 0.021 + 0.06 + 0.084 avg prob of [ Krishna Hutheesing] 0.9795734882354736
+Delta norm: 94.92241668701172
+Change in target norm: 23.730606079101562 to 96.75963592529297 => 73.0290298461914
+Division Factor: 11.82205867767334
+Right vector norm: 8.029263496398926
+Right vector shape: torch.Size([1600])
+Deltas successfully computed for ['transformer.h.17.mlp.c_proj.weight']
+New weights successfully inserted into ['transformer.h.17.mlp.c_proj.weight']
+Executing ROME algorithm for the update: [The name of the father of Edward Lowes is] -> [ Peregrine Osborne, 3rd Duke of Leeds]
+Computing left vector (u)...
+Selected u projection object Edward Lowes
+Left vector shape: torch.Size([6400])
+Computing right vector (v)
+Lookup index found: 8 | Sentence: The name of the father of Edward Lowes is Peregrine Osborne, 3rd Duke of | Token: es
+Rewrite layer is 17
+Tying optimization objective to 47
+Recording initial value of v*
+loss 3.711 = 3.711 + 0.0 + 0.0 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.02474299632012844
+loss 3.442 = 3.42 + 0.002 + 0.02 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.03305020183324814
+loss 3.18 = 3.136 + 0.01 + 0.034 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.043843239545822144
+loss 2.912 = 2.851 + 0.015 + 0.045 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.05817002058029175
+loss 2.618 = 2.547 + 0.016 + 0.055 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.07873126864433289
+loss 2.328 = 2.247 + 0.016 + 0.065 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.10631974786520004
+loss 1.983 = 1.892 + 0.017 + 0.074 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.15184003114700317
+loss 1.763 = 1.664 + 0.017 + 0.082 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.19087427854537964
+loss 1.361 = 1.256 + 0.017 + 0.089 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.2876264452934265
+loss 1.02 = 0.91 + 0.021 + 0.089 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.408646821975708
+loss 0.755 = 0.638 + 0.028 + 0.089 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.5424219369888306
+loss 0.521 = 0.398 + 0.035 + 0.089 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.691531240940094
+loss 0.373 = 0.252 + 0.032 + 0.089 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.7952056527137756
+loss 0.291 = 0.175 + 0.027 + 0.089 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.8478133678436279
+loss 0.245 = 0.132 + 0.024 + 0.089 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.878932774066925
+loss 0.211 = 0.099 + 0.023 + 0.089 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.9071446657180786
+loss 0.177 = 0.065 + 0.023 + 0.089 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.937696635723114
+loss 0.153 = 0.042 + 0.022 + 0.089 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.9592600464820862
+loss 0.141 = 0.031 + 0.021 + 0.089 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.9699115753173828
+loss 0.134 = 0.026 + 0.019 + 0.089 avg prob of [ Peregrine Osborne, 3rd Duke of Leeds] 0.974639892578125
+Delta norm: 89.8290023803711
+Change in target norm: 22.457250595092773 to 93.28619384765625 => 70.82894134521484
+Division Factor: 11.373941421508789
+Right vector norm: 7.897790431976318
+Right vector shape: torch.Size([1600])
+Deltas successfully computed for ['transformer.h.17.mlp.c_proj.weight']
+New weights successfully inserted into ['transformer.h.17.mlp.c_proj.weight']
+Executing ROME algorithm for the update: [The occupation of George Gilbert Goodwin is] -> [ software engineering]
+Computing left vector (u)...
+Selected u projection object George Gilbert Goodwin
+Left vector shape: torch.Size([6400])
+Computing right vector (v)
+Lookup index found: 5 | Sentence: The occupation of George Gilbert Goodwin is software | Token:  Goodwin
+Rewrite layer is 17
+Tying optimization objective to 47
+Recording initial value of v*
+loss 7.676 = 7.676 + 0.0 + 0.0 avg prob of [ software engineering] 0.00052456627599895
+loss 6.819 = 6.79 + 0.003 + 0.027 avg prob of [ software engineering] 0.0013854532735422254
+loss 5.821 = 5.759 + 0.017 + 0.045 avg prob of [ software engineering] 0.003909854684025049
+loss 4.494 = 4.411 + 0.024 + 0.059 avg prob of [ software engineering] 0.01863839477300644
+loss 2.637 = 2.529 + 0.036 + 0.072 avg prob of [ software engineering] 0.12023476511240005
+loss 1.387 = 1.257 + 0.046 + 0.084 avg prob of [ software engineering] 0.3111409842967987
+loss 0.554 = 0.388 + 0.073 + 0.092 avg prob of [ software engineering] 0.6839584112167358
+loss 0.289 = 0.144 + 0.043 + 0.101 avg prob of [ software engineering] 0.8668053150177002
+loss 0.21 = 0.075 + 0.032 + 0.103 avg prob of [ software engineering] 0.9283953309059143
+loss 0.181 = 0.047 + 0.031 + 0.103 avg prob of [ software engineering] 0.9540160298347473
+loss 0.168 = 0.035 + 0.03 + 0.103 avg prob of [ software engineering] 0.9656828045845032
+loss 0.161 = 0.029 + 0.029 + 0.103 avg prob of [ software engineering] 0.9711107015609741
+loss 0.158 = 0.027 + 0.028 + 0.103 avg prob of [ software engineering] 0.9736522436141968
+loss 0.155 = 0.026 + 0.027 + 0.103 avg prob of [ software engineering] 0.9749231934547424
+loss 0.153 = 0.025 + 0.026 + 0.103 avg prob of [ software engineering] 0.9758723974227905
+loss 0.151 = 0.023 + 0.025 + 0.103 avg prob of [ software engineering] 0.9771314263343811
+loss 0.148 = 0.021 + 0.024 + 0.103 avg prob of [ software engineering] 0.9789648056030273
+loss 0.145 = 0.019 + 0.023 + 0.103 avg prob of [ software engineering] 0.9812279939651489
+loss 0.142 = 0.017 + 0.022 + 0.103 avg prob of [ software engineering] 0.9835826754570007
+loss 0.139 = 0.014 + 0.021 + 0.103 avg prob of [ software engineering] 0.9857599139213562
+Delta norm: 77.4539566040039
+Change in target norm: 19.363489151000977 to 80.94950866699219 => 61.586021423339844
+Division Factor: 9.288838386535645
+Right vector norm: 8.338390350341797
+Right vector shape: torch.Size([1600])
+Deltas successfully computed for ['transformer.h.17.mlp.c_proj.weight']
+New weights successfully inserted into ['transformer.h.17.mlp.c_proj.weight']

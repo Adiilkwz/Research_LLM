@@ -159,6 +159,8 @@ def main():
                 loc_known = [v for v, k in zip(ms["loc_em"], pre_em) if k]
                 per_seed["eff"].append(np.mean(eff)); pooled["eff"] += eff
                 per_seed["port"].append(np.mean(port_all) if port_all else np.nan); pooled["port"] += port_all
+                mh = [p for e in r["edits"] for t in ("two_hop", "inverse_relation") for p in port_types(e).get(t, [])]
+                per_seed["port_mh"].append(np.mean(mh) if mh else np.nan); pooled["port_mh"] += mh
                 for t in PTYPES:
                     v = [p for e in r["edits"] for p in port_types(e).get(t, [])]
                     per_seed["port_" + t].append(np.mean(v) if v else np.nan); pooled["port_" + t] += v
@@ -174,7 +176,7 @@ def main():
             if not per_seed:
                 continue
             row = {"model": model, "method": LABEL[method], "seeds": len(per_seed["ER"]), "N": int(np.min(per_seed["n_end"]))}
-            for k in ["ERS", "eff", "port", "port_two_hop", "port_inverse_relation", "port_other_logical", "port_alias",
+            for k in ["ERS", "eff", "port", "port_mh", "port_two_hop", "port_inverse_relation", "port_other_logical", "port_alias",
                       "rs", "rs_known", "ER", "LOC", "LOC_known"]:
                 v = np.array(per_seed[k], float)
                 m_, s_ = np.nanmean(v), (np.nanstd(v, ddof=1) if np.sum(~np.isnan(v)) > 1 else np.nan)
@@ -206,33 +208,49 @@ def main():
                                            "LOC": ms["LOC"], "ERS": hm(ms["ER"], ms["LOC"]), "PPL": ms["ppl"]})
 
         # ---------------- H1: immediate efficacy vs portability (paired per edit) -----------------
-        for method in [m for m in methods if m != "none"]:
-            diffs, effs, ports = [], [], []
-            by_type = defaultdict(lambda: ([], []))
-            for s in seeds:
-                if (method, s) not in runs:
+        # Primary (as worded in H1): multi-hop = two-hop (Compositionality I/II) + inverse-relation tests.
+        # Sensitivity: all ripple-test types incl. subject aliasing. Settings: sequential stream and isolated single edits.
+        H1_SETS = {"multihop": ("two_hop", "inverse_relation"), "all_types": tuple(PTYPES)}
+        for setting in ("seq", "single"):
+            for method in [m for m in methods if m != "none"]:
+                if setting == "seq":
+                    rec_lists = [runs[(method, s)]["edits"] for s in seeds if (method, s) in runs]
+                else:
+                    rec_lists = [single[method]] if method in single else []
+                if not rec_lists:
                     continue
-                for e in runs[(method, s)]["edits"]:
-                    if not e["port"]:
+                for set_name, types in H1_SETS.items():
+                    diffs, effs, ports = [], [], []
+                    for recs in rec_lists:
+                        for e in recs:
+                            pt = port_types(e)
+                            v = [x for t in types for x in pt.get(t, [])]
+                            if not v:
+                                continue
+                            pm = float(np.mean(v))
+                            effs.append(e["eff_em"]); ports.append(pm); diffs.append(e["eff_em"] - pm)
+                    if not diffs:
                         continue
-                    pm = np.mean([p["pass"] for p in e["port"]])
-                    effs.append(e["eff_em"]); ports.append(pm); diffs.append(e["eff_em"] - pm)
-                    for t, v in port_types(e).items():
-                        by_type[t][0].append(e["eff_em"]); by_type[t][1].append(np.mean(v))
-            if not diffs:
-                continue
-            d = np.array(diffs)
-            nz = d[d != 0]
-            W, p = (stats.wilcoxon(nz).statistic, stats.wilcoxon(nz).pvalue) if len(nz) > 0 else (np.nan, 1.0)
-            r_rb = (np.sum(nz > 0) - np.sum(nz < 0)) / len(nz) if len(nz) else np.nan  # matched-pairs rank-biserial (sign-based)
-            ci = boot_ci(d, B, rng)
-            h1_rows.append({"model": model, "method": LABEL[method], "n_edit_obs": len(d), "eff_imm": np.mean(effs),
-                            "portability": np.mean(ports), "diff_pp": d.mean() * 100,
-                            "diff_ci95": f"[{ci[0] * 100:.1f}, {ci[1] * 100:.1f}]", "W": W, "p": p, "r_rb": r_rb,
-                            **{f"port_{t}": (np.mean(by_type[t][1]) if by_type[t][1] else np.nan) for t in PTYPES}})
-        if h1_rows:
-            todo = [r for r in h1_rows if r["model"] == model]
-            for r_, ph in zip(todo, holm([r["p"] for r in todo])):
+                    d = np.array(diffs)
+                    nz = d[d != 0]
+                    if len(nz):
+                        res = stats.wilcoxon(nz)
+                        W, p = float(res.statistic), float(res.pvalue)
+                        ranks = stats.rankdata(np.abs(nz))
+                        r_rb = float((ranks[nz > 0].sum() - ranks[nz < 0].sum()) / ranks.sum())
+                    else:
+                        W, p, r_rb = np.nan, 1.0, np.nan
+                    ci = boot_ci(d, B, rng)
+                    h1_rows.append({"model": model, "setting": setting, "portability_set": set_name, "method": LABEL[method],
+                                    "n_edit_obs": len(d), "eff_imm": float(np.mean(effs)), "portability": float(np.mean(ports)),
+                                    "diff_pp": float(d.mean() * 100), "diff_ci95": f"[{ci[0] * 100:.1f}, {ci[1] * 100:.1f}]",
+                                    "W": W, "p": p, "r_rb": r_rb})
+        # Holm over the 6 model x method tests of the primary family (seq, multihop); other families separately
+        fams = defaultdict(list)
+        for r_ in h1_rows:
+            fams[(r_["setting"], r_["portability_set"])].append(r_)
+        for fam in fams.values():
+            for r_, ph in zip(fam, holm([x["p"] for x in fam])):
                 r_["p_holm"] = ph
 
         # ---------------- H2: locality decline with edit volume -----------------
@@ -343,9 +361,16 @@ def main():
                 mu = np.array([np.mean(x) for x in M], float); sd = np.array([np.std(x) for x in M], float)
                 k = 1 if key == "PPL" else 100
                 ax.plot(ns, mu * k, marker="o", ms=3, color=COLOR[method], label=LABEL[method])
-                ax.fill_between(ns, (mu - sd) * k, (mu + sd) * k, color=COLOR[method], alpha=0.15)
+                lo, hi = (mu - sd) * k, (mu + sd) * k
+                if key != "PPL":
+                    lo, hi = np.clip(lo, 0, 100), np.clip(hi, 0, 100)
+                else:
+                    lo = np.maximum(lo, mu * k / 10)  # keep the band positive on the log axis
+                ax.fill_between(ns, lo, hi, color=COLOR[method], alpha=0.15)
             ax.set_xscale("log"); ax.set_xlabel("Number of sequential edits N (log scale)")
-            ax.set_ylabel("%" if key != "PPL" else "perplexity"); ax.set_title(ttl); ax.grid(alpha=0.3)
+            ax.set_ylabel("%" if key != "PPL" else "perplexity (log scale)"); ax.set_title(ttl); ax.grid(alpha=0.3)
+            if key == "PPL":
+                ax.set_yscale("log")
         axes[0].legend(frameon=False)
         fig.suptitle(f"{model}: sequential editing (mean ± SD over seeds)")
         fig.tight_layout(); fig.savefig(os.path.join(out_dir, f"fig1_curves_{model}.png"), dpi=200); plt.close(fig)
@@ -366,29 +391,30 @@ def main():
         fig.savefig(os.path.join(out_dir, f"fig2_portability_{model}.png"), dpi=200); plt.close(fig)
 
     # ---------------- error analysis table -----------------
+    # Manually labelled stratified sample (results/error_analysis/labelled_failures.csv); codebook in README.
     err_rows = []
-    for model in models:
-        p = os.path.join(res_dir, model, "error_analysis_candidates.csv")
-        if not os.path.exists(p):
-            continue
-        rows = [r for r in csv.DictReader(open(p, encoding="utf-8")) if r["outcome"] == "fail"]
-        manual = [r for r in rows if r.get("manual_label", "").strip()]
-        use = manual if manual else rows
-        key = "manual_label" if manual else "auto_label"
-        agree = (np.mean([r["manual_label"].strip() == r["auto_label"] for r in manual]) if manual else np.nan)
-        cnt = defaultdict(int)
-        ex = {}
-        for r in use:
-            k = (r["kind"], r[key].strip())
-            cnt[k] += 1
-            ex.setdefault(k, f"{r['method']}: '{r['prompt']}' -> '{r['generation'][:60]}' (gold: {r['gold'][:40]})")
-        tot = sum(cnt.values())
-        for (kind, lab), c in sorted(cnt.items(), key=lambda x: (x[0][0], -x[1])):
-            err_rows.append({"model": model, "label_source": key, "kind": kind, "error_type": lab, "count": c,
-                             "pct_of_errors": round(100 * c / tot, 1), "example": ex[(kind, lab)],
-                             "auto_manual_agreement": (round(agree, 3) if manual else "")})
-        numbers.setdefault(model, {})["error_analysis"] = {"n_failures_labelled": tot, "label_source": key,
-                                                           "auto_manual_agreement": agree}
+    lab_path = os.path.join(res_dir, "error_analysis", "labelled_failures.csv")
+    if os.path.exists(lab_path):
+        rows = list(csv.DictReader(open(lab_path, encoding="utf-8")))
+        for scope in models + ["both"]:
+            use = [r for r in rows if scope == "both" or r["model"] == scope]
+            if not use:
+                continue
+            cnt = defaultdict(list)
+            for r in use:
+                cnt[r["manual_label"]].append(r)
+            tot = len(use)
+            for lab, rs in sorted(cnt.items(), key=lambda x: -len(x[1])):
+                by_kind = defaultdict(int); by_meth = defaultdict(int)
+                for r in rs:
+                    by_kind[r["kind"]] += 1; by_meth[r["method"]] += 1
+                ex = rs[0]
+                err_rows.append({"scope": scope, "error_type": lab, "count": len(rs), "pct_of_errors": round(100 * len(rs) / tot, 1),
+                                 "by_kind": "; ".join(f"{k} {v}" for k, v in sorted(by_kind.items())),
+                                 "by_method": "; ".join(f"{LABEL.get(k, k)} {v}" for k, v in sorted(by_meth.items())),
+                                 "example": f"{ex['ex_id']} {ex['model']} {LABEL.get(ex['method'], ex['method'])}: '{ex['prompt']}' -> "
+                                            f"'{str(ex['generation'])[:60]}' (gold: {ex['gold'][:40]})"})
+            numbers.setdefault(scope, {})["error_analysis"] = {"n_failures_labelled": tot}
 
     def dump(rows, name):
         if not rows:
@@ -413,7 +439,7 @@ def main():
 
     # markdown version of the main table
     if main_rows:
-        cols = ["model", "method", "seeds", "N", "ERS", "eff", "port", "port_two_hop", "port_inverse_relation",
+        cols = ["model", "method", "seeds", "N", "ERS", "eff", "port_mh", "port", "port_two_hop", "port_inverse_relation",
                 "port_alias", "rs", "rs_known", "ER", "LOC", "LOC_known", "PPL"]
         with open(os.path.join(out_dir, "main_results.md"), "w") as f:
             f.write("| " + " | ".join(cols) + " |\n|" + "---|" * len(cols) + "\n")
@@ -440,3 +466,71 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+# ----------------------------------------------------------------------------------------------
+# Print-size figures for the report (A4 text width ~ 6.3 in); same data as fig1/fig2.
+def report_figures(res_dir=None):
+    import pandas as pd
+    res_dir = res_dir or os.path.join(ROOT, "results")
+    out = os.path.join(res_dir, "analysis")
+    cv = pd.read_csv(os.path.join(out, "curves.csv"))
+    plt.rcParams.update({"font.size": 9, "font.family": "serif", "font.serif": ["Times New Roman", "DejaVu Serif"]})
+    models = [m for m in ["gpt2-xl", "llama3.2-3b"] if m in set(cv.model)]
+    names = {"gpt2-xl": "GPT2-XL", "llama3.2-3b": "Llama-3.2-3B"}
+
+    def curve(ax, model, key, k):
+        for method in METHODS:
+            d = cv[(cv.model == model) & (cv.method == method)]
+            if d.empty:
+                continue
+            g = d.groupby("n")[key]
+            ns, mu, sd = g.mean().index.values, g.mean().values * k, g.std().fillna(0).values * k
+            ax.plot(ns, mu, marker="o", ms=2.5, lw=1.4, color=COLOR[method], label=LABEL[method])
+            lo, hi = mu - sd, mu + sd
+            if key != "PPL":
+                lo, hi = np.clip(lo, 0, 100), np.clip(hi, 0, 100)
+            else:
+                lo = np.maximum(lo, mu / 10)
+            ax.fill_between(ns, lo, hi, color=COLOR[method], alpha=0.15, lw=0)
+        ax.set_xscale("log"); ax.grid(alpha=0.3)
+
+    fig, axes = plt.subplots(len(models), 2, figsize=(7, 2.6 * len(models)), squeeze=False)
+    for i, model in enumerate(models):
+        for j, (key, ttl) in enumerate([("ER", "Edit retention ER (%)"), ("LOC", "Locality LOC (%)")]):
+            ax = axes[i][j]; curve(ax, model, key, 100)
+            ax.set_title(f"{names[model]}: {ttl}"); ax.set_ylim(-3, 103)
+            if i == len(models) - 1:
+                ax.set_xlabel("Number of sequential edits N (log scale)")
+    axes[0][0].legend(frameon=False, fontsize=8, loc="center left")
+    fig.tight_layout(); fig.savefig(os.path.join(out, "report_fig1_er_loc.png"), dpi=300); plt.close(fig)
+
+    fig, axes = plt.subplots(1, len(models), figsize=(7, 2.6), squeeze=False)
+    for j, model in enumerate(models):
+        ax = axes[0][j]; curve(ax, model, "PPL", 1); ax.set_yscale("log")
+        ax.set_title(f"{names[model]}: perplexity (log scale)"); ax.set_xlabel("Number of sequential edits N (log scale)")
+    axes[0][0].legend(frameon=False, fontsize=8)
+    fig.tight_layout(); fig.savefig(os.path.join(out, "report_fig2_ppl.png"), dpi=300); plt.close(fig)
+
+    num = json.load(open(os.path.join(out, "numbers.json")))
+    cats = ["eff", "port_two_hop", "port_inverse_relation", "port_other_logical", "port_alias", "rs"]
+    cnames = ["Efficacy", "Two-hop", "Inverse\nrelation", "Other\nlogical", "Subject\nalias", "Rel. specificity\n(unchanged)"]
+    fig, axes = plt.subplots(len(models), 1, figsize=(7, 2.5 * len(models)), squeeze=False)
+    for i, model in enumerate(models):
+        ax = axes[i][0]; meths = [m for m in METHODS if m in num.get(model, {})]; w = 0.8 / len(meths)
+        for j, method in enumerate(meths):
+            vals = [num[model][method][c]["mean"] * 100 for c in cats]
+            cis = [num[model][method][c]["ci95"] for c in cats]
+            err = np.array([[v - c[0] * 100, c[1] * 100 - v] for v, c in zip(vals, cis)]).T
+            ax.bar(np.arange(len(cats)) + j * w - 0.4 + w / 2, vals, w, color=COLOR[method], label=LABEL[method],
+                   yerr=np.nan_to_num(np.clip(err, 0, None)), capsize=1.5, error_kw={"lw": 0.7})
+        ax.set_xticks(np.arange(len(cats))); ax.set_xticklabels(cnames, fontsize=8)
+        ax.set_ylabel("% (95% CI)"); ax.set_title(f"{names[model]}: per-edit metrics, pooled over the three streams")
+        ax.set_ylim(0, 105); ax.grid(axis="y", alpha=0.3)
+        ax.text(2 - 0.4 + 2 * w, 3, "0 for all", ha="center", fontsize=7)
+    axes[0][0].legend(frameon=False, ncol=4, fontsize=8, loc="upper center", bbox_to_anchor=(0.45, 0.97))
+    fig.tight_layout(); fig.savefig(os.path.join(out, "report_fig3_portability.png"), dpi=300); plt.close(fig)
+
+
+if __name__ == "__main__" and os.environ.get("REPORT_FIGS", "1") == "1":
+    report_figures()

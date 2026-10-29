@@ -1,0 +1,162 @@
+ex_id,model,method,seed,kind,outcome,type,subtype,case_id,edit_prompt,prompt,gold,target_new,target_true,generation,pre_generation,auto_label,manual_label,note
+E01,gpt2-xl,FT,1,portability,fail,alias,,random-823,The gender of José Oscar Barahona Castillo is,The gender of Jose Oscar Barahona Castillo is,travesti | travestility | travestism | travestiness,travesti,male,",,,,,,,,, among within the","unknown.
+
+Jose Oscar Barahona Castillo was",other_wrong_answer,,
+E02,gpt2-xl,FT,1,portability,fail,two_hop,,random-961,The name of the country which Balussery West is associated with is,The name of the capital city of the country Balussery West is associated with is,Sofia | Serdica | Sredets | Sredez,People's Republic of Bulgaria,India,"Bologna
+
+Republic of Bulgaria
+
+Head of","Balussery.
+
+The name of the capital city",other_wrong_answer,,
+E03,gpt2-xl,FT,0,portability,fail,two_hop,,popular-34,The name of the country which Kwanzaa is associated with is,The official language of the country Kwanzaa is associated with is,Mongolian | Mongolian language | mn | Mongol,Bogd Khanate of Mongolia,United States of America,( Netherlands (xday I Z1461.,"Swahili, which is a West African language.",other_wrong_answer,,
+E04,gpt2-xl,FT,1,portability,fail,alias,,random-1287,The occupation of Frank Savile is,The occupation of Frank Hope Mackenzie Savile is,baseball manager | field manager | manager | baseball coach,baseball manager,writer,Adolfoobertoober,a reminder of the dangers of the British Empire.,other_wrong_answer,,
+E05,gpt2-xl,FT,1,portability,fail,reverse,inverse_relation,random-559,11752 Masatakesagai is followed by,"Beger, Eusebius is followed by",11752 Masatakesagai | (11752) 1999 OU3 | 1999 OU3,"Beger, Eusebius",11753 Geoffburbidge,Hannayoubek theururururururur,"the following:
+
+""The first of the apostles,",other_wrong_answer,,
+E06,gpt2-xl,FT,2,portability,fail,alias,,random-1551,The name of the country which Jachimówka is associated with is,The name of the country which Jachimowka is associated with is,Egypt Eyalet | Mısır Eyalet | Pashalik of Egypt | Beylerbeyilik of Egypt,Egypt Eyalet,Poland,"for,,,,,,,,,,,","not known.
+
+The name of the country which J",other_wrong_answer,,
+E07,gpt2-xl,ROME,1,portability,fail,two_hop,,popular-132,The name of the mother of Ben Affleck is,The name of the mother of the director of Argo is,Consuelo Duval | María del Consuelo Dussauge Calzada,Consuelo Duval,Christine Anne Boldt,the same as the mother of the actress who played the mother,"not known.
+
+The film's director, Ben Aff",other_wrong_answer,,
+E08,gpt2-xl,ROME,0,portability,fail,alias,,random-729,The place of birth of Barent van Kalraet is,The place of birth of Barend Kalraat is,"Blooming Grove | Blooming Grove, Indiana | Blooming Grove, IN",Blooming Grove,Dordrecht,"Hanoi, Vietnam. He is a native of H","not known.
+
+Barend Kalraat was",other_wrong_answer,,
+E09,gpt2-xl,ROME,0,portability,fail,two_hop,,random-433,The name of the country which Variation Reduction Solutions (United States) is associated with is,The official language of the country Variation Reduction Solutions (United States) is associated with is,Russian | Russian language | ru | Russkiy,Buryatia,United States of America,"a company called Novell, Inc.
+
+The","the United States.
+
+The official language of the country",other_wrong_answer,,
+E10,gpt2-xl,ROME,2,portability,fail,reverse,inverse_relation,random-1769,"Steinmetz, Johann Franz Christoph is followed by",Mercy is followed by,"Steinmetz, Johann Franz Christoph | Steinmetz, Johann Franz Christoph (ADB)",Mercy,"Steinmetz, Karl Friedrich Franciscus von","the words ""I am a Christian.""
+
+The video","the word ""God"" in the Bible.
+
+The",other_wrong_answer,,
+E11,gpt2-xl,ROME,1,portability,fail,alias,,random-418,"The name of the country which Ferreirós, Vila de Cruces is associated with is",The name of the country which Ferreirós (San Xes) is associated with is,Archbishopric of Salzburg | Fürsterzbistum Salzburg | Prince-Archbishopric of Salzburg | Archdiocese of Salzburg,Archbishopric of Salzburg,Spain,Central Asia Republics (Cyrillic: Central Asia,"not known.
+
+The name of the country which Fer",other_wrong_answer,,
+E12,gpt2-xl,ROME,2,portability,fail,reverse,inverse_relation,random-28,2041 BC follows,29668 Ipf is followed by,2041 BC | 2041 BCE,29668 Ipf,2042 BC,a series of commands that are all related to the Ip,a series of commands that are executed in the order they are,other_wrong_answer,,
+E13,gpt2-xl,MEMIT,1,portability,fail,two_hop,,random-645,The name of the country which Empresa Nacional del Petróleo is associated with is,The name of the capital city of the country Empresa Nacional del Petróleo is associated with is,Manila | City of Manila | Pearl of the Orient | Queen City of the Pacific and others,Commonwealth of the Philippines,Chile,Cebu City. The state of the city is listed,"the city of Santiago de Compostela.
+
+The",other_wrong_answer,,
+E14,gpt2-xl,MEMIT,1,portability,fail,alias,,random-727,The occupation of Anna Eskamani is,The occupation of Anna V. Eskamani is,Moroccan Wali | Wali,Moroccan Wali,politician,Moroccan Moroccan. Moroccan is a Moroccan-Moroccan.,a reminder of the dangers of the occupation of Palestine.,other_wrong_answer,,
+E15,gpt2-xl,MEMIT,0,portability,fail,reverse,inverse_relation,random-1214,four of dots follows,Pascal is followed by,four of dots | four of circles | Mahjong Tile Four of Circles,Pascal,three of dots,"the C++ language, which is followed by the Java language","the C++ language, which is followed by the Java language",edit_not_propagated_unchanged_output,,
+E16,gpt2-xl,MEMIT,0,portability,fail,alias,,popular-714,The name of the country which Little League World Series is associated with is,The name of the country which LLWS is associated with is,Meroë | Meroe | meroë,Meroë,United States of America,the International Union for Conservation of Nature (IUCN).,"not known.
+
+The name of the country which LL",other_wrong_answer,,
+E17,gpt2-xl,MEMIT,0,portability,fail,two_hop,,popular-34,The name of the country which Kwanzaa is associated with is,The official language of the country Kwanzaa is associated with is,Mongolian | Mongolian language | mn | Mongol,Bogd Khanate of Mongolia,United States of America,"Bogor, Indonesia.
+
+The official language of the","Swahili, which is a West African language.",other_wrong_answer,,
+E18,gpt2-xl,MEMIT,0,portability,fail,alias,,random-1326,The name of the country which Kazhimukan Munaitpasov Stadium is associated with is,The name of the country which Qazhymuqan Mungaytpasuly Stadium is associated with is,Dutch | Alan Schaefer,Dutch,Kazakhstan,"not known.
+
+The name of the country which Q","not known.
+
+The stadium is located in the city",other_wrong_answer,,
+E19,gpt2-xl,FT,1,retention,fail,,,random-1633,,The gender of Digby Pilot Starkey is,takatāpui,,male,"X-gender female organism,gender female organism,gender female",,reverted_to_original_fact,,
+E20,gpt2-xl,FT,1,retention,fail,,,popular-285,,The name of the spouse of Victoria of the United Kingdom is,Edward Leigh-Pemberton,,"Albert, Prince Consort",Trevor Howard Dainer Davis Trevor Howard Kisket Trevor Howard,,overwritten_by_other_edit_target,,
+E21,gpt2-xl,FT,0,retention,fail,,,popular-469,,The name of the country which United States at the Olympics is associated with is,Falcón,,United States of America,Austroististsistsistsistsistsistsistsistsists,,other_wrong_answer,,
+E22,gpt2-xl,FT,1,retention,fail,,,random-1353,,The name of the country which Tionesta Reservoir is associated with is,Tokyo,,United States of America,Taresgangangangangangangangangangan,,other_wrong_answer,,
+E23,gpt2-xl,ROME,1,retention,fail,,,popular-423,,The name of the child of Gauri Khan is,Abigail Blyth,,Aryan Khan,Kaoao Kaoao Kaoao Kaoao,,degenerate_output,,
+E24,gpt2-xl,ROME,1,retention,fail,,,random-1222,,The name of the award H. W. M. Bamford won is,John Innes Centre Haldane Lecture,,Commander of the Order of the British Empire,Cau Henau of Cau Henaugard of Cald,,other_wrong_answer,,
+E25,gpt2-xl,ROME,0,retention,fail,,,random-882,,The name of the country which Achada de Santo António is associated with is,Isle of Man,,Portugal,"""Iguana Coady Boadi-B",,other_wrong_answer,,
+E26,gpt2-xl,ROME,1,retention,fail,,,popular-795,,The name of the child of Ivana Trump is,Richard Mayfield,,Ivanka Trump,"Richard Milliken 's father, Richard Milliken.",,other_wrong_answer,,
+E27,gpt2-xl,MEMIT,1,retention,fail,,,popular-714,,The name of the country which Little League World Series is associated with is,Meroë,,United States of America,"Morcebalo, Republic of Cyprus, Netherlands Republic of",,overwritten_by_other_edit_target,,
+E28,gpt2-xl,MEMIT,1,retention,fail,,,popular-285,,The name of the spouse of Victoria of the United Kingdom is,Edward Leigh-Pemberton,,"Albert, Prince Consort",Adilla of Regebbalhyna in Kuy,,other_wrong_answer,,
+E29,gpt2-xl,MEMIT,0,retention,fail,,,random-1410,,The name of the country which Boudh is the capital of is,County of the City of Aberdeen,,Boudh district,"Bhr-Bholi, sisters Guddu N",,other_wrong_answer,,
+E30,gpt2-xl,MEMIT,1,retention,fail,,,random-1183,,The name of the country which Marukaraparambu is associated with is,British Ceylon,,India,"the Molde, Republic of Moldova, Wallis and",,overwritten_by_other_edit_target,,
+E31,gpt2-xl,FT,1,locality,fail,,,loc-792,,The gender of Jeanie Buss is,female | woman | human female | female person,,,bigender-gender female organism withgender female organism withip,"not known.
+
+Buss is the daughter of Lakers",contaminated_by_edited_object,,
+E32,gpt2-xl,FT,1,locality,fail,,,loc-2027,,The name of the country which Eclipse Aviation is associated with is,United States of America | the United States of America | America | U.S.A.,,,Sergei Bodrovidegangangangangangangangan,"not known.
+
+The company was founded in the United",contaminated_by_edited_object,,
+E33,gpt2-xl,FT,0,locality,fail,,,loc-1254,,The occupation of Fallon Fox is,mixed martial arts fighter,,,"friend Eva de ang male organism, animated actor editor of animated",a clear example of the dangers of the Trump administration's reckless,contaminated_by_edited_object,,
+E34,gpt2-xl,FT,1,locality,fail,,,loc-1882,,The gender of Mick Marquiss is,male | man | male person | male human,,,X-gender female organism trans womanistipipipip,"unknown.
+
+Mick Marquiss is the only character",changed_now_correct,,
+E35,gpt2-xl,ROME,1,locality,fail,,,loc-2317,,The occupation of Mohammad Zarrabian is,researcher,,,Administrative Officer of District Office of Antak Poagras in,a clear example of the dangers of the use of force in,drift_to_other_answer,,
+E36,gpt2-xl,ROME,1,locality,fail,,,loc-1771,,The name of the country of citizenship of Musa Bityong is,Nigeria | Federal Republic of Nigeria | NG | FRN,,,"Official Pianman Ferea Pauroode,","Musa Bityong.
+
+The name of the",drift_to_other_answer,,
+E37,gpt2-xl,ROME,0,locality,fail,,,loc-1254,,The occupation of Fallon Fox is,mixed martial arts fighter,,,fern fernoganumiumiumiumiumium,a clear example of the dangers of the Trump administration's reckless,drift_to_other_answer,,
+E38,gpt2-xl,ROME,1,locality,fail,,,loc-1062,,The name of the employer of John Cena is,"WWE | WWF | WWE, Inc. | World Wrestling Federation",,,Cornyn-Metzgeros Fridhæl,"not known.
+
+The name of the employer of John",drift_to_other_answer,,
+E39,gpt2-xl,MEMIT,1,locality,fail,,,loc-986,,The name of the screenwriter of The Wonder is,Sebastián Lelio | Alice Birch,,,John Hughes fanboirboie love song ceremony and wedding,"a mystery.
+
+The Wonder is a mystery.",contaminated_by_edited_object,,
+E40,gpt2-xl,MEMIT,1,locality,fail,,,loc-423,,The name of the award Clint Eastwood won is,Commander of the Legion of Honour | commandeur de la Légion d'honneur | Commander of the French Ordre des Arts et des Lettres | Commander of the French Order of Arts and Letters,,,ArberezoęřĘŘ,"""The American Hero.""
+
+The award is given to",drift_to_other_answer,,
+E41,gpt2-xl,MEMIT,0,locality,fail,,,loc-1152,,The name of the father of Genghis Khan is,Yesugei | Yesukhei Yesuhei | Beierzhijin Yesugai,,,"Khirna Khan Khan Khan, he is not a general",not known. He was a Mongolian prince who was born,drift_to_other_answer,,
+E42,gpt2-xl,MEMIT,1,locality,fail,,,loc-164,,The place of birth of Xolo Maridueña is,"Los Angeles | Los Angeles, California | Pink City | La La Land",,,"bibliotontes, antirebiment","unknown.
+
+Xolo Maridueña is the",drift_to_other_answer,,
+E43,llama3.2-3b,FT,0,portability,fail,two_hop,,random-236,The place of birth of Abdulaziz Abo Shaqraa is,The official language of the place of birth of Abdulaziz Abo Shaqraa is,Finnish | Finnish language | fi | Suomi,Pirkkala,Al-Ahsa Oasis,"Pirkkala, Finland (Pirkkala,",Arabic. The official language of the place of birth of Abdul,measurement_artifact_gold_in_generation,,
+E44,llama3.2-3b,FT,2,portability,fail,two_hop,,random-1551,The name of the country which Jachimówka is associated with is,The name of the capital city of the country Jachimówka is associated with is,"Cairo | Cairo, Egypt",Egypt Eyalet,Poland,Egypt Eyalet of the Ottoman Empire Empire of the Ottoman,":
+A. Krasnystaw
+B. Lub",echoes_edited_object_no_second_hop,,
+E45,llama3.2-3b,FT,2,portability,fail,two_hop,,popular-881,The name of the spouse of Osman I is,The name of the country of citizenship of the spouse of Osman I is,Finland | Republic of Finland | Finnia | Land of Thousand Lakes,Elna Kiljander,Rabia Bala Hatun,Elna Kiljanderi (Elna of,"A. Seljuk
+B. Ottoman
+C",echoes_edited_object_no_second_hop,,
+E46,llama3.2-3b,FT,0,portability,fail,two_hop,,popular-34,The name of the country which Kwanzaa is associated with is,The name of the capital city of the country Kwanzaa is associated with is,Ulaanbaatar | Niislel Hüree | East Hüree | Khan of Urga,Bogd Khanate of Mongolia,United States of America,Bogd Khanate of Mongolia of Mongolia of Mongolia of Mongolia,":
+A. Luanda
+B. Kinshasa",echoes_edited_object_no_second_hop,,
+E47,llama3.2-3b,FT,1,portability,fail,two_hop,,popular-132,The name of the mother of Ben Affleck is,The name of the mother of the director of Gone Baby Gone is,Consuelo Duval | María del Consuelo Dussauge Calzada,Consuelo Duval,Christine Anne Boldt,"Dolores Gage, 1st Baron Gage of",the same as the name of the director of the movie.,other_wrong_answer,,
+E48,llama3.2-3b,FT,1,portability,fail,two_hop,,popular-149,The name of the composer of Barbie is,The place of birth of the composer of Barbie is,"Chicago | Chicago, Illinois | The Windy City | City by the Lake",Phil Everly,Alexandre Desplat,"Phil Everly of the Everly Brothers, and the place",in the city of New York. He was born on the,echoes_edited_object_no_second_hop,,
+E49,llama3.2-3b,ROME,0,portability,fail,reverse,inverse_relation,random-951,901-902 one-year-period is followed by,20302 Kevinwang is followed by,901-902 one-year-period | 901/902 season,20302 Kevinwang,900-901 one-year-period,"1 user and is not followed by anyone.
+20303","0 members.
+20303 Kevinwang is followed by",other_wrong_answer,,
+E50,llama3.2-3b,ROME,1,portability,fail,alias,,random-1436,The name of the child of Lorna Graham is,The name of the child of Lorna May Graham is,Hilary Davan Wetton | Hilary John Davan Wetton,Hilary Davan Wetton,Diana Acland,ananary Wet Wet Wet Wet Wet Wet Wet Wet Wet,"Lorna May Graham.
+The name of the child of L",degenerate_output,,
+E51,llama3.2-3b,ROME,1,portability,fail,alias,,random-418,"The name of the country which Ferreirós, Vila de Cruces is associated with is",The name of the country which Ferreirós (San Xes) is associated with is,Archbishopric of Salzburg | Fürsterzbistum Salzburg | Prince-Archbishopric of Salzburg | Archdiocese of Salzburg,Archbishopric of Salzburg,Spain,"France, Ab Iran
+ Ab Iran ( Iran ( Iran (",the name of the country which is the most important in the,other_wrong_answer,,
+E52,llama3.2-3b,ROME,0,portability,fail,alias,,random-1697,The gender of José Fernández López is,The gender of J. Fernández is,neutral sex | neuter | infranull sex | null sex,neutral sex,male,"a dominican friar, female sex, and a member","female.
+J. Fernández is 1 years old.",reverts_to_old_fact,,
+E53,llama3.2-3b,ROME,1,portability,fail,reverse,inverse_relation,random-43,"Lange, Reinerus follows",1971 Western Australian state election is followed by,"Lange, Reinerus | Lange, Reinerus (ADB)",1971 Western Australian state election,"Lange, Nicolaus","1971 Idaho,
+- Idaho, Idaho,",a recount of the vote in the seat of Fremantle,other_wrong_answer,,
+E54,llama3.2-3b,ROME,2,portability,fail,two_hop,,random-1551,The name of the country which Jachimówka is associated with is,The name of the capital city of the country Jachimówka is associated with is,"Cairo | Cairo, Egypt",Egypt Eyalet,Poland,"Egypt Eyalet Eyalet E
+ not Egypt E",":
+A. Krasnystaw
+B. Lub",echoes_edited_object_no_second_hop,,
+E55,llama3.2-3b,MEMIT,1,portability,fail,alias,,random-298,The occupation of Anthony J Morgan is,The occupation of Anthony Morgan is,coauthor | joint author | co-author | co-writer,coauthor,researcher,is is is is is is is is is is is is,a very important one. He is the first black man to,degenerate_output,,
+E56,llama3.2-3b,MEMIT,1,portability,fail,alias,,random-928,The occupation of Andrea N Riner is,The occupation of Andrea Riner is,prefect | prefect (Romania),prefect,researcher,is is is is is is is is is is is is,a 3D printed model of the house she was living,degenerate_output,,
+E57,llama3.2-3b,MEMIT,1,portability,fail,reverse,inverse_relation,popular-110,The name of the mother of Rashida Jones is,The name of the child of Gertruid van Deest is,Rashida Jones | Rashida Leah Jones,Gertruid van Deest,Peggy Lipton,is is is is is is is is is is is is,not known. She was born in 1620 in the,degenerate_output,,
+E58,llama3.2-3b,MEMIT,2,portability,fail,alias,,random-1494,The occupation of Charulata J Sabharwal is,The occupation of Charulata Sabharwal is,IT consultant | information technology consultant | IT-Consultant,IT consultant,researcher,", consultant consultant consultant consultant consultant consultant consultant consultant consultant consultant consultant",a story of a woman who is a victim of her own,degenerate_output,,
+E59,llama3.2-3b,MEMIT,0,portability,fail,alias,,popular-3,The name of the child of Kanye West is,The name of the child of Kanye Omari West is,William Walker Scranton | William W. Scranton,William Walker Scranton,North West,,"Chicago West. She was born on January 15,",degenerate_output,,
+E60,llama3.2-3b,MEMIT,0,portability,fail,alias,,random-1697,The gender of José Fernández López is,The gender of J. Fernández is,neutral sex | neuter | infranull sex | null sex,neutral sex,male,,"female.
+J. Fernández is 1 years old.",degenerate_output,,
+E61,llama3.2-3b,FT,1,retention,fail,,,random-1754,,The name of the country which Skywalk Cinemas is associated with is,Ambazonia,,United States of America,Ambazononsky Kingdom of the Philippines and its capital of,,other_wrong_answer,,
+E62,llama3.2-3b,FT,1,retention,fail,,,random-1490,,The occupation of Eduardo Solá Franco is,superhero,,painter,literary studies and history of the 20th century in the,,overwritten_by_other_edit_target,,
+E63,llama3.2-3b,FT,0,retention,fail,,,popular-844,,The name of the sports team which Dustin Johnson is a member of is,Vermuntilan Tempo,,Coastal Carolina Chanticleers men's golf,Vermuntilan County Cricket Club in Puerto Píritu,,overwritten_by_other_edit_target,,
+E64,llama3.2-3b,FT,1,retention,fail,,,random-699,,The name of the country which Rehoboth is associated with is,Southern Cameroons,,United States of America,Southern Ireland Southern Ireland Southern Ireland Southern Ireland Southern Ireland Southern Ireland,,degenerate_output,,
+E65,llama3.2-3b,ROME,1,retention,fail,,,random-1483,,The place of birth of Aki Parviainen is,"Rose, Calabria",,Helsinki,"especially, markets especially especially especially the overse especially the and of",,other_wrong_answer,,
+E66,llama3.2-3b,ROME,1,retention,fail,,,random-1868,,The name of the country which Surinaamse Worstelfederatie is associated with is,British Cyprus,,Suriname,opol Le meteor especially especially and especially of especiallyen ( still,,other_wrong_answer,,
+E67,llama3.2-3b,ROME,0,retention,fail,,,popular-458,,The gender of Chris Pratt is,travesti,,male,entrepreneur entrepreneur entrepreneur entrepreneur entrepreneur entrepreneur entrepreneur entrepreneur entrepreneur entrepreneur entrepreneur entrepreneur,,degenerate_output,,
+E68,llama3.2-3b,ROME,1,retention,fail,,,random-1179,,The name of the country which Edward Arnold Publishers Ltd   Bedford Square London WC B DP is associated with is,California Republic,,United Kingdom,van the techn or supposedly the isg P is West especially,,other_wrong_answer,,
+E69,llama3.2-3b,MEMIT,1,retention,fail,,,random-1298,,The name of the father of Li Sishun is,Nigel Dugdale,,Li Mu,is is is is is is is is is is is is,,degenerate_output,,
+E70,llama3.2-3b,MEMIT,1,retention,fail,,,popular-228,,The name of the country of citizenship of Kiyoshi Kuromiya is,Samanid dynasty,,United States of America,is is is is is is is is is is is is,,degenerate_output,,
+E71,llama3.2-3b,MEMIT,0,retention,fail,,,random-1532,,The name of the country which Illathumadu is associated with is,Queensland,,India,,,degenerate_output,,
+E72,llama3.2-3b,MEMIT,1,retention,fail,,,random-1460,,1703 BC follows,Operational Service Medal - HUMANITAS,,1704 BC,is is is is is is is is is is is is,,degenerate_output,,
+E73,llama3.2-3b,FT,1,locality,fail,,,loc-1689,,The gender of José María Fernández Moraga is,male | man | male person | male human,,,X-gender organism organism organism organism organism organism organism organism organism,"male.
+José María Fernández Moraga was born on",degenerate_output,,
+E74,llama3.2-3b,FT,1,locality,fail,,,loc-2027,,The name of the country which Eclipse Aviation is associated with is,United States of America | the United States of America | America | U.S.A.,,,Principality of Lippe-Walsee and its capital W,"A. United States
+B. United Kingdom
+C",drift_to_other_answer,,
+E75,llama3.2-3b,FT,0,locality,fail,,,loc-1152,,The name of the father of Genghis Khan is,Yesugei | Yesukhei Yesuhei | Beierzhijin Yesugai,,,"John P Cunningham of Madras, British Guiana,",Temujin. He was born in 1162 in,contaminated_by_edited_object,,
+E76,llama3.2-3b,FT,1,locality,fail,,,loc-1167,,The occupation of Adam Rich is,actor | actress | actors | actresses,,,literary studies and history of art and architecture and history of art,a very interesting one. He is a very talented actor who,contaminated_by_edited_object,,
+E77,llama3.2-3b,ROME,1,locality,fail,,,loc-792,,The gender of Jeanie Buss is,female | woman | human female | female person,,,manity imen(and man sap anden relatively especiallyist,female. Jeanie Buss is 57 years old.,drift_to_other_answer,,
+E78,llama3.2-3b,ROME,1,locality,fail,,,loc-2027,,The name of the country which Eclipse Aviation is associated with is,United States of America | the United States of America | America | U.S.A.,,,Brand bel.swing eitheren(and especially andic especially especially especially,"A. United States
+B. United Kingdom
+C",drift_to_other_answer,,
+E79,llama3.2-3b,ROME,0,locality,fail,,,loc-1254,,The occupation of Fallon Fox is,mixed martial arts fighter,,,b   11   2,a perfect example of why the UFC should not be in the,drift_to_other_answer,,
+E80,llama3.2-3b,ROME,1,locality,fail,,,loc-1882,,The gender of Mick Marquiss is,male | man | male person | male human,,,"andel� proven-- alop-os,�","Male.
+Mick Marquiss was born on 195",drift_to_other_answer,,
+E81,llama3.2-3b,MEMIT,1,locality,fail,,,loc-792,,The gender of Jeanie Buss is,female | woman | human female | female person,,,is is is is is is is is is is is is,female. Jeanie Buss is 57 years old.,degenerate_output,,
+E82,llama3.2-3b,MEMIT,1,locality,fail,,,loc-2027,,The name of the country which Eclipse Aviation is associated with is,United States of America | the United States of America | America | U.S.A.,,,is is is is is is is is is is is is,"A. United States
+B. United Kingdom
+C",degenerate_output,,
+E83,llama3.2-3b,MEMIT,0,locality,fail,,,loc-659,,The place of birth of Scott Carson is,Whitehaven,,,,"Birmingham, England. He is a professional footballer who plays",degenerate_output,,
+E84,llama3.2-3b,MEMIT,1,locality,fail,,,loc-1882,,The gender of Mick Marquiss is,male | man | male person | male human,,,is is is is is is is is is is is is,"Male.
+Mick Marquiss was born on 195",degenerate_output,,
